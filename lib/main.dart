@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smartfarm/screens/home/home_page_view.dart';
+import 'package:smartfarm/view/screens/home_page_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Smart Farm',
       theme: ThemeData(
+
         primarySwatch: Colors.blue,
       ),
-      home: const HomePage(),
+      home: const HomePageView(),
     );
   }
 }
-
