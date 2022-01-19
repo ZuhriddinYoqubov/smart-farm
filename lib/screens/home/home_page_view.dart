@@ -3,6 +3,7 @@ import 'package:smartfarm/core/components/size_config.dart';
 import 'package:smartfarm/core/constants/const_colors.dart';
 import 'package:smartfarm/widgets/my_bottom_nav_bar.dart';
 import 'package:smartfarm/widgets/my_edge_insets.dart';
+import 'package:smartfarm/widgets/my_elevated_button.dart';
 import 'package:smartfarm/widgets/my_text_bold.dart';
 import 'package:smartfarm/widgets/my_text_form_tield.dart';
 
@@ -19,7 +20,8 @@ class HomePageView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-           MyTextFormField(hint: "Email")
+           MyButton(onPressed: (){}, label: 'Ro’yxatdan o’tish')
+
           ],
         ),
       ),
