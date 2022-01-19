@@ -3,8 +3,6 @@ import 'package:smartfarm/core/components/size_config.dart';
 import 'package:smartfarm/core/constants/asset_icons.dart';
 import 'package:smartfarm/core/constants/const_colors.dart';
 import 'package:smartfarm/widgets/animal_buttons.dart';
-import 'package:smartfarm/widgets/my_text_bold.dart';
-
 class HomePageView extends StatelessWidget {
   const HomePageView({Key? key}) : super(key: key);
 //dsanasksnljadsadsada
@@ -14,7 +12,7 @@ class HomePageView extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-         AnimalButtons(img: AnimalIcons.chicken, color: green,text: "flutter",)
+         AnimalButtons(img: AnimalIcons.chicken,text: "flutter")
         ],
       ),
     );
