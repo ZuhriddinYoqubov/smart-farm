@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/size_config.dart';
 import 'package:smartfarm/core/constants/const_colors.dart';
+import 'package:smartfarm/widgets/my_bottom_nav_bar.dart';
 import 'package:smartfarm/widgets/my_text_bold.dart';
 
 class HomePageView extends StatelessWidget {
@@ -10,6 +11,7 @@ class HomePageView extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
+      bottomNavigationBar: MyBottomNavigationBar(),
       body: Column(
         children: [
           MyTextBold(
