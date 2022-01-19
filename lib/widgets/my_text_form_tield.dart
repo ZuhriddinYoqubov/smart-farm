@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/size_config.dart';
-import 'package:smartfarm/core/constants/const_colors.dart';
+import 'package:smartfarm/core/constants/my_colors.dart';
 import 'package:smartfarm/widgets/my_edge_insets.dart';
 
 class MyTextFormField extends StatelessWidget {
@@ -44,11 +44,11 @@ class MyTextFormField extends StatelessWidget {
       );
 
   OutlineInputBorder _setBorder() => OutlineInputBorder(
-      borderSide: const BorderSide(color: grey),
+      borderSide: const BorderSide(color: MyColors.grey),
       borderRadius: BorderRadius.circular(getUniqueW(10.0)));
 
   TextStyle _textStyle() => TextStyle(
-        color: grey,
+        color: MyColors.grey,
         fontSize: getUniqueW(16.0),
         fontWeight: FontWeight.w400,
       );

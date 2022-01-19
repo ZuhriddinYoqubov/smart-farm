@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/size_config.dart';
-import 'package:smartfarm/core/constants/const_colors.dart';
+import 'package:smartfarm/core/constants/my_colors.dart';
 import 'package:smartfarm/widgets/my_bottom_nav_bar.dart';
 import 'package:smartfarm/widgets/my_edge_insets.dart';
 import 'package:smartfarm/widgets/my_elevated_button.dart';

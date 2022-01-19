@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smartfarm/core/components/size_config.dart';
-import 'package:smartfarm/core/constants/asset_icons.dart';
-import 'package:smartfarm/core/constants/const_colors.dart';
+import 'package:smartfarm/core/constants/my_asset_icons.dart';
+import 'package:smartfarm/core/constants/my_colors.dart';
 
 class MyBottomNavigationBar extends StatelessWidget {
   MyBottomNavigationBar({Key? key}) : super(key: key);
@@ -17,10 +17,10 @@ class MyBottomNavigationBar extends StatelessWidget {
       showSelectedLabels: false,
       showUnselectedLabels: false,
       items: [
-        _setItem(AssetIcons.home, 0),
-        _setItem(AssetIcons.search, 1),
-        _setItem(AssetIcons.calendar, 2),
-        _setItem(AssetIcons.settings, 4),
+        _setItem(MyAssetIcons.home, 0),
+        _setItem(MyAssetIcons.search, 1),
+        _setItem(MyAssetIcons.calendar, 2),
+        _setItem(MyAssetIcons.settings, 4),
       ],
       onTap: (i) {
         _currentIndex = i;
@@ -35,7 +35,7 @@ class MyBottomNavigationBar extends StatelessWidget {
           assetIcon,
           height: getUniqueH(20.0),
           width: getUniqueW(20.0),
-          color: _currentIndex == index ? primary : grey,
+          color: _currentIndex == index ? MyColors.primary : MyColors.grey,
         ),
       );
 }

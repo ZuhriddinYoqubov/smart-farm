@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/size_config.dart';
-import 'package:smartfarm/core/constants/const_colors.dart';
 
 class MyTextBold extends StatelessWidget {
   final String text;
