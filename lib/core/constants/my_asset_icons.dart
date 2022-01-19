@@ -1,4 +1,4 @@
-class AssetIcons {
+class MyAssetIcons {
   static const String logo = 'assets/icons/logo.svg';
   static const String home = 'assets/icons/home.svg';
   static const String search = 'assets/icons/search.svg';
