@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/size_config.dart';
+import 'package:smartfarm/core/constants/asset_icons.dart';
 import 'package:smartfarm/core/constants/const_colors.dart';
+import 'package:smartfarm/widgets/animal_buttons.dart';
 import 'package:smartfarm/widgets/my_text_bold.dart';
 
 class HomePageView extends StatelessWidget {
@@ -12,11 +14,7 @@ class HomePageView extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          MyTextBold(
-            text: "Sevimli hayvonlaringizni onlayn sotib oling",
-            color: Colors.red,
-            // size: 40.0,
-          )
+         AnimalButtons(img: AnimalIcons.chicken, color: green,text: "flutter",)
         ],
       ),
     );
