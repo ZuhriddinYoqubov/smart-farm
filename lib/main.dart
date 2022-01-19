@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smartfarm/view/screens/home_page_view.dart';
+import 'package:smartfarm/screens/home/home_page_view.dart';
 
 void main() {
   runApp(const MyApp());
