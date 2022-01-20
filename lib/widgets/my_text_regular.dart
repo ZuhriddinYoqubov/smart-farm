@@ -19,6 +19,7 @@ class MyTextRegular extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Text(
       text,
       textAlign: textAlign,
