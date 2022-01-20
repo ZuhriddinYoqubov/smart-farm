@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/size_config.dart';
 
-class MyTextBold extends StatelessWidget {
+class MyTextExtrabold extends StatelessWidget {
   final String text;
   double? size;
   int? maxLines;
   Color? color;
   TextAlign? textAlign;
 
-  MyTextBold(
+  MyTextExtrabold(
       {required this.text,
       this.textAlign,
       this.color,
-      this.size = 30.0,
+      this.size = 24.0,
       Key? key,
       this.maxLines})
       : super(key: key);
@@ -26,7 +26,7 @@ class MyTextBold extends StatelessWidget {
       style: TextStyle(
         fontSize: getUniqueH(size!),
         color: color,
-        fontWeight: FontWeight.w700,
+        fontWeight: FontWeight.w800,
       ),
     );
   }
