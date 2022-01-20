@@ -28,38 +28,36 @@ class AnimalButtons extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      child: Container(
-          height: height,
-          width: width,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(radius!), color: color),
-          child: Column(
-            children: [
-              SizedBox(
-                height: getUniqueH(bottomtxt!),
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: getUniqueW(righttxt!),
-                  ),
-                  Text(text!),
-                ],
-              ),
-              SizedBox(
-                height: getUniqueH(buttomicon!),
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: getUniqueW(righticon!),
-                  ),
-                  Image.asset(img!),
-                ],
-              )
-            ],
-          )),
-    );
+    return Container(
+        height: height,
+        width: width,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(radius!), color: color),
+        child: Column(
+          children: [
+            SizedBox(
+              height: getUniqueH(bottomtxt!),
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: getUniqueW(righttxt!),
+                ),
+                Text(text!),
+              ],
+            ),
+            SizedBox(
+              height: getUniqueH(buttomicon!),
+            ),
+            Row(
+              children: [
+                SizedBox(
+                  width: getUniqueW(righticon!),
+                ),
+                Image.asset(img!),
+              ],
+            )
+          ],
+        ));
   }
 }
