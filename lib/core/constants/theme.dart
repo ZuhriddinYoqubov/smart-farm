@@ -45,21 +45,22 @@ ThemeData getApplicationTheme() {
 
     // Text theme
     textTheme: TextTheme(
-        headline1: getSemiBoldStyle(
-            color: MyColors.darkGrey, fontSize: MyFontSize.s16),
-        headline2:
-            getRegularStyle(color: MyColors.white, fontSize: MyFontSize.s16),
-        headline3:
-            getBoldStyle(color: MyColors.primary, fontSize: MyFontSize.s16),
-        headline4:
-            getRegularStyle(color: MyColors.primary, fontSize: MyFontSize.s14),
-        subtitle1:
-            getMediumStyle(color: MyColors.lightGrey, fontSize: MyFontSize.s14),
-        subtitle2:
-            getMediumStyle(color: MyColors.primary, fontSize: MyFontSize.s14),
-        bodyText2: getMediumStyle(color: MyColors.lightGrey),
-        caption: getRegularStyle(color: MyColors.grey),
-        bodyText1: getRegularStyle(color: MyColors.grey)),
+      headline1:
+          getSemiBoldStyle(color: MyColors.darkGrey, fontSize: MyFontSize.s16),
+      headline2:
+          getRegularStyle(color: MyColors.white, fontSize: MyFontSize.s16),
+      headline3:
+          getBoldStyle(color: MyColors.primary, fontSize: MyFontSize.s16),
+      headline4:
+          getRegularStyle(color: MyColors.primary, fontSize: MyFontSize.s14),
+      subtitle1:
+          getMediumStyle(color: MyColors.lightGrey, fontSize: MyFontSize.s14),
+      subtitle2:
+          getMediumStyle(color: MyColors.primary, fontSize: MyFontSize.s14),
+      bodyText1: getRegularStyle(color: MyColors.grey),
+      bodyText2: getMediumStyle(color: MyColors.lightGrey),
+      caption: getRegularStyle(color: MyColors.grey),
+    ),
     // input decoration theme (text form field)
 
     inputDecorationTheme: InputDecorationTheme(
@@ -73,7 +74,7 @@ ThemeData getApplicationTheme() {
       errorStyle: getRegularStyle(color: MyColors.grey),
 
       // enabled border
-      enabledBorder: const  OutlineInputBorder(
+      enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: MyColors.grey, width: MyAppSize.s1_5),
           borderRadius: BorderRadius.all(Radius.circular(MyAppSize.s8))),
 
@@ -86,7 +87,7 @@ ThemeData getApplicationTheme() {
       // error border
       errorBorder: const OutlineInputBorder(
           borderSide: BorderSide(color: MyColors.grey, width: MyAppSize.s1_5),
-          borderRadius:   BorderRadius.all(Radius.circular(MyAppSize.s8))),
+          borderRadius: BorderRadius.all(Radius.circular(MyAppSize.s8))),
       // focused error border
       focusedErrorBorder: const OutlineInputBorder(
           borderSide:

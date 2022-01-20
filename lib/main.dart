@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartfarm/core/constants/theme.dart';
 import 'package:smartfarm/screens/body_page/body_page_view.dart';
 
 void main() {
@@ -13,9 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Smart Farm',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: getApplicationTheme(),
       home: BodyPageView(),
     );
   }

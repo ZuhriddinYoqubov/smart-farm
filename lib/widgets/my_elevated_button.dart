@@ -30,7 +30,7 @@ class MyButton extends StatelessWidget {
         ),
       ),
       style: ElevatedButton.styleFrom(
-          primary: color,
+          // primary: color,
           shape: MyShape.circular(radius: 10),
           padding: MyEdgeInsets.symmetric(h: 40.0, v: 18.0)),
     );
