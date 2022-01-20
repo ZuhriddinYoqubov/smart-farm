@@ -16,3 +16,7 @@ class MyAnimalsImage {
   static const String sheep = 'assets/animals_image/sheep.png';
   static const String hourse = 'assets/animals_image/hourse.png'; 
 }
+class ProductName{
+    static const String name = 'icons/productname.png';
+     static const String tuxum = 'icons/tuxum.png';
+}
