@@ -24,10 +24,9 @@ class MyTextExtrabold extends StatelessWidget {
       textAlign: textAlign,
       maxLines: maxLines,
       style: TextStyle(
-        fontSize: getUniqueH(size!),
-        color: color,
-        fontWeight: FontWeight.w800,
-      ),
+          fontSize: getUniqueH(size!),
+          color: color,
+          fontWeight: FontWeight.w800),
     );
   }
 }

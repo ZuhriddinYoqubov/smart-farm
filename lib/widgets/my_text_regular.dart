@@ -24,10 +24,9 @@ class MyTextRegular extends StatelessWidget {
       textAlign: textAlign,
       maxLines: maxLines,
       style: TextStyle(
-        fontSize: getUniqueH(size!),
-        color: color,
-        fontWeight: FontWeight.w400,
-      ),
+          fontSize: getUniqueH(size!),
+          color: color,
+          fontWeight: FontWeight.w400),
     );
   }
 }
