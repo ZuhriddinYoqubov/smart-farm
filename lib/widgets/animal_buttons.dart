@@ -13,6 +13,11 @@ class AnimalButtons extends StatelessWidget {
   double? bottomtxt;
   double? righticon;
   double? buttomicon;
+  Color? boxshadowcolor;
+  double? boxblurradius;
+  double? boxspreadRadius;
+  double? boxrighthorizontal;
+  double? boxbottomvertically;
   AnimalButtons({
     required this.img,
     this.color = primary,
@@ -24,6 +29,11 @@ class AnimalButtons extends StatelessWidget {
     this.righticon = 16.3,
     this.buttomicon = 10.0,
     this.radius = 10.0,
+    this.boxshadowcolor = grey,
+    this.boxblurradius = 5.0,
+    this.boxspreadRadius = 5.0,
+    this.boxbottomvertically =5.0,
+    this.boxrighthorizontal =5.0,
     Key? key,
   }) : super(key: key);
   @override
@@ -31,8 +41,17 @@ class AnimalButtons extends StatelessWidget {
     return Container(
         height: height,
         width: width,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(radius!), color: color),
+        decoration: BoxDecoration(boxShadow: [
+          BoxShadow(
+            color: boxshadowcolor!,
+            blurRadius: boxblurradius!,
+            spreadRadius: boxblurradius!,
+            offset: Offset(
+              boxrighthorizontal!,
+              boxbottomvertically!,
+            ),
+          )
+        ], borderRadius: BorderRadius.circular(radius!), color: color),
         child: Column(
           children: [
             SizedBox(
