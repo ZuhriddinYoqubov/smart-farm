@@ -1,11 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smartfarm/core/components/size_config.dart';
 import 'package:smartfarm/core/constants/my_asset_icons.dart';
+import 'package:smartfarm/core/constants/my_colors.dart';
 import 'package:smartfarm/widgets/container_with_opacity.dart';
-import 'package:smartfarm/widgets/my_decoration.dart';
 import 'package:smartfarm/widgets/my_text_bold.dart';
 
 class AnimalFeedingInfo extends StatelessWidget {
@@ -36,7 +35,9 @@ class AnimalFeedingInfo extends StatelessWidget {
                   child: FloatingActionButton(
                     elevation: 0.0,
                     backgroundColor: Colors.red,
-                    onPressed: () {},
+                    onPressed: () {
+                      showBottomSheet(context: context, builder: _buildBottomSheet );
+                    },
                     child: SvgPicture.asset(MyAssetIcons.medicationBox),
                   ),
                 ),
@@ -54,5 +55,9 @@ class AnimalFeedingInfo extends StatelessWidget {
         )
       ],
     );
+  }
+
+  Widget _buildBottomSheet(BuildContext context){
+    return Container(height: 400, color: MyColors.primary,);
   }
 }
