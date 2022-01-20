@@ -6,10 +6,12 @@ import 'package:smartfarm/widgets/my_shape.dart';
 class MyOutlinedButton extends StatelessWidget {
   VoidCallback onPressed;
   Widget child;
+  double padding;
   MyOutlinedButton({
     Key? key,
     required this.onPressed,
     required this.child,
+    this.padding = 7.0
   }) : super(key: key);
 
   @override
@@ -19,9 +21,9 @@ class MyOutlinedButton extends StatelessWidget {
       child: child,
       style: OutlinedButton.styleFrom(
         primary: MyColors.grey,
-        padding: MyEdgeInsets.all(7.0),
+        padding: MyEdgeInsets.all(padding),
         shape: MyShape.circular(radius: 10.0),
-        side:const BorderSide(color: MyColors.grey),
+        side: const BorderSide(color: MyColors.grey),
       ),
     );
   }

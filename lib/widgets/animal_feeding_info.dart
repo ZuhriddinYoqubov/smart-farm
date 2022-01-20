@@ -57,23 +57,48 @@ class AnimalFeedingInfo extends StatelessWidget {
             SizedBox(
               height: getUniqueH(190.0),
               child: MyOutlinedButton(
-                  onPressed: () {},
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Spacer(),
-                      SvgPicture.asset(MyAssetIcons.corn),
-                      const Spacer(),
-                      MyOutlinedButtonText(
-                        onPressed: () {},
-                        label: '12 %',
-                        color: MyColors.red,
-                      )
-                    ],
-                  )),
+                onPressed: () {},
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Spacer(),
+                    SvgPicture.asset(MyAssetIcons.corn),
+                    const Spacer(),
+                    MyOutlinedButtonText(
+                      onPressed: () {},
+                      label: '12 %',
+                      color: MyColors.red,
+                    )
+                  ],
+                ),
+              ),
             )
           ],
-        )
+        ),
+        SizedBox(height: getUniqueH(15.0)),
+        MyOutlinedButton(
+            padding: 10.0,
+            onPressed: () {},
+            child: Row(
+              children: [
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      MyTextBold(
+                        text: 'Broller tovuq',
+                        size: 18.0,
+                        color: Colors.black,
+                      ),
+                      MyTextBold(text: 'Izoh', color: Colors.black),
+                      MyTextBold(
+                          text:
+                              'Shu kunlari infektsiya tarqaldi va sizning tovuqlaringiz ham...')
+                    ],
+                  ),
+                ),
+              ],
+            ))
       ],
     );
   }
