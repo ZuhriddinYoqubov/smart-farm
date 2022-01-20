@@ -79,4 +79,23 @@ class AnimalButtons extends StatelessWidget {
           ],
         ));
   }
+  /*EXAMPLE
+   AnimalButtons(
+            img: AnimalIcons.cow,
+            text: "Cow",
+            bottomtxt: 10.0,
+            buttomicon: 10.0,
+            boxblurradius: 10.0,
+            boxbottomvertically: 10.0,
+            boxrighthorizontal: 10.0,
+            boxshadowcolor: green,
+            boxspreadRadius: 10.0,
+            color: black,
+            height: 200.0,
+            width: 200.0,
+            radius: 20.0,
+            righticon: 20.0,
+            righttxt: 20.0,
+          ),
+  */
 }
