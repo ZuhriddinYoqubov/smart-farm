@@ -15,7 +15,7 @@ class AnimalFeedingInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        //comment
+        
         Row(
           children: [
             Stack(
