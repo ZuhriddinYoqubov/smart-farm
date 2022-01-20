@@ -18,3 +18,6 @@ class MyAnimalsImage {
   static const String hourse = 'assets/animals_image/hourse.png'; 
 
 }
+class ProductName{
+   static const String name = 'icons/productname.png';
+}
