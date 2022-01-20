@@ -7,7 +7,7 @@ import 'package:smartfarm/core/constants/my_colors.dart';
 import 'package:smartfarm/screens/body_page/body_page_cubit.dart';
 
 class BodyPageView extends StatelessWidget {
-   BodyPageView({Key? key}) : super(key: key);
+  BodyPageView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,9 +26,9 @@ class BodyPageView extends StatelessWidget {
             showUnselectedLabels: false,
             items: [
               _setItem(MyAssetIcons.home, 0, _contextWatch.currentIndex),
-              _setItem(MyAssetIcons.search, 1,_contextWatch.currentIndex),
-              _setItem(MyAssetIcons.calendar, 2,_contextWatch.currentIndex),
-              _setItem(MyAssetIcons.settings, 4,_contextWatch.currentIndex),
+              _setItem(MyAssetIcons.search, 1, _contextWatch.currentIndex),
+              _setItem(MyAssetIcons.calendar, 2, _contextWatch.currentIndex),
+              _setItem(MyAssetIcons.settings, 4, _contextWatch.currentIndex),
             ],
             onTap: (i) {
               _contextRead.changePage(i);
@@ -40,7 +40,10 @@ class BodyPageView extends StatelessWidget {
   }
 
   BottomNavigationBarItem _setItem(
-          String assetIcon, int index, int currentIndex,) =>
+    String assetIcon,
+    int index,
+    int currentIndex,
+  ) =>
       BottomNavigationBarItem(
         label: "",
         icon: SvgPicture.asset(

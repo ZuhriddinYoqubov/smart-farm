@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/size_config.dart';
+import 'package:smartfarm/widgets/container_with_opacity.dart';
 import 'package:smartfarm/widgets/my_edge_insets.dart';
 import 'package:smartfarm/widgets/my_elevated_button.dart';
 
@@ -10,12 +11,16 @@ class HomePageView extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
+      backgroundColor: Colors.indigo,
       body: Padding(
         padding: MyEdgeInsets.symmetric(h: 20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-           MyButton(onPressed: (){}, label: 'Ro’yxatdan o’tish')
+            ContainerWithOpacity(
+              vPadding: 7.0,
+              hPadding: 12.0,
+              child: Text("Hello"),),
 
           ],
         ),
