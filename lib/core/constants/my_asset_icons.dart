@@ -8,5 +8,5 @@ class MyAssetIcons {
   static const String minus = 'assets/icons/minus.svg';
   static const String plus = 'assets/icons/plus.svg';
   static const String medicationBox = 'assets/icons/MedicationBox.svg';
-
+  static const String corn = 'assets/icons/corn.svg';
 }

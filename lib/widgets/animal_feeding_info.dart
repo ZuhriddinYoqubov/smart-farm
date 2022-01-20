@@ -4,8 +4,11 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:smartfarm/core/components/size_config.dart';
 import 'package:smartfarm/core/constants/my_asset_icons.dart';
+import 'package:smartfarm/core/constants/my_colors.dart';
 import 'package:smartfarm/widgets/container_with_opacity.dart';
 import 'package:smartfarm/widgets/my_decoration.dart';
+import 'package:smartfarm/widgets/my_outlined_button.dart';
+import 'package:smartfarm/widgets/my_outlined_button_text.dart';
 import 'package:smartfarm/widgets/my_text_bold.dart';
 
 class AnimalFeedingInfo extends StatelessWidget {
@@ -17,6 +20,7 @@ class AnimalFeedingInfo extends StatelessWidget {
       children: [
         //kdflksdlkfs
         Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Stack(
               clipBehavior: Clip.none,
@@ -46,10 +50,28 @@ class AnimalFeedingInfo extends StatelessWidget {
                     child: ContainerWithOpacity(
                       vPadding: 7.0,
                       hPadding: 12.0,
-                      child: MyTextBold(text: "5 dona",size: 12.0),
+                      child: MyTextBold(text: "5 dona", size: 12.0),
                     ))
               ],
             ),
+            SizedBox(
+              height: getUniqueH(190.0),
+              child: MyOutlinedButton(
+                  onPressed: () {},
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Spacer(),
+                      SvgPicture.asset(MyAssetIcons.corn),
+                      const Spacer(),
+                      MyOutlinedButtonText(
+                        onPressed: () {},
+                        label: '12 %',
+                        color: MyColors.red,
+                      )
+                    ],
+                  )),
+            )
           ],
         )
       ],
