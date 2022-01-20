@@ -7,4 +7,6 @@ class MyAssetIcons {
   static const String checked = 'assets/icons/checked.svg';
   static const String minus = 'assets/icons/minus.svg';
   static const String plus = 'assets/icons/plus.svg';
+  static const String medicationBox = 'assets/icons/MedicationBox.svg';
+
 }

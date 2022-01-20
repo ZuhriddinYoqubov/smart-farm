@@ -8,14 +8,14 @@ class MyTextBold extends StatelessWidget {
   Color? color;
   TextAlign? textAlign;
 
-  MyTextBold(
-      {required this.text,
-      this.textAlign,
-      this.color,
-      this.size = 30.0,
-      Key? key,
-      this.maxLines})
-      : super(key: key);
+  MyTextBold({
+    required this.text,
+    this.textAlign,
+    this.color,
+    this.size = 14.0,
+    Key? key,
+    this.maxLines,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class MyTextBold extends StatelessWidget {
       textAlign: textAlign,
       maxLines: maxLines,
       style: TextStyle(
-        fontSize: getUniqueH(size!),
+        fontSize: getUniqueW(size!),
         color: color,
         fontWeight: FontWeight.w700,
       ),
