@@ -17,9 +17,9 @@ class ProductButton extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Container(
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10.0), color: Colors.blueAccent,),
         height: getUniqueH(100.0),
         width: getUniqueW(140.0),
-        color: Colors.blueAccent,
         child: Stack(
           fit: StackFit.expand,
           children: <Widget>[
