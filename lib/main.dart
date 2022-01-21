@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/constants/theme.dart';
-import 'package:smartfarm/screens/body_page/body_page_view.dart';
 import 'package:smartfarm/screens/test_page/test_page.dart';
 
 void main() {
