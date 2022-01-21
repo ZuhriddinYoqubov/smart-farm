@@ -34,14 +34,18 @@ class _NoConnectionPageState extends State<NoConnectionPage> {
             ),
             MyTextBold(
               text: "Internet yo’q",
-              color: MyColors.black,size: 20.0,
+              color: MyColors.black,
+              size: 20.0,
             ),
             SizedBox(height: getUniqueH(10.0)),
             MyTextRegular(
               text: "Bog’lanishni tekshirib qayta urinib ko’ring",
-              color: MyColors.black,size: 16.0,
+              color: MyColors.black,
+              size: 16.0,
             ),
-            SizedBox(height: getUniqueH(33.0)),
+            SizedBox(
+              height: getUniqueH(33.0),
+            ),
             MyButton(
               onPressed: () {},
               label: "Qayta urinish",
