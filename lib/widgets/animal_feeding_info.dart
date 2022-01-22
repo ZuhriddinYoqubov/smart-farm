@@ -59,12 +59,6 @@ class AnimalFeedingInfo extends StatelessWidget {
                     ),
                   ),
                 ),
-                    onPressed: () {
-                      showBottomSheet(context: context, builder: _buildBottomSheet );
-                    },
-                    child: SvgPicture.asset(MyAssetIcons.medicationBox),
-                  ),
-                ),
                 Positioned(
                     bottom: getUniqueH(7.0),
                     left: getUniqueW(10.0),
