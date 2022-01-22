@@ -25,7 +25,9 @@ class AnimalFeedingInfo extends StatelessWidget {
               clipBehavior: Clip.none,
               children: [
                 ClipRRect(
-                  borderRadius: BorderRadius.circular(getUniqueW(10.0)),
+                  borderRadius: BorderRadius.circular(
+                    getUniqueW(10.0),
+                  ),
                   child: CachedNetworkImage(
                     imageUrl: 'https://source.unsplash.com/random/7',
                     height: getUniqueH(190.0),
@@ -39,6 +41,24 @@ class AnimalFeedingInfo extends StatelessWidget {
                   child: FloatingActionButton(
                     elevation: 0.0,
                     backgroundColor: Colors.red,
+                    onPressed: () {},
+                    child: SvgPicture.asset(
+                      MyAssetIcons.medicationBox,
+                    ),
+                  ),
+                ),
+                Positioned(
+                  bottom: getUniqueH(7.0),
+                  left: getUniqueW(10.0),
+                  child: ContainerWithOpacity(
+                    vPadding: 7.0,
+                    hPadding: 12.0,
+                    child: MyTextBold(
+                      text: "5 dona",
+                      size: 12.0,
+                    ),
+                  ),
+                ),
                     onPressed: () {
                       showBottomSheet(context: context, builder: _buildBottomSheet );
                     },
@@ -105,7 +125,6 @@ class AnimalFeedingInfo extends StatelessWidget {
       ],
     );
   }
-
   Widget _buildBottomSheet(BuildContext context){
     return Container(height: 400, color: MyColors.primary,);
   }
