@@ -28,6 +28,7 @@ class MyTextBold extends StatelessWidget {
         fontSize: getUniqueW(size!),
         color: color,
         fontWeight: FontWeight.w700,
+        fontFamily: "AvenirNext"
       ),
     );
   }
