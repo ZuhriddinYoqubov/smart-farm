@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:smartfarm/core/constants/my_asset_icons.dart';
 import 'package:smartfarm/core/constants/my_colors.dart';
 import 'package:smartfarm/core/constants/size_config.dart';
 import 'package:smartfarm/widgets/my_elevated_button.dart';
@@ -29,8 +31,16 @@ class _NoConnectionPageState extends State<NoConnectionPage> {
               ),
               height: getUniqueH(391.0),
               width: getUniqueW(330.0),
-              child: Image.asset(""),
-              color: MyColors.red,
+              child:
+                  // SvgPicture.asset(
+                  //   MyAssetIcons.no_connection,
+                  //   fit: BoxFit.contain,
+                  // ),
+                  Image.asset(
+                // MyAnimalsImage.no_connection,
+                "assets/animals_image/no_connection.png",
+                fit: BoxFit.contain,
+              ),
             ),
             MyTextBold(
               text: "Internet yo’q",
