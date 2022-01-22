@@ -19,11 +19,14 @@ export 'package:smartfarm/widgets/my_outlined_button_text.dart';
 export 'package:smartfarm/widgets/my_shape.dart';
 export 'package:smartfarm/widgets/my_text_bold.dart';
 export 'package:smartfarm/widgets/my_text_extrabold.dart';
-export 'package:smartfarm/widgets/my_text_form_tield.dart';
+export 'package:smartfarm/widgets/inputs/my_text_form_tield.dart';
 export 'package:smartfarm/widgets/my_text_regular.dart';
 export 'package:smartfarm/widgets/my_text_semibold.dart';
 export 'package:smartfarm/widgets/cards/animals_card_bottom.dart';
 export 'package:smartfarm/widgets/cards/farm_info_card.dart';
+export 'package:smartfarm/widgets/cards/products_card.dart';
+export 'package:smartfarm/widgets/inputs/search_text_field.dart';
+
 
 // Components
 export 'package:smartfarm/core/components/size_config.dart';
@@ -46,3 +49,6 @@ export 'package:flutter_bloc/flutter_bloc.dart';
 export 'package:equatable/equatable.dart';
 export 'package:cached_network_image/cached_network_image.dart';
 export 'package:intl/intl.dart';
+
+// Others
+export 'package:flutter/services.dart';

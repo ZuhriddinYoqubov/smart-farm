@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/widgets/cards/products_card.dart';
 
 class TestPage extends StatelessWidget {
   const TestPage({Key? key}) : super(key: key);
@@ -8,9 +7,11 @@ class TestPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return const Scaffold(
-      body: Center(
-        child: ProductsCard(),
+    return  Scaffold(
+      body: Container(
+        alignment: Alignment.center,
+        margin: MyEdgeInsets.symmetric(h: 16.0),
+        child: SearchField(),
       ),
     );
   }

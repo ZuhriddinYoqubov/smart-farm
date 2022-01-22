@@ -7,6 +7,7 @@ class MyTextRegular extends StatelessWidget {
   int? maxLines;
   Color? color;
   TextAlign? textAlign;
+
   MyTextRegular(
       {required this.text,
       this.textAlign,
@@ -24,9 +25,11 @@ class MyTextRegular extends StatelessWidget {
       textAlign: textAlign,
       maxLines: maxLines,
       style: TextStyle(
-          fontSize: getUniqueW(size),
-          color: color,
-          fontWeight: FontWeight.w400),
+        fontSize: getUniqueW(size),
+        color: color,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'AvenirNext',
+      ),
     );
   }
 }

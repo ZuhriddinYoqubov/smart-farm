@@ -10,7 +10,7 @@ class FarmInfoCard extends StatelessWidget {
       height: getUniqueH(150.0),
       decoration: MyDecoration.withImage(imageUrl: Links.cow),
       padding: MyEdgeInsets.all(10.0),
-      margin: MyEdgeInsets.symmetric(h: 10.0),
+      margin: MyEdgeInsets.symmetric(h: 15.0),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,7 +35,7 @@ class FarmInfoCard extends StatelessWidget {
               spacing: getUniqueW(5.0),
               children: [
                 _setChip('Sigir'),
-                _setChip('Ot'),
+                // _setChip('Ot'),
                 _setChip('12+'),
               ],
             ),
