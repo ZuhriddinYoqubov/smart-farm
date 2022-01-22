@@ -9,6 +9,7 @@ class MyAssetIcons {
   static const String plus = 'assets/icons/plus.svg';
   static const String medicationBox = 'assets/icons/MedicationBox.svg';
   static const String corn = 'assets/icons/corn.svg';
+
 }
 
 class MyAnimalsImage {
@@ -16,5 +17,6 @@ class MyAnimalsImage {
   static const String chicken = 'assets/animals_image/chicken.png';  
   static const String sheep = 'assets/animals_image/sheep.png';
   static const String hourse = 'assets/animals_image/hourse.png'; 
+  static const String no_connection = 'assets/animals_image/no_connection_r.png'; 
 
 }
