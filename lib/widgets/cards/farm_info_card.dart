@@ -23,7 +23,7 @@ class FarmInfoCard extends StatelessWidget {
           ),
           ListTile(
             contentPadding: EdgeInsets.zero,
-            title: MyTextBold(text: 'Ina ferma', size: 16.0),
+            title: MyTextBold(text: 'Ina ferma', size: 16.0, color: Colors.white),
             subtitle: MyTextRegular(
               text: 'Eng yaxshi fermer xo\'jaliklaridan...',
               maxLines: 1,

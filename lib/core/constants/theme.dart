@@ -13,6 +13,9 @@ ThemeData getApplicationTheme() {
     // will be used incase of disabled button for example
     // accentColor: MyColors.grey,
     // card view theme
+
+    fontFamily: "AvenirNext",
+
     cardTheme: const CardTheme(
         color: MyColors.white,
         shadowColor: MyColors.grey,
