@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
 class AnimalsCardBottom extends StatelessWidget {

@@ -7,7 +7,6 @@ class MyTextRegular extends StatelessWidget {
   int? maxLines;
   Color? color;
   TextAlign? textAlign;
-
   MyTextRegular(
       {required this.text,
       this.textAlign,

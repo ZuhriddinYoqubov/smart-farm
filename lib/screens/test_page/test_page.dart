@@ -6,14 +6,10 @@ class TestPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    SizeConfig().init(context);
+    return const Scaffold(
       body: Center(
-        child: AnimalsCardBottom(
-          img: 'https://images.unsplash.com/photo-1545468800-85cc9bc6ecf7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80',
-          data: "2 oylik",
-          price: "5000000",
-          text: "Golland sigiri",
-        ),
+        child: FarmInfoCard(),
       ),
     );
   }
