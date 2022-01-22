@@ -1,27 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:smartfarm/core/constants/my_colors.dart';
-import 'package:smartfarm/core/constants/size_config.dart';
-import 'package:smartfarm/widgets/my_text_bold.dart';
-import 'package:smartfarm/widgets/my_text_regular.dart';
+import 'package:intl/intl.dart';
+import 'package:smartfarm/core/components/exporting_packages.dart';
 
 class AnimalsCardBottom extends StatelessWidget {
   Color? color;
-  String? img;
+  String img;
   double? height;
   double? weight;
   String? text;
   String? price;
   String? data;
-  AnimalsCardBottom(
-      {this.color = MyColors.white,
-      required this.data,
-      this.height = 242.0,
-      this.weight = 155.0,
-      required this.price,
-      this.img,
-      required this.text,
-      Key? key})
-      : super(key: key);
+
+  AnimalsCardBottom({
+    this.color = MyColors.white,
+    required this.data,
+    this.height = 242.0,
+    this.weight = 155.0,
+    required this.price,
+    required this.img,
+    required this.text,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +29,7 @@ class AnimalsCardBottom extends StatelessWidget {
       height: getUniqueH(height!),
       width: getUniqueW(weight!),
       decoration: BoxDecoration(
+        border: Border.all(color: MyColors.lightGrey, width: 1.0),
         color: color,
         borderRadius: BorderRadius.circular(10),
       ),
@@ -38,9 +38,11 @@ class AnimalsCardBottom extends StatelessWidget {
           Container(
             height: getUniqueH(120.0),
             width: getUniqueW(weight!),
-            decoration: const BoxDecoration(
+            decoration: BoxDecoration(
               color: MyColors.lightGrey,
-              borderRadius: BorderRadius.only(
+              image:
+                  DecorationImage(fit: BoxFit.cover, image: NetworkImage(img)),
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(10.0),
                 topRight: Radius.circular(10.0),
               ),
@@ -67,7 +69,7 @@ class AnimalsCardBottom extends StatelessWidget {
             ),
             child: Center(
               child: MyTextBold(
-                text: price!,
+                text: _formattedPrice(price!),
                 size: 16.0,
                 color: MyColors.black,
               ),
@@ -76,5 +78,11 @@ class AnimalsCardBottom extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String _formattedPrice(String price) {
+    NumberFormat nf = NumberFormat('#,###');
+    return nf.format(int.parse(price));
+
   }
 }

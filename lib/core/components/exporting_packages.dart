@@ -22,6 +22,8 @@ export 'package:smartfarm/widgets/my_text_extrabold.dart';
 export 'package:smartfarm/widgets/my_text_form_tield.dart';
 export 'package:smartfarm/widgets/my_text_regular.dart';
 export 'package:smartfarm/widgets/my_text_semibold.dart';
+export 'package:smartfarm/widgets/animals_card_bottom.dart';
+
 
 
 // Components
