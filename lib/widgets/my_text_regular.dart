@@ -3,7 +3,7 @@ import 'package:smartfarm/core/components/size_config.dart';
 
 class MyTextRegular extends StatelessWidget {
   final String text;
-  double? size;
+  double size;
   int? maxLines;
   Color? color;
   TextAlign? textAlign;
@@ -24,7 +24,7 @@ class MyTextRegular extends StatelessWidget {
       textAlign: textAlign,
       maxLines: maxLines,
       style: TextStyle(
-          fontSize: getUniqueH(size!),
+          fontSize: getUniqueW(size),
           color: color,
           fontWeight: FontWeight.w400),
     );
