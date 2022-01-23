@@ -16,7 +16,7 @@ class ProductCardBottom extends StatelessWidget {
       this.height = 220.0,
       this.weight = 155.0,
       required this.price,
-      required this.img,
+      this.img,
       required this.text,
       Key? key})
       : super(key: key);
@@ -43,7 +43,6 @@ class ProductCardBottom extends StatelessWidget {
                 topRight: Radius.circular(10.0),
               ),
             ),
-            child: Image(image: MyAssetImages,),
           ),
           SizedBox(height: getUniqueH(20.0)),
           MyTextBold(
