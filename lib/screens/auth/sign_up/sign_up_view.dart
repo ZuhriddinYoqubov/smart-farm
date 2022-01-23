@@ -1,0 +1,94 @@
+import 'package:flutter/material.dart';
+import 'package:smartfarm/core/components/exporting_packages.dart';
+import 'package:smartfarm/widgets/buttons/my_button_with_icon.dart';
+
+class SignUpView extends StatelessWidget {
+  SignUpView({Key? key}) : super(key: key);
+
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _lastnameController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    SizeConfig().init(context);
+    return Scaffold(
+      body: Center(
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: MyEdgeInsets.symmetric(h: 20.0),
+            child: _showFirstStep(),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Column _showFirstStep() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        MyTextBold(
+          text: "Ro'yxatdan o'tish",
+          size: 24.0,
+          color: Colors.black,
+        ),
+        MySizedBox(height: 50),
+        MyTextFormField(
+          hint: 'Email',
+          controller: _emailController,
+          inputType: TextInputType.emailAddress,
+          action: TextInputAction.next,
+        ),
+        MySizedBox(height: 20),
+        MyTextFormField(
+          hint: 'Password',
+          controller: _passwordController,
+          inputType: TextInputType.visiblePassword,
+          action: TextInputAction.done,
+          obscureText: true,
+        ),
+        MySizedBox(height: 30.0),
+        _showDivider(),
+        MySizedBox(height: 30.0),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            MyElevatedIconButton(
+              onPressed: () {},
+              label: 'Facebook',
+              assetIcon: MyAssetIcons.facebook,
+            ),
+            MyElevatedIconButton(
+              onPressed: () {},
+              label: 'Google',
+              assetIcon: MyAssetIcons.google,
+            ),
+          ],
+        ),
+        MySizedBox(height: 60.0),
+        MyButton(onPressed: () {}, label: 'Keyingi')
+      ],
+    );
+  }
+
+  _showDivider() => Row(
+        children: [
+          _divider(true),
+          MyTextRegular(
+            text: 'yoki',
+          ),
+          _divider(false),
+        ],
+      );
+
+  Expanded _divider(bool isStart) => Expanded(
+        child: Divider(
+          thickness: getUniqueH(1.0),
+          endIndent: isStart ? getUniqueW(10.0) : 0.0,
+          indent: !isStart ? getUniqueW(10.0) : 0.0,
+        ),
+      );
+}

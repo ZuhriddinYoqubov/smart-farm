@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Smart Farm',
       theme: getApplicationTheme(),
-      home: const TestPage(),
+      home:  SignUpView(),
     );
   }
 }

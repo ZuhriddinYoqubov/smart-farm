@@ -10,6 +10,8 @@ class MyAssetIcons {
   static const String medicationBox = 'assets/icons/MedicationBox.svg';
   static const String corn = 'assets/icons/corn.svg';
   static const String rectangle = 'assets/icons/rectangle.svg';
+  static const String google = 'assets/icons/google.svg';
+  static const String facebook = 'assets/icons/facebook.svg';
 
 }
 
