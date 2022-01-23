@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smartfarm/core/constants/my_colors.dart';
 import 'package:smartfarm/core/constants/size_config.dart';
 import 'package:smartfarm/widgets/animals_card_bottom.dart';
+import 'package:smartfarm/widgets/product_card_bottom.dart';
 
 class TestPage extends StatelessWidget {
   const TestPage({Key? key}) : super(key: key);
@@ -10,10 +11,9 @@ class TestPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: AnimalsCardBottom(
-          data: "202020",
-          price: "50000",
-          text: "Golland sigiri",
+        child: ProductCardBottom(
+          price: "20000",
+          text: "Sut",
         ),
       ),
     );
