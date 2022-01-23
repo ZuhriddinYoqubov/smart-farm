@@ -11,7 +11,7 @@ class TestPage extends StatelessWidget {
       body: Container(
         alignment: Alignment.center,
         margin: MyEdgeInsets.symmetric(h: 16.0),
-        child: SearchField(),
+        child: CityNameTable(),
       ),
     );
   }
