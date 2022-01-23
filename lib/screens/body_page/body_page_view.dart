@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:smartfarm/core/components/size_config.dart';
-import 'package:smartfarm/core/constants/my_asset_icons.dart';
-import 'package:smartfarm/core/constants/my_colors.dart';
+import 'package:smartfarm/core/components/exporting_packages.dart';
 import 'package:smartfarm/screens/body_page/body_page_cubit.dart';
 
 class BodyPageView extends StatelessWidget {

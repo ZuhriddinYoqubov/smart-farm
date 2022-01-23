@@ -9,4 +9,18 @@ class MyDecoration {
           getUniqueW(radius),
         ),
       );
+
+  static BoxDecoration withImage({
+    required String imageUrl,
+    double radius = 10.0,
+    Color? color,
+  }) =>
+      BoxDecoration(
+        color: color,
+        borderRadius: BorderRadius.circular(getUniqueW(radius)),
+        image: DecorationImage(
+          fit: BoxFit.cover,
+          image: NetworkImage(imageUrl),
+        ),
+      );
 }

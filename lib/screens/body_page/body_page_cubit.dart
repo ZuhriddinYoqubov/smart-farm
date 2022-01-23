@@ -12,14 +12,14 @@ class BodyPageCubit extends Cubit<BodyPageState> {
   int currentIndex = 0;
 
   List pages = [
+    //trash
     const HomePageView(),
     const SearchPageView(),
     const CalendarPageView(),
-    const SettingsPageView()
-
+    const SettingsPageView(),
   ];
 
-  changePage(int index){
+  changePage(int index) {
     currentIndex = index;
     emit(BodyPageInitial());
   }
