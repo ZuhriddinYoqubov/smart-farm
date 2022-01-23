@@ -6,8 +6,8 @@ import 'package:smartfarm/core/constants/my_asset_icons.dart';
 import 'package:smartfarm/core/constants/my_colors.dart';
 import 'package:smartfarm/screens/home/my_animals_detail_page/my_animals_detail_page_view.dart';
 import 'package:smartfarm/widgets/container_with_opacity.dart';
-import 'package:smartfarm/widgets/my_outlined_button.dart';
-import 'package:smartfarm/widgets/my_outlined_button_text.dart';
+import 'package:smartfarm/widgets/buttons/my_outlined_button.dart';
+import 'package:smartfarm/widgets/buttons/my_outlined_button_text.dart';
 import 'package:smartfarm/widgets/my_text_bold.dart';
 
 class AnimalFeedingInfo extends StatelessWidget {

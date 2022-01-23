@@ -12,4 +12,5 @@ class MyColors {
   static const Color white = Color(0xffffffff);
   static const Color black = Color(0xff000000);
   static const Color glassBlack = Color(0x33000000);
+  static const Color blue = Color(0xFF0088DC);
 }

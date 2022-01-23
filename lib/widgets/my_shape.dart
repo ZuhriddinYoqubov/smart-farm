@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:smartfarm/core/components/exporting_packages.dart';
 
 class MyShape {
   static RoundedRectangleBorder circular({
@@ -6,7 +7,7 @@ class MyShape {
     BorderSide borderSide = BorderSide.none,
   }) =>
       RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(radius),
+        borderRadius: BorderRadius.circular(getUniqueW(radius)),
         side: borderSide,
       );
 }

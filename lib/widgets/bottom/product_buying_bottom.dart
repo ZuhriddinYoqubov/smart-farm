@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
 class ProductBuyingBottom extends StatelessWidget {
@@ -59,20 +60,23 @@ class ProductBuyingBottom extends StatelessWidget {
                     _buildMyTextBold("12 000"),
                   ],
                 ),
-
                 SizedBox(height: getUniqueH(20.0)),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Material(
                       shape: MyShape.circular(borderSide: const BorderSide()),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          _buildIconButton(MyAssetIcons.minus),
-                          MyTextBold(text: '1', color: Colors.black, size: 20.0),
-                          _buildIconButton(MyAssetIcons.plus),
-                        ],
+                      child: Padding(
+                        padding: MyEdgeInsets.symmetric(h: 17.51, v: 7.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            _buildIconButton(MyAssetIcons.minus),
+                            MyTextBold(
+                                text: '1', color: Colors.black, size: 20.0),
+                            _buildIconButton(MyAssetIcons.plus),
+                          ],
+                        ),
                       ),
                     ),
                     MyButton(onPressed: () {}, label: 'Sotib olish'),
