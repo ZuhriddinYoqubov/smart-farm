@@ -11,4 +11,5 @@ class MyColors {
   static const Color darkGrey = Color(0xFF454545);
   static const Color white = Color(0xffffffff);
   static const Color black = Color(0xff000000);
+  static const Color glassBlack = Color(0x33000000);
 }
