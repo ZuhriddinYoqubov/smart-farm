@@ -26,7 +26,8 @@ export 'package:smartfarm/widgets/cards/animals_card_bottom.dart';
 export 'package:smartfarm/widgets/cards/farm_info_card.dart';
 export 'package:smartfarm/widgets/cards/products_card.dart';
 export 'package:smartfarm/widgets/inputs/search_text_field.dart';
-export 'package:smartfarm/widgets/city_name_table.dart';
+export 'package:smartfarm/widgets/tiles/city_name_tile.dart';
+export 'package:smartfarm/widgets/tiles/feeding_list_tile.dart';
 
 
 // Components

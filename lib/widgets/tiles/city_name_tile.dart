@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
-class CityNameTable extends StatelessWidget {
-  const CityNameTable({Key? key}) : super(key: key);
+class CityNameTile extends StatelessWidget {
+  const CityNameTile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
