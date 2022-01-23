@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:smartfarm/core/constants/my_asset_icons.dart';
 import 'package:smartfarm/core/constants/my_colors.dart';
 import 'package:smartfarm/core/constants/size_config.dart';
 import 'package:smartfarm/widgets/my_elevated_button.dart';
