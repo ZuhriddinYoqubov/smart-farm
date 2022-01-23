@@ -9,11 +9,10 @@ class TestPage extends StatelessWidget {
     SizeConfig().init(context);
     return  Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          FeedingListTile(),
-          FeedingListTile(),
-          FeedingListTile(),
+
+          ProductBuyingBottom()
         ],
       ),
     );

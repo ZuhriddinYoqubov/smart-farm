@@ -28,6 +28,7 @@ export 'package:smartfarm/widgets/cards/products_card.dart';
 export 'package:smartfarm/widgets/inputs/search_text_field.dart';
 export 'package:smartfarm/widgets/tiles/city_name_tile.dart';
 export 'package:smartfarm/widgets/tiles/feeding_list_tile.dart';
+export 'package:smartfarm/widgets/bottom/product_buying_bottom.dart';
 
 
 // Components
