@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:smartfarm/core/components/exporting_packages.dart';
 import 'package:smartfarm/core/components/size_config.dart';
 import 'package:smartfarm/core/constants/my_asset_icons.dart';
 import 'package:smartfarm/core/constants/my_colors.dart';
@@ -58,7 +59,6 @@ class AnimalFeedingInfo extends StatelessWidget {
                     ),
                   ),
                 ),
-                    
                 Positioned(
                     bottom: getUniqueH(7.0),
                     left: getUniqueW(10.0),
@@ -71,6 +71,7 @@ class AnimalFeedingInfo extends StatelessWidget {
             ),
             SizedBox(
               height: getUniqueH(190.0),
+              width: getUniqueW(85.0),
               child: MyOutlinedButton(
                 onPressed: () => _buildBottomSheet(context),
                 child: Column(
@@ -79,47 +80,80 @@ class AnimalFeedingInfo extends StatelessWidget {
                     const Spacer(),
                     SvgPicture.asset(MyAssetIcons.corn),
                     const Spacer(),
-                    MyOutlinedButtonText(
-                      onPressed: () {},
-                      label: '12 %',
-                      color: MyColors.red,
-                    )
+                    _setFoodPercent(),
                   ],
                 ),
               ),
             )
           ],
         ),
-        SizedBox(height: getUniqueH(15.0)),
-        MyOutlinedButton(
-            padding: 10.0,
-            onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context)=> MyAnimalsDetailPageView() ));
-            },
-            child: Row(
-              children: [
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      MyTextBold(
-                        text: 'Broller tovuq',
-                        size: 18.0,
-                        color: Colors.black,
-                      ),
-                      MyTextBold(text: 'Izoh', color: Colors.black),
-                      MyTextBold(
-                          text:
-                              'Shu kunlari infektsiya tarqaldi va sizning tovuqlaringiz ham...')
-                    ],
-                  ),
-                ),
-              ],
-            ))
+        MySizedBox(height: 15.0),
+        _commentButton(context)
       ],
     );
   }
-  Widget _buildBottomSheet(BuildContext context){
-    return Container(height: 400, color: MyColors.primary,);
+
+  MyOutlinedButton _commentButton(BuildContext context) {
+    return MyOutlinedButton(
+      padding: 10.0,
+      onPressed: () {
+        showModalBottomSheet(
+          isScrollControlled: true,
+          backgroundColor: Colors.transparent,
+          context: context,
+          builder: (_) => ProductBuyingBottom(),
+        );
+      },
+      child: Row(
+        children: [
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                MyTextBold(
+                  text: 'Broller tovuq',
+                  size: 18.0,
+                  color: Colors.black,
+                ),
+                MySizedBox(height: 10.0),
+                MyTextBold(text: 'Izoh', color: Colors.black),
+                MySizedBox(height: 5.0),
+                MyTextRegular(text: AppStrings.shuKunlarda)
+              ],
+            ),
+          ),
+          _showAnimalPercent(),
+        ],
+      ),
+    );
   }
+
+  Widget _buildBottomSheet(BuildContext context) {
+    return Container(
+      height: 400,
+      color: MyColors.primary,
+    );
+  }
+
+  Container _showAnimalPercent() => Container(
+        width: getUniqueW(75.0),
+        alignment: Alignment.center,
+        height: getUniqueH(108.0),
+        decoration: MyDecoration.circular(color: MyColors.primary),
+        child: MyTextBold(text: '55%', color: MyColors.white, size: 16.0),
+      );
+
+  Container _setFoodPercent() => Container(
+        padding: MyEdgeInsets.symmetric(v: 6),
+        width: getUniqueW(71.0),
+        alignment: Alignment.center,
+        child: MyTextRegular(text: '12%', color: MyColors.red),
+        decoration: MyDecoration.circular(
+          radius: 7.0,
+          border: Border.all(
+            color: MyColors.red,
+            width: getUniqueW(1.0),
+          ),
+        ),
+      );
 }

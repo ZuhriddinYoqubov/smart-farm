@@ -2,12 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/size_config.dart';
 
 class MyDecoration {
-  static BoxDecoration circular({double radius = 10.0, Color? color}) =>
+  static BoxDecoration circular({
+    double radius = 10.0,
+    Color? color,
+    Border? border,
+  }) =>
       BoxDecoration(
         color: color,
+        border: border,
         borderRadius: BorderRadius.circular(
           getUniqueW(radius),
         ),
+
       );
 
   static BoxDecoration withImage({
