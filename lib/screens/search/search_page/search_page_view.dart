@@ -11,7 +11,13 @@ class _SearchPageViewState extends State<SearchPageView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(children: [Container()],),
+      body: Column(
+        children: [
+          Row(
+            children: [],
+          ),
+        ],
+      ),
     );
   }
 }
