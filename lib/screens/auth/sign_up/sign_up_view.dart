@@ -5,6 +5,7 @@ import 'package:smartfarm/widgets/buttons/my_button_with_icon.dart';
 class SignUpView extends StatelessWidget {
   SignUpView({Key? key}) : super(key: key);
 
+  final GlobalKey<FormFieldState> _formKey = GlobalKey<FormFieldState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   late BuildContext _context;
@@ -25,53 +26,56 @@ class SignUpView extends StatelessWidget {
     );
   }
 
-  Column _showFirstStep() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        MyTextBold(
-          text: "Ro'yxatdan o'tish",
-          size: 24.0,
-          color: Colors.black,
-        ),
-        MySizedBox(height: 50),
-        MyTextFormField(
-          hint: 'Email',
-          controller: _emailController,
-          inputType: TextInputType.emailAddress,
-          action: TextInputAction.next,
-        ),
-        MySizedBox(height: 20),
-        MyTextFormField(
-          hint: 'Password',
-          controller: _passwordController,
-          inputType: TextInputType.visiblePassword,
-          action: TextInputAction.done,
-          obscureText: true,
-        ),
-        MySizedBox(height: 30.0),
-        _showDivider(),
-        MySizedBox(height: 30.0),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            MyElevatedIconButton(
-              onPressed: () {},
-              label: 'Facebook',
-              assetIcon: MyAssetIcons.facebook,
-            ),
-            MyElevatedIconButton(
-              onPressed: () {},
-              label: 'Google',
-              assetIcon: MyAssetIcons.google,
-            ),
-          ],
-        ),
-        MySizedBox(height: 60.0),
-        MyButton(onPressed: () {
-          Navigator.push(_context, MaterialPageRoute(builder: (_)=> SignUpSecond()));
-        }, label: 'Keyingi')
-      ],
+  Form _showFirstStep() {
+    return Form(
+      key: _formKey,
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          MyTextBold(
+            text: "Ro'yxatdan o'tish",
+            size: 24.0,
+            color: Colors.black,
+          ),
+          MySizedBox(height: 50),
+          MyTextFormField(
+            hint: 'Email',
+            controller: _emailController,
+            inputType: TextInputType.emailAddress,
+            action: TextInputAction.next,
+          ),
+          MySizedBox(height: 20),
+          MyTextFormField(
+            hint: 'Password',
+            controller: _passwordController,
+            inputType: TextInputType.visiblePassword,
+            action: TextInputAction.done,
+            obscureText: true,
+          ),
+          MySizedBox(height: 30.0),
+          _showDivider(),
+          MySizedBox(height: 30.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              MyElevatedIconButton(
+                onPressed: () {},
+                label: 'Facebook',
+                assetIcon: MyAssetIcons.facebook,
+              ),
+              MyElevatedIconButton(
+                onPressed: () {},
+                label: 'Google',
+                assetIcon: MyAssetIcons.google,
+              ),
+            ],
+          ),
+          MySizedBox(height: 60.0),
+          MyButton(onPressed: () {
+            Navigator.push(_context, MaterialPageRoute(builder: (_)=> SignUpSecond()));
+          }, label: 'Keyingi')
+        ],
+      ),
     );
   }
 
