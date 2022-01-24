@@ -58,7 +58,9 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
                   size: getUniqueW(20.0),
                   color: MyColors.black,
                 ),
-                SizedBox(height: getUniqueH(10.0)),
+                SizedBox(
+                  height: getUniqueH(10.0),
+                ),
                 Row(
                   children: [
                     AnimalButtons(
@@ -66,13 +68,17 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
                       text: "Sigir",
                       color: MyColors.primary,
                     ),
-                    SizedBox(width: getUniqueW(15.0)),
+                    SizedBox(
+                      width: getUniqueW(15.0),
+                    ),
                     AnimalButtons(
                       img: "",
                       text: "Tovuq",
                       color: MyColors.primaryOppacity50,
                     ),
-                    SizedBox(width: getUniqueW(15.0)),
+                    SizedBox(
+                      width: getUniqueW(15.0),
+                    ),
                     AnimalButtons(
                       img: "",
                       text: "Qo'y",
@@ -80,7 +86,9 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
                     ),
                   ],
                 ),
-                SizedBox(height: getUniqueH(15.0)),
+                SizedBox(
+                  height: getUniqueH(15.0),
+                ),
                 Row(
                   children: [
                     AnimalButtons(
@@ -88,7 +96,9 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
                       text: "Ot",
                       color: MyColors.green,
                     ),
-                    SizedBox(width: getUniqueW(15.0)),
+                    SizedBox(
+                      width: getUniqueW(15.0),
+                    ),
                     AnimalButtons(
                       img: "",
                       text: "Qo'y",
@@ -102,7 +112,9 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
                     ),
                   ],
                 ),
-                SizedBox(height: getUniqueH(15.0)),
+                SizedBox(
+                  height: getUniqueH(15.0),
+                ),
                 Row(
                   children: [
                     AnimalButtons(
