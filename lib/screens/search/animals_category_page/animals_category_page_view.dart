@@ -45,9 +45,7 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.symmetric(
-              horizontal: getUniqueW(15.0),
-            ),
+            padding: EdgeInsets.symmetric(horizontal: getUniqueW(15.0)),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
