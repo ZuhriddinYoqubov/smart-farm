@@ -34,7 +34,7 @@ export 'package:smartfarm/widgets/tiles/feeding_list_tile.dart';
 export 'package:smartfarm/widgets/bottom/product_buying_bottom.dart';
 export 'package:smartfarm/widgets/my_sized_box.dart';
 export 'package:smartfarm/widgets/sign_up_app_bar.dart';
-
+export 'package:smartfarm/widgets/page_indicator.dart';
 
 // Components
 export 'package:smartfarm/core/components/size_config.dart';
