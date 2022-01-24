@@ -12,7 +12,6 @@ class MyAssetIcons {
   static const String rectangle = 'assets/icons/rectangle.svg';
   static const String google = 'assets/icons/google.svg';
   static const String facebook = 'assets/icons/facebook.svg';
-
 }
 
 class MyAnimalsImage {

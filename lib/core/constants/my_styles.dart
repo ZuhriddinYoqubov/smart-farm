@@ -5,10 +5,12 @@ import 'my_fonts.dart';
 TextStyle _getTextStyle(
     double fontSize, String fontFamily, FontWeight fontWeight, Color color) {
   return TextStyle(
-      fontSize: fontSize,
-      fontFamily: fontFamily,
-      color: color,
-      fontWeight: fontWeight);
+    fontSize: fontSize,
+    fontFamily: fontFamily,
+    color: color,
+    fontWeight: fontWeight,
+
+  );
 }
 
 // regular style
@@ -41,7 +43,6 @@ TextStyle getSemiBoldStyle(
       fontSize, MyFontConstants.fontFamily, MyFontWeight.regular, color);
 }
 
-
 // medium text style
 
 TextStyle getMediumStyle(
@@ -49,13 +50,3 @@ TextStyle getMediumStyle(
   return _getTextStyle(
       fontSize, MyFontConstants.fontFamily, MyFontWeight.regular, color);
 }
-
-
-
-
-
-
-
-
-
-

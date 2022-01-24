@@ -7,14 +7,13 @@ class SignUpView extends StatelessWidget {
 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _lastnameController = TextEditingController();
-  final TextEditingController _phoneController = TextEditingController();
-
+  late BuildContext _context;
   @override
   Widget build(BuildContext context) {
+    _context = context;
     SizeConfig().init(context);
     return Scaffold(
+      appBar: const SignUpAppBar(),
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
@@ -69,7 +68,9 @@ class SignUpView extends StatelessWidget {
           ],
         ),
         MySizedBox(height: 60.0),
-        MyButton(onPressed: () {}, label: 'Keyingi')
+        MyButton(onPressed: () {
+          Navigator.push(_context, MaterialPageRoute(builder: (_)=> SignUpSecond()));
+        }, label: 'Keyingi')
       ],
     );
   }
@@ -77,9 +78,7 @@ class SignUpView extends StatelessWidget {
   _showDivider() => Row(
         children: [
           _divider(true),
-          MyTextRegular(
-            text: 'yoki',
-          ),
+          MyTextRegular(text: 'yoki'),
           _divider(false),
         ],
       );
