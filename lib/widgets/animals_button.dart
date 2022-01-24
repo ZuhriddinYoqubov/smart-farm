@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:smartfarm/core/components/exporting_packages.dart';
 import 'package:smartfarm/core/components/size_config.dart';
 import 'package:smartfarm/core/constants/my_colors.dart';
+import 'package:smartfarm/widgets/my_text_regular.dart';
+
 class AnimalButtons extends StatelessWidget {
   String? img;
   Color? color;
@@ -29,18 +32,19 @@ class AnimalButtons extends StatelessWidget {
     this.buttomicon = 10.0,
     this.radius = 10.0,
     this.boxshadowcolor = MyColors.grey,
-    this.boxblurradius = 5.0,
-    this.boxspreadRadius = 5.0,
-    this.boxbottomvertically =5.0,
-    this.boxrighthorizontal =5.0,
+    this.boxblurradius = 0.0,
+    this.boxspreadRadius = 0.0,
+    this.boxbottomvertically = 0.0,
+    this.boxrighthorizontal = 0.0,
     Key? key,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: height,
-        width: width,
-        decoration: BoxDecoration(boxShadow: [
+      height: getUniqueH(height!),
+      width: getUniqueW(width!),
+      decoration: BoxDecoration(
+        boxShadow: [
           BoxShadow(
             color: boxshadowcolor!,
             blurRadius: boxblurradius!,
@@ -49,34 +53,33 @@ class AnimalButtons extends StatelessWidget {
               boxrighthorizontal!,
               boxbottomvertically!,
             ),
-          )
-        ], borderRadius: BorderRadius.circular(radius!), color: color),
-        child: Column(
-          children: [
-            SizedBox(
-              height: getUniqueH(bottomtxt!),
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: getUniqueW(righttxt!),
-                ),
-                Text(text!),
-              ],
-            ),
-            SizedBox(
-              height: getUniqueH(buttomicon!),
-            ),
-            Row(
-              children: [
-                SizedBox(
-                  width: getUniqueW(righticon!),
-                ),
-                Image.asset(img!),
-              ],
-            )
-          ],
-        ));
+          ),
+        ],
+        borderRadius: BorderRadius.circular(radius!),
+        color: color,
+      ),
+      child: Column(
+        children: [
+          SizedBox(height: getUniqueH(bottomtxt!)),
+          Row(
+            children: [
+              SizedBox(width: getUniqueW(righttxt!)),
+              MyTextRegular(
+                text: text!,
+                color: MyColors.black,
+              ),
+            ],
+          ),
+          SizedBox(height: getUniqueH(buttomicon!)),
+          Row(
+            children: [
+              SizedBox(width: getUniqueW(righticon!)),
+              Image.asset(img!),
+            ],
+          ),
+        ],
+      ),
+    );
   }
   /*EXAMPLE
    AnimalButtons(
