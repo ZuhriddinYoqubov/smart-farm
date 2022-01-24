@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SearchPageView extends StatefulWidget {
-  const SearchPageView({ Key? key }) : super(key: key);
+  const SearchPageView({Key? key}) : super(key: key);
 
   @override
   _SearchPageViewState createState() => _SearchPageViewState();
@@ -10,8 +10,8 @@ class SearchPageView extends StatefulWidget {
 class _SearchPageViewState extends State<SearchPageView> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      body: Column(),
     );
   }
 }
