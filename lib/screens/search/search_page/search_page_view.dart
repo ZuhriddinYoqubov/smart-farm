@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartfarm/core/constants/size_config.dart';
 
 class SearchPageView extends StatefulWidget {
   const SearchPageView({Key? key}) : super(key: key);
@@ -14,7 +15,14 @@ class _SearchPageViewState extends State<SearchPageView> {
       body: Column(
         children: [
           Row(
-            children: [],
+            children: [
+              InkWell(
+                child: Container(
+                  height: getUniqueH(50.0),
+                  width: getUniqueW(50.0),
+                ),
+              ),
+            ],
           ),
         ],
       ),
