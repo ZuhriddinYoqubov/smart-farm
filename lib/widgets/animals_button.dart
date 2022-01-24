@@ -60,7 +60,9 @@ class AnimalButtons extends StatelessWidget {
       ),
       child: Column(
         children: [
-          SizedBox(height: getUniqueH(bottomtxt!)),
+          SizedBox(
+            height: getUniqueH(bottomtxt!),
+          ),
           Row(
             children: [
               SizedBox(width: getUniqueW(righttxt!)),
