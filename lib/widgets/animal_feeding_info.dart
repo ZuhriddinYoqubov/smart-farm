@@ -17,7 +17,6 @@ class AnimalFeedingInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        //kdflksdlkfs
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -78,7 +77,7 @@ class AnimalFeedingInfo extends StatelessWidget {
             SizedBox(
               height: getUniqueH(190.0),
               child: MyOutlinedButton(
-                onPressed: () {},
+                onPressed: () => _buildBottomSheet(context),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
