@@ -5,6 +5,9 @@ export 'package:smartfarm/screens/calendar_page/calendar_page_view.dart';
 export 'package:smartfarm/screens/home/home_page/home_page_view.dart';
 export 'package:smartfarm/screens/no_connection_page/no_connection_page_view.dart';
 export 'package:smartfarm/screens/search/animals_category_page/animals_category_page_view.dart';
+export 'package:smartfarm/screens/auth/sign_in/sigh_in_view.dart';
+export 'package:smartfarm/screens/auth/sign_up/sign_up_view.dart';
+export 'package:smartfarm/screens/auth/sign_up_second/sign_up_second_view.dart';
 
 // Widgets
 export 'package:smartfarm/widgets/animal_feeding_info.dart';
@@ -13,9 +16,9 @@ export 'package:smartfarm/widgets/cards/animals_card_bottom.dart';
 export 'package:smartfarm/widgets/container_with_opacity.dart';
 export 'package:smartfarm/widgets/my_decoration.dart';
 export 'package:smartfarm/widgets/my_edge_insets.dart';
-export 'package:smartfarm/widgets/my_elevated_button.dart';
-export 'package:smartfarm/widgets/my_outlined_button.dart';
-export 'package:smartfarm/widgets/my_outlined_button_text.dart';
+export 'package:smartfarm/widgets/buttons/my_elevated_button.dart';
+export 'package:smartfarm/widgets/buttons/my_outlined_button.dart';
+export 'package:smartfarm/widgets/buttons/my_outlined_button_text.dart';
 export 'package:smartfarm/widgets/my_shape.dart';
 export 'package:smartfarm/widgets/my_text_bold.dart';
 export 'package:smartfarm/widgets/my_text_extrabold.dart';
@@ -26,6 +29,11 @@ export 'package:smartfarm/widgets/cards/animals_card_bottom.dart';
 export 'package:smartfarm/widgets/cards/farm_info_card.dart';
 export 'package:smartfarm/widgets/cards/products_card.dart';
 export 'package:smartfarm/widgets/inputs/search_text_field.dart';
+export 'package:smartfarm/widgets/tiles/city_name_tile.dart';
+export 'package:smartfarm/widgets/tiles/feeding_list_tile.dart';
+export 'package:smartfarm/widgets/bottom/product_buying_bottom.dart';
+export 'package:smartfarm/widgets/my_sized_box.dart';
+export 'package:smartfarm/widgets/sign_up_app_bar.dart';
 
 
 // Components

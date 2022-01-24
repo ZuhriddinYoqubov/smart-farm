@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:smartfarm/core/constants/my_asset_images.dart';
 import 'package:smartfarm/core/constants/my_colors.dart';
 import 'package:smartfarm/core/constants/size_config.dart';
 import 'package:smartfarm/widgets/my_text_bold.dart';

@@ -8,10 +8,12 @@ class TestPage extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return  Scaffold(
-      body: Container(
-        alignment: Alignment.center,
-        margin: MyEdgeInsets.symmetric(h: 16.0),
-        child: SearchField(),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+
+          ProductBuyingBottom()
+        ],
       ),
     );
   }

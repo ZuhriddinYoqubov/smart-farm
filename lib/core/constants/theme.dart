@@ -23,11 +23,15 @@ ThemeData getApplicationTheme() {
     // App bar theme
     appBarTheme: AppBarTheme(
         centerTitle: true,
-        color: MyColors.primary,
-        elevation: MyAppSize.s4,
+        color: Colors.transparent,
+        elevation: MyAppSize.s0,
+        iconTheme: const IconThemeData(color: MyColors.black),
         shadowColor: MyColors.primaryOppacity50,
-        titleTextStyle:
-            getRegularStyle(color: MyColors.white, fontSize: MyFontSize.s16)),
+        systemOverlayStyle: SystemUiOverlayStyle.dark,
+        titleTextStyle: getRegularStyle(
+          color: MyColors.white,
+          fontSize: MyFontSize.s16,
+        )),
     // Button theme
     buttonTheme: ButtonThemeData(
         shape: const StadiumBorder(),
@@ -45,6 +49,7 @@ ThemeData getApplicationTheme() {
 
     // Text theme
     textTheme: TextTheme(
+
       headline1:
           getSemiBoldStyle(color: MyColors.darkGrey, fontSize: MyFontSize.s16),
       headline2:
@@ -60,6 +65,7 @@ ThemeData getApplicationTheme() {
       bodyText1: getRegularStyle(color: MyColors.grey),
       bodyText2: getMediumStyle(color: MyColors.lightGrey),
       caption: getRegularStyle(color: MyColors.grey),
+
     ),
     // input decoration theme (text form field)
 
@@ -67,6 +73,7 @@ ThemeData getApplicationTheme() {
       contentPadding: const EdgeInsets.all(MyPadding.p8),
       // hint style
       hintStyle: getRegularStyle(color: MyColors.grey),
+
 
       // label style
       labelStyle: getMediumStyle(color: MyColors.darkGrey),
