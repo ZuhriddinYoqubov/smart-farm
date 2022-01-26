@@ -40,6 +40,8 @@ dependencies:
   equatable: ^2.0.3
   cached_network_image: ^3.2.0
   intl: ^0.17.0
+  welcomescreenflutter: ^0.0.5
+  scrollable_clean_calendar: ^1.0.1
 
 dev_dependencies:
   flutter_test:
@@ -62,6 +64,7 @@ flutter:
   assets:
     - assets/icons/
     - assets/animals_image/
+    - assets/splash_screens_images/
 
   ###############
 

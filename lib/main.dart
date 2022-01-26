@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/screens/search/search_page/search_page_view.dart';
-import 'package:smartfarm/screens/test_page/test_page.dart';
 
 void main() {
   runApp(const MyApp());

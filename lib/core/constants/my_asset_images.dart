@@ -1,4 +1,5 @@
 const String IMAGE_PATH = "assets/images";
+const String Image_Path2 = "assets/splash_screens_images";
 
 class MyAssetImages {
   static const String splashLogo = "$IMAGE_PATH/splash_logo.png";
@@ -21,4 +22,10 @@ class MyAssetImages {
   static const String cow = "$IMAGE_PATH/cow.png";
   static const String sheep = "$IMAGE_PATH/sheep.png";
   static const String chicken = "$IMAGE_PATH/chicken.png";
+}
+
+class MyAssetsImagestwo {
+  static const String cows = "$Image_Path2/cows.png";
+  static const String sheeps = "$Image_Path2/sheeps.png";
+  static const String chickens = "$Image_Path2/chikens.png";
 }
