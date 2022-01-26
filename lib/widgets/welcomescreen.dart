@@ -126,7 +126,7 @@ class Page extends StatelessWidget {
     return Container(
       margin: EdgeInsets.all(16),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Image.asset(
             pageData == null
@@ -134,30 +134,25 @@ class Page extends StatelessWidget {
                 : pageData!.imagePath.isEmpty
                     ? 'assets/logo.png'
                     : pageData!.imagePath,
-            height: 200,
+            height: 300,
+            width: 420,
+            fit: BoxFit.cover,
           ),
           Column(
             children: [
-              Text(
-                pageData == null
-                    ? 'Welcome to Intro Page'
-                    : pageData!.title.isEmpty
-                        ? 'Welcome to Intro Page'
-                        : pageData!.title,
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 30),
-              ),
-              const SizedBox(
-                height: 24,
-              ),
-              Text(
-                pageData == null
-                    ? 'Make a beautiful clean and fully functional onboarding screen layout in Android StudioIn this part we are going to setup the viewpager intro slider.Illustra...'
-                    : pageData!.description.isEmpty
+              Row(
+                children: [
+                  SizedBox(width: 10,),
+                  Text(
+                    pageData == null
                         ? 'Make a beautiful clean and fully functional onboarding screen layout in Android StudioIn this part we are going to setup the viewpager intro slider.Illustra...'
-                        : pageData!.description,
-                textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 14),
+                        : pageData!.description.isEmpty
+                            ? 'Make a beautiful clean and fully functional onboarding screen layout in Android StudioIn this part we are going to setup the viewpager intro slider.Illustra...'
+                            : pageData!.description,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(fontSize: 40,color: Colors.black,fontWeight: FontWeight.bold),
+                  ),
+                ],
               ),
             ],
           )

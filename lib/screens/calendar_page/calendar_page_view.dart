@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:scrollable_clean_calendar/controllers/clean_calendar_controller.dart';
 import 'package:scrollable_clean_calendar/scrollable_clean_calendar.dart';
 import 'package:scrollable_clean_calendar/utils/enums.dart';
+import 'package:smartfarm/core/components/exporting_packages.dart';
 import 'package:smartfarm/core/components/size_config.dart';
-import 'package:smartfarm/widgets/my_text_regular.dart';
 
 class CalendarPageView extends StatelessWidget {
   CalendarPageView({Key? key}) : super(key: key);

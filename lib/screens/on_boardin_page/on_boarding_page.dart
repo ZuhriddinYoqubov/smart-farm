@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/size_config.dart';
+import 'package:smartfarm/core/constants/my_asset_images.dart';
 import 'package:smartfarm/screens/auth/sign_up/sign_up_view.dart';
 import 'package:smartfarm/widgets/welcomescreen.dart';
 
@@ -7,16 +8,16 @@ class OnBoardingPage extends StatelessWidget {
   List<PageData> pageData = [
     PageData(
         'Fresh Food',
-        'Make a beautiful clean and fully functional onboarding screen layout in Android StudioIn this part we are going to setup the viewpager intro slider.Illustra...',
-        'assets/logo.png'),
+        'Sevimli\nhayvonlaringizni\nonlayn sotib oling',
+         MyAssetsImagestwo.cows),
     PageData(
         'Fast Delivery',
-        'Make a beautiful clean and fully functional onboarding screen layout in Android StudioIn this part we are going to setup the viewpager intro slider.Illustra...',
-        ''),
+        "Ularni o'z\nnazoratingiz ostida\nboqing",
+        MyAssetsImagestwo.sheeps),
     PageData(
         'Easy Payment',
-        'Make a beautiful clean and fully functional onboarding screen layout in Android StudioIn this part we are going to setup the viewpager intro slider.Illustra...',
-        '')
+        'Jarayonni\nreal-time kuzatib\nboring',
+        MyAssetsImagestwo.chickens)
   ];
   @override
   int indx = 0;

@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:smartfarm/core/components/exporting_packages.dart';
 import 'package:smartfarm/core/components/size_config.dart';
 
-class MyTextBold extends StatelessWidget {
+class MyTextRegular extends StatelessWidget {
   final String text;
-  double? size;
+  double size;
   int? maxLines;
-  Color? color;
+  Color color;
   TextAlign? textAlign;
+  TextDecoration? decoration;
 
-  MyTextBold({
+  MyTextRegular({
     required this.text,
     this.textAlign,
-    this.color,
+    this.color = MyColors.black,
     this.size = 14.0,
     Key? key,
     this.maxLines,
+    this.decoration,
   }) : super(key: key);
 
   @override
@@ -24,10 +27,12 @@ class MyTextBold extends StatelessWidget {
       text,
       textAlign: textAlign,
       maxLines: maxLines,
+      overflow: TextOverflow.ellipsis,
       style: TextStyle(
-        fontSize: getUniqueW(size!),
+        fontSize: getUniqueW(size),
         color: color,
-        fontWeight: FontWeight.w700,
+        fontWeight: FontWeight.w400,
+        decoration: decoration,
       ),
     );
   }

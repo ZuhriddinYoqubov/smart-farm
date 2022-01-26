@@ -16,8 +16,12 @@ class ProductsCard extends StatelessWidget {
         children: [
           SvgPicture.asset(MyAssetIcons.rectangle),
           Positioned(
-              bottom: getUniqueH(5.0),
-              child: MyTextBold(text: 'Qo\'y', color: Colors.white)),
+            bottom: getUniqueH(5.0),
+            child: MyTextBold(
+              text: 'Qo\'y',
+              color: Colors.white,
+            ),
+          ),
         ],
       ),
     );
