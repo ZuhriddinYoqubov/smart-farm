@@ -60,13 +60,13 @@ class SearchPageView extends StatelessWidget {
     return Padding(
       padding: MyEdgeInsets.symmetric(h: 15.0),
       child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                MySizedBox(height: 45.0, width: 275.0, child: SearchField()),
-                _showFilterButton(),
-              ],
-            ),
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          MySizedBox(height: 45.0, width: 275.0, child: SearchField()),
+          _showFilterButton(),
+        ],
+      ),
     );
   }
 
@@ -95,9 +95,12 @@ class SearchPageView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             MyTextBold(text: category, size: 20.0),
-            MyTextButton(onPressed: () {
-              CustomNavigator().push(const AllCategoryPageView());
-            }, label: 'Barchasi'),
+            MyTextButton(
+                onPressed: () {
+                  CustomNavigator()
+                      .push(AllCategoryPageView(categoryName: category));
+                },
+                label: 'Barchasi'),
           ],
         ),
       );
