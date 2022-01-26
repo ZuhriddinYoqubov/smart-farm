@@ -54,7 +54,9 @@ class SignUpSecond extends StatelessWidget {
                   prefix: _buildContainer(),
                 ),
                 MySizedBox(height: 60.0),
-                MyButton(onPressed: () {}, label: 'Ro’yxatdan o’tish'),
+                MyButton(onPressed: () {
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomePageView()));
+                }, label: 'Ro’yxatdan o’tish'),
               ],
             ),
           ),

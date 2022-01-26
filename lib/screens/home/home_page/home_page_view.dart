@@ -7,7 +7,7 @@ class HomePageView extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      backgroundColor: Colors.indigo,
+      // backgroundColor: Colors.indigo,
       body: Padding(
         padding: MyEdgeInsets.symmetric(h: 20.0),
         child: Column(
