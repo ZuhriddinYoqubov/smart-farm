@@ -4,6 +4,7 @@ import 'package:smartfarm/core/components/exporting_packages.dart';
 class SignUpSecond extends StatelessWidget {
   SignUpSecond({Key? key}) : super(key: key);
 
+  final GlobalKey<FormFieldState> _formKey = GlobalKey<FormFieldState>();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _lastnameController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
@@ -17,47 +18,94 @@ class SignUpSecond extends StatelessWidget {
         child: SingleChildScrollView(
           child: Padding(
             padding: MyEdgeInsets.symmetric(h: 20.0),
-            child: Column(
-              children: [
-                MyTextBold(
-                  text: 'Ro\'yxatdan o\'tish',
-                  color: MyColors.black,
-                  size: 24.0,
-                ),
-                MySizedBox(height: 15.0),
-                MyTextRegular(
-                  text:
-                      "Contrary to popular belief, Lorem \nIpsum is not simply",
-                  textAlign: TextAlign.center,
-                  size: 12.0,
-                ),
-                MySizedBox(height: 50.0),
-                MyTextFormField(
-                  controller: _nameController,
-                  inputType: TextInputType.name,
-                  action: TextInputAction.next,
-                  hint: 'Ism',
-                ),
-                MySizedBox(height: 20.0),
-                MyTextFormField(
-                  controller: _lastnameController,
-                  inputType: TextInputType.name,
-                  action: TextInputAction.next,
-                  hint: 'Familiya',
-                ),
-                MySizedBox(height: 20.0),
-                MyTextFormField(
-                  controller: _phoneController,
-                  inputType: TextInputType.phone,
-                  action: TextInputAction.done,
-                  hint: 'Telefon Raqam',
-                  prefix: _buildContainer(),
-                ),
-                MySizedBox(height: 60.0),
-                MyButton(onPressed: () {
-                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomePageView()));
-                }, label: 'Ro’yxatdan o’tish'),
-              ],
+            // child: Column(
+            //   children: [
+            //     MyTextBold(
+            //       text: 'Ro\'yxatdan o\'tish',
+            //       color: MyColors.black,
+            //       size: 24.0,
+            //     ),
+            //     MySizedBox(height: 15.0),
+            //     MyTextRegular(
+            //       text:
+            //           "Contrary to popular belief, Lorem \nIpsum is not simply",
+            //       textAlign: TextAlign.center,
+            //       size: 12.0,
+            //     ),
+            //     MySizedBox(height: 50.0),
+            //     MyTextFormField(
+            //       controller: _nameController,
+            //       inputType: TextInputType.name,
+            //       action: TextInputAction.next,
+            //       hint: 'Ism',
+            //     ),
+            //     MySizedBox(height: 20.0),
+            //     MyTextFormField(
+            //       controller: _lastnameController,
+            //       inputType: TextInputType.name,
+            //       action: TextInputAction.next,
+            //       hint: 'Familiya',
+            //     ),
+            //     MySizedBox(height: 20.0),
+            //     MyTextFormField(
+            //       controller: _phoneController,
+            //       inputType: TextInputType.phone,
+            //       action: TextInputAction.done,
+            //       hint: 'Telefon Raqam',
+            //       prefix: _buildContainer(),
+            //     ),
+            //     MySizedBox(height: 60.0),
+            //     MyButton(onPressed: () {
+            //       Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> HomePageView()));
+            //     }, label: 'Ro’yxatdan o’tish'),
+            //   ],
+            child: Form(
+              key: _formKey,
+              child: Column(
+                children: [
+                  MyTextBold(
+                    text: 'Ro\'yxatdan o\'tish',
+                    color: MyColors.black,
+                    size: 24.0,
+                  ),
+                  MySizedBox(height: 15.0),
+                  MyTextRegular(
+                    text:
+                        "Contrary to popular belief, Lorem \nIpsum is not simply",
+                    textAlign: TextAlign.center,
+                    size: 12.0,
+                  ),
+                  MySizedBox(height: 50.0),
+                  MyTextFormField(
+                    controller: _nameController,
+                    inputType: TextInputType.name,
+                    action: TextInputAction.next,
+                    hint: 'Ism',
+                  ),
+                  MySizedBox(height: 20.0),
+                  MyTextFormField(
+                    controller: _lastnameController,
+                    inputType: TextInputType.name,
+                    action: TextInputAction.next,
+                    hint: 'Familiya',
+                  ),
+                  MySizedBox(height: 20.0),
+                  MyTextFormField(
+                    controller: _phoneController,
+                    inputType: TextInputType.phone,
+                    action: TextInputAction.done,
+                    hint: 'Telefon Raqam',
+                    prefix: _buildContainer(),
+                  ),
+                  MySizedBox(height: 60.0),
+                  MyButton(
+                      onPressed: () {
+                        Navigator.pushReplacement(context,
+                            MaterialPageRoute(builder: (_) => HomePageView()));
+                      },
+                      label: 'Ro’yxatdan o’tish'),
+                ],
+              ),
             ),
           ),
         ),
