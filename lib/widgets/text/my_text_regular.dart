@@ -25,6 +25,7 @@ class MyTextRegular extends StatelessWidget {
       text,
       textAlign: textAlign,
       maxLines: maxLines,
+      overflow: TextOverflow.ellipsis,
       style: TextStyle(
         fontSize: getUniqueW(size),
         color: color,
