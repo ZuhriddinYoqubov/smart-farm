@@ -22,21 +22,19 @@ class AllCategoryPageView extends StatelessWidget {
     );
   }
 
-
-
   SliverPadding _showAnimalList() {
     return SliverPadding(
-          padding: MyEdgeInsets.symmetric(h: 10.0, v: 10.0),
-          sliver: SliverGrid.count(
-              crossAxisCount: 3,
-              mainAxisSpacing: getUniqueH(15.0),
-              crossAxisSpacing: getUniqueW(15.0),
-              childAspectRatio: 1.0,
-              children: List.generate(
-                  9,
-                  (index) =>
-                      AnimalButtons(img: MyAnimalsImage.cow, text: 'Sigir'))),
-        );
+      padding: MyEdgeInsets.symmetric(h: 10.0, v: 10.0),
+      sliver: SliverGrid.count(
+        crossAxisCount: 3,
+        mainAxisSpacing: getUniqueH(15.0),
+        crossAxisSpacing: getUniqueW(15.0),
+        children: List.generate(
+          9,
+          (index) => AnimalButtons(img: MyAnimalsImage.cow, text: 'Sigir'),
+        ),
+      ),
+    );
   }
 
   SliverList _showFarmList() {
