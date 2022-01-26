@@ -7,10 +7,13 @@ class FarmInfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      
       height: getUniqueH(150.0),
       width: getUniqueW(330.0),
       decoration: MyDecoration.withImage(
         imageUrl: Links.cow,
+      color: Colors.amber,
+
       ),
       padding: MyEdgeInsets.symmetric(
         h: getUniqueW(10.0),
