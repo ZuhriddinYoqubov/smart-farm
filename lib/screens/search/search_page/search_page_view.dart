@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
+import 'package:smartfarm/screens/search/farm_list_page/all_category_page_view.dart';
 
 class SearchPageView extends StatelessWidget {
   const SearchPageView({Key? key}) : super(key: key);
@@ -7,26 +8,16 @@ class SearchPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
+    CustomNavigator().init(context);
     return SafeArea(
       child: Column(
         children: [
-          MySizedBox(height: 10.0),
-          _setWidgetWithPadding(
-            padding: 15.0,
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                MySizedBox(height: 45.0, width: 275.0, child: SearchField()),
-                _showFilterButton(),
-              ],
-            ),
-          ),
-          MySizedBox(height: 20.0),
+          MySizedBox(height: 18.0),
+          _showSearchField(),
           _setCategoryLabel('Fermalar'),
-          MySizedBox(height: 10.0),
+          MySizedBox(height: 2.0),
           const FarmInfoCard(),
-          MySizedBox(height: 15.0),
+          MySizedBox(height: 7.0),
           _setCategoryLabel('Hayvonlar'),
           MySizedBox(height: 10.0),
           SizedBox(
@@ -44,20 +35,8 @@ class SearchPageView extends StatelessWidget {
             ),
           ),
           MySizedBox(height: 15.0),
-          _setWidgetWithPadding(
-            padding: 15.0,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                MyTextBold(
-                  text: "Mahsulotlar",
-                  color: MyColors.black,
-                  size: 19.9,
-                ),
-              ],
-            ),
-          ),
-          MySizedBox(height: 10.0),
+          _setCategoryLabel('Mahsulotlar'),
+          // MySizedBox(height: 10.0),
           SizedBox(
             height: getUniqueH(100.0),
             child: ListView.builder(
@@ -74,6 +53,20 @@ class SearchPageView extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Padding _showSearchField() {
+    return Padding(
+      padding: MyEdgeInsets.symmetric(h: 15.0),
+      child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                MySizedBox(height: 45.0, width: 275.0, child: SearchField()),
+                _showFilterButton(),
+              ],
+            ),
     );
   }
 
@@ -96,20 +89,15 @@ class SearchPageView extends StatelessWidget {
     );
   }
 
-  Padding _setWidgetWithPadding(
-          {required Widget child, double padding = 0.0}) =>
-      Padding(
-        child: child,
-        padding: MyEdgeInsets.symmetric(h: padding),
-      );
-
   Padding _setCategoryLabel(String category) => Padding(
         padding: MyEdgeInsets.symmetric(h: 15.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             MyTextBold(text: category, size: 20.0),
-            MyTextButton(onPressed: () {}, label: 'Barchasi'),
+            MyTextButton(onPressed: () {
+              CustomNavigator().push(const AllCategoryPageView());
+            }, label: 'Barchasi'),
           ],
         ),
       );

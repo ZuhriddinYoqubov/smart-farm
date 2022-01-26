@@ -16,12 +16,9 @@ class MyTextButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-        style: TextButton.styleFrom(primary: color, padding: EdgeInsets.zero),
-        onPressed: onPressed,
-        child: MyTextRegular(
-          text: label,
-          color: MyColors.black,
-          decoration: TextDecoration.underline,
-        ));
+      style: TextButton.styleFrom(primary: color, padding: EdgeInsets.zero),
+      onPressed: onPressed,
+      child: MyTextRegular(text: label, decoration: TextDecoration.underline),
+    );
   }
 }

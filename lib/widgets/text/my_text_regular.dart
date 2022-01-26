@@ -13,7 +13,7 @@ class MyTextRegular extends StatelessWidget {
   MyTextRegular({
     required this.text,
     this.textAlign,
-    this.color = MyColors.grey,
+    this.color = MyColors.black,
     this.size = 14.0,
     Key? key,
     this.maxLines,

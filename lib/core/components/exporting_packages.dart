@@ -39,6 +39,8 @@ export 'package:smartfarm/widgets/buttons/my_text_button.dart';
 
 // Components
 export 'package:smartfarm/core/components/size_config.dart';
+export 'package:smartfarm/core/components/custom_navigator.dart';
+
 
 // Constants
 export 'package:smartfarm/core/constants/my_asset_icons.dart';
