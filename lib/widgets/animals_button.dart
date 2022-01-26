@@ -28,8 +28,8 @@ class AnimalButtons extends StatelessWidget {
     this.width = 100.0,
     this.righttxt = 10.0,
     this.bottomtxt = 10.0,
-    this.righticon = 16.3,
-    this.buttomicon = 10.0,
+    this.righticon = 0.0,
+    this.buttomicon = 0.0,
     this.radius = 10.0,
     this.boxshadowcolor = MyColors.grey,
     this.boxblurradius = 0.0,
@@ -76,7 +76,10 @@ class AnimalButtons extends StatelessWidget {
           Row(
             children: [
               SizedBox(width: getUniqueW(righticon!)),
-              Image.asset(img!),
+              Image.network(
+                img!,
+                fit: BoxFit.contain,
+              ),
             ],
           ),
         ],
