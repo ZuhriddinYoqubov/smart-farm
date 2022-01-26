@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
+import 'package:smartfarm/screens/on_boardin_page/on_boarding_page.dart';
 import 'package:smartfarm/screens/test_page/test_page.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Smart Farm',
       theme: getApplicationTheme(),
-      home:  SignUpView(),
+      home:  OnBoardingPage(),
     );
   }
 }

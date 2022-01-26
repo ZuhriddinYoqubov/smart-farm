@@ -15,7 +15,7 @@ class BodyPageCubit extends Cubit<BodyPageState> {
     //trash
     const HomePageView(),
     const SearchPageView(),
-    const CalendarPageView(),
+    CalendarPageView(),
     const SettingsPageView(),
   ];
 
