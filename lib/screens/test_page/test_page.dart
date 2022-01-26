@@ -9,10 +9,10 @@ class TestPage extends StatelessWidget {
     SizeConfig().init(context);
     return  Scaffold(
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
 
-          ProductBuyingBottom()
+          AnimalButtons(img: MyAnimalsImage.cow, text: 'Sigir')
         ],
       ),
     );

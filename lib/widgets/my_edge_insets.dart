@@ -9,4 +9,17 @@ class MyEdgeInsets {
         h: getUniqueW(size),
         v: getUniqueH(size),
       );
+
+  static EdgeInsets only({
+    double right = 0.0,
+    double left = 0.0,
+    double top = 0.0,
+    double bottom = 0.0,
+  }) =>
+      EdgeInsets.only(
+        top: getUniqueH(top),
+        bottom: getUniqueH(bottom),
+        right: getUniqueW(right),
+        left: getUniqueH(left),
+      );
 }

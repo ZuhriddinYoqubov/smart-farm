@@ -9,7 +9,7 @@ import 'package:smartfarm/screens/home/my_animals_detail_page/my_animals_detail_
 import 'package:smartfarm/widgets/container_with_opacity.dart';
 import 'package:smartfarm/widgets/buttons/my_outlined_button.dart';
 import 'package:smartfarm/widgets/buttons/my_outlined_button_text.dart';
-import 'package:smartfarm/widgets/my_text_bold.dart';
+import 'package:smartfarm/widgets/text/my_text_bold.dart';
 
 class AnimalFeedingInfo extends StatelessWidget {
   const AnimalFeedingInfo({Key? key}) : super(key: key);
