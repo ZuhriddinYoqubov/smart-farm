@@ -86,15 +86,13 @@ class SearchPageView extends StatelessWidget {
               height: getUniqueH(100.0),
               child: ListView.builder(
                 scrollDirection: Axis.horizontal,
-                padding: EdgeInsets.only(
-                  right: getUniqueW(10.0),
-                ),
+                padding:MyEdgeInsets.only(right: 10.0),
                 itemCount: 10,
                 itemBuilder: (BuildContext context, int index) {
                   return Padding(
-                    padding: EdgeInsets.only(right: 10.0),
+                    padding: MyEdgeInsets.only(right: 10.0),
                     child: AnimalButtons(
-                      img: Links.cow,
+                      img: MyAnimalsImage.cow,
                       text: "Sigir",
                     ),
                   );
