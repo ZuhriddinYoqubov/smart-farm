@@ -101,12 +101,13 @@ class ProductBuyingBottom extends StatelessWidget {
     );
   }
 
-  IconButton _buildIconButton(String assetIcon,StateSetter state) => IconButton(
+  IconButton _buildIconButton(String assetIcon, StateSetter state) =>
+      IconButton(
         onPressed: () {
-          state.call((){
+          state.call(() {
             if (assetIcon == MyAssetIcons.plus) {
               _amount++;
-            } else if(_amount >1) {
+            } else if (_amount > 1) {
               _amount--;
             }
           });
