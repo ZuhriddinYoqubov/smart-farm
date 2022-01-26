@@ -10,54 +10,62 @@ class MyAnimalsDetailPageView extends StatelessWidget {
     return Scaffold(
       backgroundColor: MyColors.white,
       //appBar: appbar(context),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Stack(
-            clipBehavior: Clip.none,
-            children: [
-              SafeArea(
-                child: Container(
-                  height: getUniqueH(300),
-                  color: Colors.amber,
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Stack(
+              clipBehavior: Clip.none,
+              children: [
+                SafeArea(
+                  child: Container(
+                    height: getUniqueH(300),
+                    color: Colors.amber,
+                  ),
                 ),
-              ),
-              Positioned(
-                left: 0,
-                right: 0,
-                bottom: -1,
-                child: Container(
-                  height: getUniqueH(13),
-                  decoration: BoxDecoration(
-                    color: MyColors.white,
+                Positioned(
+                  left: 0,
+                  right: 0,
+                  bottom: -1,
+                  child: Container(
+                    height: getUniqueH(13),
+                    decoration: BoxDecoration(
+                      color: MyColors.white,
                     borderRadius: BorderRadius.vertical(
-                      top: Radius.circular(
-                        getUniqueW(10),
+                        top: Radius.circular(
+                          getUniqueW(10),
+                        ),
                       ),
                     ),
                   ),
                 ),
+              ],
+            ),
+            buildTitleSection(),
+            Divider(thickness: getUniqueH(1.0), color: MyColors.lightGrey),
+            Padding(
+              padding: EdgeInsets.fromLTRB(
+                getUniqueW(15),
+                getUniqueH(20),
+                getUniqueW(15),
+                getUniqueH(5),
               ),
-            ],
-          ),
-          buildTitleSection(),
-          Divider(thickness: getUniqueH(1.0), color: MyColors.lightGrey),
-          Padding(
-            padding: EdgeInsets.fromLTRB(
-              getUniqueW(15),
-              getUniqueH(20),
-              getUniqueW(15),
-              getUniqueH(5),
+              child: MyTextBold(
+                text: 'Ovqatlanish tarixi',
+                size: 18.0,
+                color: Colors.black,
+              ),
             ),
-            child: MyTextBold(
-              text: 'Ovqatlanish tarixi',
-              size: 18.0,
-              color: Colors.black,
-            ),
-          ),
-          buildNutrionHistoryItem(),
-          // buildNutrionHistoryItem(),
-        ],
+            buildNutrionHistoryItem(),
+            buildNutrionHistoryItem(),
+            buildNutrionHistoryItem(),
+            Padding(
+              padding: MyEdgeInsets.symmetric(v: 30, h: 83.5),
+              child: MyButton(onPressed: (){}, label: "Ko'proq ko'rish"),
+            )
+            // buildNutrionHistoryItem(),
+          ],
+        ),
       ),
     );
   }
