@@ -4,6 +4,7 @@ class MyColors {
   static const Color primary = Color(0xFFFF8843);
   static Color primaryOppacity50 = const Color(0xFFFF8843).withOpacity(0.5);
   static const Color lightGrey = Color(0xFFDDDDDD);
+  static const Color lighGrey = Color(0xffEFEFEF);
   static const Color grey = Color(0xFF999999);
   static const Color disabled = Color(0xFFEFEFEF);
   static const Color red = Color(0xFFFF4949);
