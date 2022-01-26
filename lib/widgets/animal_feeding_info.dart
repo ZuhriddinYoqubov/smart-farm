@@ -17,6 +17,7 @@ class AnimalFeedingInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,29 +25,39 @@ class AnimalFeedingInfo extends StatelessWidget {
             Stack(
               clipBehavior: Clip.none,
               children: [
+                // IMAGE
                 ClipRRect(
                   borderRadius: BorderRadius.circular(
                     getUniqueW(10.0),
                   ),
                   child: CachedNetworkImage(
-                    imageUrl: 'https://source.unsplash.com/random/7',
+                    imageUrl: 'https://source.unsplash.com/random/6',
                     height: getUniqueH(190.0),
                     width: getUniqueW(230.0),
                     fit: BoxFit.cover,
                   ),
                 ),
+                // MEDICAL BUTTON
                 Positioned(
                   top: getUniqueH(-8.0),
                   right: getUniqueW(-8.0),
                   child: FloatingActionButton(
                     elevation: 0.0,
                     backgroundColor: Colors.red,
-                    onPressed: () {},
+                    onPressed: () {
+                      showModalBottomSheet(
+                        isScrollControlled: true,
+                        backgroundColor: Colors.transparent,
+                        context: context,
+                        builder: (_) => ProductBuyingBottom(),
+                      );
+                    },
                     child: SvgPicture.asset(
                       MyAssetIcons.medicationBox,
                     ),
                   ),
                 ),
+                //  ANIMALS COUNT INFO
                 Positioned(
                   bottom: getUniqueH(7.0),
                   left: getUniqueW(10.0),
@@ -59,26 +70,37 @@ class AnimalFeedingInfo extends StatelessWidget {
                     ),
                   ),
                 ),
-                Positioned(
-                    bottom: getUniqueH(7.0),
-                    left: getUniqueW(10.0),
-                    child: ContainerWithOpacity(
-                      vPadding: 7.0,
-                      hPadding: 12.0,
-                      child: MyTextBold(text: "5 dona", size: 12.0),
-                    ))
               ],
             ),
             SizedBox(
               height: getUniqueH(190.0),
               width: getUniqueW(85.0),
               child: MyOutlinedButton(
-                onPressed: () => _buildBottomSheet(context),
+                onPressed: () {
+                  showModalBottomSheet(
+                    isScrollControlled: true,
+                    backgroundColor: Colors.transparent,
+                    context: context,
+                    builder: (_) => ProductBuyingBottom(),
+                  );
+                },
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Spacer(),
-                    SvgPicture.asset(MyAssetIcons.corn),
+
+                    //  CORN BUTTON
+
+                    InkWell(
+                        onTap: () {
+                          showModalBottomSheet(
+                            isScrollControlled: true,
+                            backgroundColor: Colors.transparent,
+                            context: context,
+                            builder: (_) => ProductBuyingBottom(),
+                          );
+                        },
+                        child: SvgPicture.asset(MyAssetIcons.corn)),
                     const Spacer(),
                     _setFoodPercent(),
                   ],
@@ -97,12 +119,11 @@ class AnimalFeedingInfo extends StatelessWidget {
     return MyOutlinedButton(
       padding: 10.0,
       onPressed: () {
-        showModalBottomSheet(
-          isScrollControlled: true,
-          backgroundColor: Colors.transparent,
-          context: context,
-          builder: (_) => ProductBuyingBottom(),
-        );
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => MyAnimalsDetailPageView(),
+            ));
       },
       child: Row(
         children: [
@@ -125,13 +146,6 @@ class AnimalFeedingInfo extends StatelessWidget {
           _showAnimalPercent(),
         ],
       ),
-    );
-  }
-
-  Widget _buildBottomSheet(BuildContext context) {
-    return Container(
-      height: 400,
-      color: MyColors.primary,
     );
   }
 

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
+import 'package:smartfarm/screens/search/search_page/search_page_view.dart';
 import 'package:smartfarm/screens/test_page/test_page.dart';
 
 void main() {
@@ -21,7 +22,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Smart Farm',
       theme: getApplicationTheme(),
-      home:  TestPage(),
+      home:  SearchPageView(),
+
     );
   }
 }

@@ -35,9 +35,6 @@ class AnimalButtons extends StatelessWidget {
                 borderRadius: MyBorder.circular(),
                 child: Image.asset(img!),
               ),
-            ),
-          ],
-        ),
       ),
     );
   }
