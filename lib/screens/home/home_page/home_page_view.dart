@@ -1,24 +1,53 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
+import 'package:smartfarm/screens/home/home_page/home_page_cubit.dart';
+import 'package:smartfarm/screens/search/farm_detail_page/farm_detail_page_view.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
+    return BlocProvider(
+      create: (_) => HomePageCubit(),
+      child:
+          BlocBuilder<HomePageCubit, HomePageState>(builder: (context, state) {
+        var _contextWatch = context.watch<HomePageCubit>();
+        var _contextRead = context.read<HomePageCubit>();
+        return buildScaffold(_contextWatch, _contextRead, context);
+      }),
+    );
+  }
+
+  Widget buildScaffold(HomePageCubit _contextWatch, HomePageCubit _contextRead,
+      BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.indigo,
       body: Padding(
         padding: MyEdgeInsets.symmetric(h: 15.0, v: 50.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const AnimalFeedingInfo(),
+            // PAGE VIEW SECTION
+            SizedBox(
+              width: SizeConfig.screenWidth,
+              height: getUniqueH(348),
+              child: PageView.builder(
+                onPageChanged: (v) {
+                  _contextRead.changeIndicatorIndex(v);
+                },
+                itemCount: _contextWatch.indicatorLength,
+                itemBuilder: (context, index) {
+                  return const AnimalFeedingInfo();
+                },
+              ),
+            ),
             MySizedBox(height: 10.0),
-            PageIndicator(length: 3, currentIndex: 0),
+            // PAGE VIEW INDICATOR
+            PageIndicator(
+                length: _contextWatch.indicatorLength,
+                currentIndex: _contextWatch.indicatorIndex),
             MySizedBox(height: 30.0),
-            _buildFloatingActionButton(),
+            _buildFloatingActionButton(context),
             MySizedBox(height: 20.0),
             Divider(
               thickness: getUniqueH(1.0),
@@ -32,10 +61,16 @@ class HomePageView extends StatelessWidget {
     );
   }
 
-  Align _buildFloatingActionButton() {
+  Widget _buildFloatingActionButton(BuildContext context) {
     return Align(
       child: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => FarmDetailPageView(),
+              ));
+        },
         backgroundColor: MyColors.white,
         child: SvgPicture.asset(MyAssetIcons.plus),
       ),

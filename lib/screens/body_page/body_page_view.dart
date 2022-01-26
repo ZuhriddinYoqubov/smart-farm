@@ -14,25 +14,29 @@ class BodyPageView extends StatelessWidget {
           BlocBuilder<BodyPageCubit, BodyPageState>(builder: (context, state) {
         var _contextWatch = context.watch<BodyPageCubit>();
         var _contextRead = context.read<BodyPageCubit>();
-        return Scaffold(
-          body: _contextWatch.pages[_contextWatch.currentIndex],
-          bottomNavigationBar: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            items: [
-              _setItem(MyAssetIcons.home, 0, _contextWatch.currentIndex),
-              _setItem(MyAssetIcons.search, 1, _contextWatch.currentIndex),
-              _setItem(MyAssetIcons.calendar, 2, _contextWatch.currentIndex),
-              _setItem(MyAssetIcons.settings, 4, _contextWatch.currentIndex),
-            ],
-            onTap: (i) {
-              _contextRead.changePage(i);
-            },
-          ),
-        );
+        return buildScaffold(_contextWatch, _contextRead);
       }),
     );
+  }
+
+  Scaffold buildScaffold(BodyPageCubit _contextWatch, BodyPageCubit _contextRead) {
+    return Scaffold(
+        body: _contextWatch.pages[_contextWatch.currentIndex],
+        bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          items: [
+            _setItem(MyAssetIcons.home, 0, _contextWatch.currentIndex),
+            _setItem(MyAssetIcons.search, 1, _contextWatch.currentIndex),
+            _setItem(MyAssetIcons.calendar, 2, _contextWatch.currentIndex),
+            _setItem(MyAssetIcons.settings, 4, _contextWatch.currentIndex),
+          ],
+          onTap: (i) {
+            _contextRead.changePage(i);
+          },
+        ),
+      );
   }
 
   BottomNavigationBarItem _setItem(
