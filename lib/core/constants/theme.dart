@@ -27,12 +27,13 @@ ThemeData getApplicationTheme() {
         centerTitle: true,
         color: Colors.transparent,
         elevation: MyAppSize.s0,
+        
         iconTheme: const IconThemeData(color: MyColors.black),
         shadowColor: MyColors.primaryOppacity50,
         systemOverlayStyle: SystemUiOverlayStyle.dark,
-        titleTextStyle: getRegularStyle(
-          color: MyColors.white,
-          fontSize: MyFontSize.s16,
+        titleTextStyle: getSemiBoldStyle(
+          color: MyColors.black,
+          fontSize: MyFontSize.s18,
         )),
     // Button theme
     buttonTheme: ButtonThemeData(

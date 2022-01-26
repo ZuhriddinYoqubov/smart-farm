@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 import 'package:smartfarm/widgets/my_border_radius.dart';
-import 'package:smartfarm/widgets/text/MyTextMedium.dart';
+import 'package:smartfarm/widgets/text/my_text_medium.dart';
 
 class AnimalButtons extends StatelessWidget {
   String? img;
@@ -31,7 +31,7 @@ class AnimalButtons extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            MtTextMedium(text, size: 18.0),
+            MyTextMedium(text, size: 18.0),
             Align(
               alignment: Alignment.centerRight,
               child: ClipRRect(

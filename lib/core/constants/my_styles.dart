@@ -40,7 +40,7 @@ TextStyle getBoldStyle(
 TextStyle getSemiBoldStyle(
     {double fontSize = MyFontSize.s12, required Color color}) {
   return _getTextStyle(
-      fontSize, MyFontConstants.fontFamily, MyFontWeight.regular, color);
+      fontSize, MyFontConstants.fontFamily, MyFontWeight.semiBold, color);
 }
 
 // medium text style
