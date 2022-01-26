@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:smartfarm/core/components/size_config.dart';
+import 'package:smartfarm/core/components/exporting_packages.dart';
 
 class MyDecoration {
   static BoxDecoration circular({
@@ -26,7 +26,7 @@ class MyDecoration {
         borderRadius: BorderRadius.circular(getUniqueW(radius)),
         image: DecorationImage(
           fit: BoxFit.cover,
-          image: NetworkImage(imageUrl),
+          image: CachedNetworkImageProvider(imageUrl),
         ),
       );
 }

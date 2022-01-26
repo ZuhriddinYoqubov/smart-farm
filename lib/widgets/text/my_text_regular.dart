@@ -8,14 +8,16 @@ class MyTextRegular extends StatelessWidget {
   int? maxLines;
   Color color;
   TextAlign? textAlign;
+  TextDecoration? decoration;
 
   MyTextRegular({
     required this.text,
     this.textAlign,
-    this.color = MyColors.grey,
+    this.color = MyColors.black,
     this.size = 14.0,
     Key? key,
     this.maxLines,
+    this.decoration,
   }) : super(key: key);
 
   @override
@@ -29,7 +31,7 @@ class MyTextRegular extends StatelessWidget {
         fontSize: getUniqueW(size),
         color: color,
         fontWeight: FontWeight.w400,
-        fontFamily: 'AvenirNext',
+        decoration: decoration,
       ),
     );
   }
