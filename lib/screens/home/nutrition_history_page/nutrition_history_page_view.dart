@@ -15,10 +15,10 @@ class NutritionHistoryPageView extends StatelessWidget {
             onPressed: () => Navigator.pop(context),
             icon: SvgPicture.asset(MyAssetIcons.left)),
       ),
-      body: Container(child: ListView.builder(
+      body: ListView.builder(
         itemCount: 9,
         shrinkWrap: true,
-        itemBuilder: (context,index)=> MyNutrionHistoryItem()),),
+        itemBuilder: (context,index)=> const MyNutrionHistoryItem()),
     );
   }
 }

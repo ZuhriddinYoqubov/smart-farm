@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/constants/my_colors.dart';
-import 'package:smartfarm/core/constants/size_config.dart';
+import 'package:smartfarm/core/components/size_config.dart';
 import 'package:smartfarm/widgets/text/my_text_bold.dart';
 
 class ProductCardBottom extends StatelessWidget {
