@@ -22,7 +22,7 @@ class SearchPageView extends StatelessWidget {
           MySizedBox(height: 10.0),
           SizedBox(
             height: getUniqueW(100.0),
-            child: ListView.builder(
+            child: ListView.separated(
               scrollDirection: Axis.horizontal,
               padding: MyEdgeInsets.symmetric(h: 10.0),
               itemCount: 10,
@@ -31,6 +31,10 @@ class SearchPageView extends StatelessWidget {
                   img: MyAnimalsImage.cow,
                   text: "Sigir",
                 );
+              },
+
+              separatorBuilder: (ctx, i) {
+                return MySizedBox(width: 10.0);
               },
             ),
           ),

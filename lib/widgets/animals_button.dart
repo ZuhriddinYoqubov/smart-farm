@@ -22,7 +22,7 @@ class AnimalButtons extends StatelessWidget {
       borderRadius: MyBorder.circular(),
       onTap: () {},
       child: Container(
-        margin: MyEdgeInsets.symmetric(h: 5.0),
+        // margin: MyEdgeInsets.symmetric(h: 5.0),
         padding: MyEdgeInsets.only(top: 15.0, left: 10.0),
         height: getUniqueH(100.0),
         width: getUniqueW(100.0),
