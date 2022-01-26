@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/core/components/size_config.dart';
-import 'package:smartfarm/core/constants/my_colors.dart';
-import 'package:smartfarm/widgets/inputs/search_text_field.dart';
-import 'package:smartfarm/widgets/my_edge_insets.dart';
-import 'package:smartfarm/widgets/buttons/my_elevated_button.dart';
 
 class SearchPageView extends StatelessWidget {
   const SearchPageView({Key? key}) : super(key: key);
@@ -12,95 +7,46 @@ class SearchPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return Scaffold(
-      body: Padding(
-        padding: EdgeInsets.only(
-          top: getUniqueH(9.98),
-          left: getUniqueW(15.0),
-          right: getUniqueW(15.0),
-        ),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Container(
-                  height: getUniqueH(45.0),
-                  width: getUniqueW(275.0),
-                  child: SearchField(),
-                ),
-                SizedBox(width: getUniqueW(10.0)),
-                InkWell(
-                  child: Container(
-                    alignment: Alignment.center,
-                    height: getUniqueH(45.0),
-                    width: getUniqueW(45.0),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10.0),
-                      color: MyColors.lighGrey,
-                    ),
-                    child: SvgPicture.asset(
-                      MyAssetIcons.setting,
-                      color: MyColors.black,
-                    ),
-                  ),
-                  onTap: () {},
-                ),
-              ],
-            ),
-            SizedBox(height: getUniqueH(20.0)),
-            Row(
+    return SafeArea(
+      child: Column(
+        children: [
+          MySizedBox(height: 10.0),
+          _setWidgetWithPadding(
+            padding: 15.0,
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                MyTextBold(
-                  text: "Fermalar",
-                  color: MyColors.black,
-                  size: 19.9,
-                ),
-                MyTextRegular(
-                  text: "Barchasi",
-                  color: MyColors.black,
-                  size: 14.0,
-                ),
+                MySizedBox(height: 45.0, width: 275.0, child: SearchField()),
+                _showFilterButton(),
               ],
             ),
-            SizedBox(height: getUniqueH(10.0)),
-            FarmInfoCard(),
-            SizedBox(height: getUniqueH(15.0)),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                MyTextBold(
-                  text: "Hayvonlar",
-                  color: MyColors.black,
-                  size: 19.9,
-                ),
-                MyTextRegular(
-                  text: "Barchasi",
-                  color: MyColors.black,
-                  size: 14.0,
-                ),
-              ],
+          ),
+          MySizedBox(height: 20.0),
+          _setCategoryLabel('Fermalar'),
+          MySizedBox(height: 10.0),
+          const FarmInfoCard(),
+          MySizedBox(height: 15.0),
+          _setCategoryLabel('Hayvonlar'),
+          MySizedBox(height: 10.0),
+          SizedBox(
+            height: getUniqueW(100.0),
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              padding: MyEdgeInsets.symmetric(h: 10.0),
+              itemCount: 10,
+              itemBuilder: (BuildContext context, int index) {
+                return AnimalButtons(
+                  img: MyAnimalsImage.cow,
+                  text: "Sigir",
+                );
+              },
             ),
-            SizedBox(height: getUniqueH(10.0)),
-            Container(
-              height: getUniqueH(100.0),
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                padding:MyEdgeInsets.only(right: 10.0),
-                itemCount: 10,
-                itemBuilder: (BuildContext context, int index) {
-                  return Padding(
-                    padding: MyEdgeInsets.only(right: 10.0),
-                    child: AnimalButtons(
-                      img: MyAnimalsImage.cow,
-                      text: "Sigir",
-                    ),
-                  );
-                },
-              ),
-            ),
-            SizedBox(height: getUniqueH(15.0)),
-            Row(
+          ),
+          MySizedBox(height: 15.0),
+          _setWidgetWithPadding(
+            padding: 15.0,
+            child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 MyTextBold(
@@ -110,23 +56,61 @@ class SearchPageView extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: getUniqueH(10.0)),
-            Container(
-              height: getUniqueH(100.0),
-              child: ListView.builder(
-                scrollDirection: Axis.horizontal,
-                itemCount: 10,
-                itemBuilder: (BuildContext context, int index) {
-                  return const Padding(
-                    padding: EdgeInsets.only(right: 10.0),
-                    child: ProductsCard(),
-                  );
-                },
-              ),
+          ),
+          MySizedBox(height: 10.0),
+          SizedBox(
+            height: getUniqueH(100.0),
+            child: ListView.builder(
+              padding: MyEdgeInsets.symmetric(h: 10.0),
+              scrollDirection: Axis.horizontal,
+              itemCount: 10,
+              itemBuilder: (BuildContext context, int index) {
+                return Padding(
+                  padding: MyEdgeInsets.symmetric(h: 5.0),
+                  child: const ProductsCard(),
+                );
+              },
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
+
+  InkWell _showFilterButton() {
+    return InkWell(
+      child: Container(
+        alignment: Alignment.center,
+        height: getUniqueH(40.0),
+        width: getUniqueH(40.0),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10.0),
+          color: MyColors.lighGrey,
+        ),
+        child: SvgPicture.asset(
+          MyAssetIcons.setting,
+          color: MyColors.black,
+        ),
+      ),
+      onTap: () {},
+    );
+  }
+
+  Padding _setWidgetWithPadding(
+          {required Widget child, double padding = 0.0}) =>
+      Padding(
+        child: child,
+        padding: MyEdgeInsets.symmetric(h: padding),
+      );
+
+  Padding _setCategoryLabel(String category) => Padding(
+        padding: MyEdgeInsets.symmetric(h: 15.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            MyTextBold(text: category, size: 20.0),
+            MyTextButton(onPressed: () {}, label: 'Barchasi'),
+          ],
+        ),
+      );
 }

@@ -23,59 +23,57 @@ class FarmInfoCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Chip(
-            padding: MyEdgeInsets.symmetric(
-              h: getUniqueW(10.0),
-              v: getUniqueH(10.0),
-            ),
-            label: MyTextRegular(
-              text: '172',
-              color: Colors.white,
-              size: 12.0,
-            ),
-            backgroundColor: MyColors.green,
-            shape: MyShape.circular(
-              radius: getUniqueW(58.0),
-            ),
-          ),
-          ListTile(
-            contentPadding: EdgeInsets.zero,
-            title: MyTextBold(
-              text: 'Ina ferma',
-              size: 16.0,
-              color: MyColors.white,
-            ),
-            subtitle: MyTextRegular(
-              text: 'Eng yaxshi fermer xo\'jaliklaridan...',
-              maxLines: 1,
-              size: 10.0,
-              color: MyColors.white,
-            ),
-            trailing: Wrap(
-              spacing: getUniqueW(5.0),
-              children: [
-                _setChip('Sigir'),
-                _setChip('Ot'),
-                _setChip('12+'),
-              ],
-            ),
+          _setChip('172', color: MyColors.green, radius: 58.0),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  MyTextBold(
+                    text: 'Ina ferma',
+                    size: 16.0,
+                    color: MyColors.white,
+                  ),
+                  MyTextRegular(
+                    text: 'Eng yaxshi fermer xo\'jaliklaridan...',
+                    maxLines: 1,
+                    size: 10.0,
+                    color: MyColors.white,
+                  ),
+                ],
+              ),
+              Wrap(
+                spacing: getUniqueW(5.0),
+                children: [
+                  _setChip('Sigir'),
+                  _setChip('Ot'),
+                  // _setChip('12+'),
+                ],
+              ),
+            ],
           ),
         ],
       ),
     );
   }
 
-  Chip _setChip(String label) => Chip(
+  Chip _setChip(
+    String label, {
+    Color color = MyColors.primary,
+    double radius = 6.0,
+  }) =>
+      Chip(
         label: MyTextRegular(
           text: label,
           size: 12.0,
           color: MyColors.white,
         ),
-        backgroundColor: MyColors.primary,
+        backgroundColor: color,
         padding: MyEdgeInsets.symmetric(
           h: getUniqueW(10.0),
           v: getUniqueH(4.0),
         ),
-        shape: MyShape.circular(radius: 6.0),
+        shape: MyShape.circular(radius: radius),
       );
 }
