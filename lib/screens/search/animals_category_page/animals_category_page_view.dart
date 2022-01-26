@@ -56,79 +56,67 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
                   size: getUniqueW(20.0),
                   color: MyColors.black,
                 ),
-                SizedBox(
-                  height: getUniqueH(10.0),
-                ),
+                SizedBox(height: getUniqueH(10.0)),
                 Row(
                   children: [
                     AnimalButtons(
-                      img: "",
+                      img: MyAssetImages.cow,
                       text: "Sigir",
                       color: MyColors.primary,
                     ),
-                    SizedBox(
-                      width: getUniqueW(15.0),
-                    ),
+                    SizedBox(width: getUniqueW(15.0)),
                     AnimalButtons(
-                      img: "",
+                      img: MyAssetImages.chicken,
                       text: "Tovuq",
                       color: MyColors.primaryOppacity50,
                     ),
-                    SizedBox(
-                      width: getUniqueW(15.0),
-                    ),
+                    SizedBox(width: getUniqueW(15.0)),
                     AnimalButtons(
-                      img: "",
+                      img: MyAssetImages.sheep,
                       text: "Qo'y",
                       color: MyColors.grey,
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: getUniqueH(15.0),
-                ),
+                SizedBox(height: getUniqueH(15.0)),
                 Row(
                   children: [
                     AnimalButtons(
-                      img: "",
+                      img: MyAssetImages.horse,
                       text: "Ot",
                       color: MyColors.green,
                     ),
-                    SizedBox(
-                      width: getUniqueW(15.0),
-                    ),
+                    SizedBox(width: getUniqueW(15.0)),
                     AnimalButtons(
-                      img: "",
+                      img: MyAssetImages.sheep,
                       text: "Qo'y",
                       color: MyColors.lightGrey,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
                     AnimalButtons(
-                      img: "",
+                      img: MyAssetImages.chicken,
                       text: "Tovuq",
                       color: MyColors.primary,
                     ),
                   ],
                 ),
-                SizedBox(
-                  height: getUniqueH(15.0),
-                ),
+                SizedBox(height: getUniqueH(15.0)),
                 Row(
                   children: [
                     AnimalButtons(
-                      img: "",
+                      img: MyAssetImages.chicken,
                       text: "Tovuq",
                       color: MyColors.primary,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
                     AnimalButtons(
-                      img: "",
+                      img: MyAssetImages.horse,
                       text: "Ot",
                       color: MyColors.green,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
                     AnimalButtons(
-                      img: "",
+                      img: MyAssetImages.sheep,
                       text: "Qo'y",
                       color: MyColors.grey,
                     ),

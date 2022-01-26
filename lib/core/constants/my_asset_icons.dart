@@ -13,13 +13,14 @@ class MyAssetIcons {
   static const String google = 'assets/icons/google.svg';
   static const String facebook = 'assets/icons/facebook.svg';
   static const String vector = 'assets/icons/vector.svg';
+  static const String setting = 'assets/icons/setting.svg';
 }
 
 class MyAnimalsImage {
   static const String cow = 'assets/animals_image/cow.png';
-  static const String chicken = 'assets/animals_image/chicken.png';  
+  static const String chicken = 'assets/animals_image/chicken.png';
   static const String sheep = 'assets/animals_image/sheep.png';
-  static const String hourse = 'assets/animals_image/hourse.png'; 
-  static const String no_connection = 'assets/animals_image/no_connection_r.png'; 
-
+  static const String hourse = 'assets/animals_image/hourse.png';
+  static const String no_connection =
+      'assets/animals_image/no_connection_r.png';
 }
