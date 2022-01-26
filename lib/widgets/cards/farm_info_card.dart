@@ -7,20 +7,13 @@ class FarmInfoCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      
       height: getUniqueH(150.0),
       width: getUniqueW(330.0),
+      margin: MyEdgeInsets.symmetric(h: getUniqueW(15.0), v: 7.5),
+      padding: MyEdgeInsets.symmetric(h: getUniqueW(10.0), v: getUniqueH(13.0)),
       decoration: MyDecoration.withImage(
         imageUrl: Links.cow,
-      color: Colors.amber,
-
-      ),
-      padding: MyEdgeInsets.symmetric(
-        h: getUniqueW(10.0),
-        v: getUniqueH(13.0),
-      ),
-      margin: MyEdgeInsets.symmetric(
-        h: getUniqueW(15.0),
+        color: Colors.amber,
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,

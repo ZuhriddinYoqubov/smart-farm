@@ -16,23 +16,51 @@ class AllCategoryPageView extends StatelessWidget {
         slivers: [
           _buildAppBar(),
           _setText(categoryName),
+          categoryName == "Fermalar" ? _showFarmList() : _showAnimalList(),
         ],
       ),
     );
   }
 
+
+
+  SliverPadding _showAnimalList() {
+    return SliverPadding(
+          padding: MyEdgeInsets.symmetric(h: 10.0, v: 10.0),
+          sliver: SliverGrid.count(
+              crossAxisCount: 3,
+              mainAxisSpacing: getUniqueH(15.0),
+              crossAxisSpacing: getUniqueW(15.0),
+              childAspectRatio: 1.0,
+              children: List.generate(
+                  9,
+                  (index) =>
+                      AnimalButtons(img: MyAnimalsImage.cow, text: 'Sigir'))),
+        );
+  }
+
+  SliverList _showFarmList() {
+    return SliverList(
+      delegate: SliverChildBuilderDelegate((ctx, i) {
+        return FarmInfoCard();
+      }, childCount: 5),
+    );
+  }
+
   SliverAppBar _buildAppBar() {
     return SliverAppBar(
+      backgroundColor: MyColors.white,
       toolbarHeight: getUniqueH(64.0),
       leadingWidth: getUniqueW(49.0),
+      floating: true,
       title: SearchField(),
     );
   }
 
   SliverToBoxAdapter _setText(String text) => SliverToBoxAdapter(
-        child: MyTextBold(
-          text: categoryName,
-          size: 20.0,
+        child: Padding(
+          padding: MyEdgeInsets.symmetric(h: 15.0),
+          child: MyTextBold(text: categoryName, size: 20.0),
         ),
       );
 }

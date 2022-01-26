@@ -14,6 +14,8 @@ ThemeData getApplicationTheme() {
     // accentColor: MyColors.grey,
     // card view theme
 
+    canvasColor: MyColors.white,
+
     fontFamily: "AvenirNext",
 
     cardTheme: const CardTheme(
@@ -49,7 +51,6 @@ ThemeData getApplicationTheme() {
 
     // Text theme
     textTheme: TextTheme(
-
       headline1:
           getSemiBoldStyle(color: MyColors.darkGrey, fontSize: MyFontSize.s16),
       headline2:
@@ -65,7 +66,6 @@ ThemeData getApplicationTheme() {
       bodyText1: getRegularStyle(color: MyColors.grey),
       bodyText2: getMediumStyle(color: MyColors.lightGrey),
       caption: getRegularStyle(color: MyColors.grey),
-
     ),
     // input decoration theme (text form field)
 
@@ -73,7 +73,6 @@ ThemeData getApplicationTheme() {
       contentPadding: const EdgeInsets.all(MyPadding.p8),
       // hint style
       hintStyle: getRegularStyle(color: MyColors.grey),
-
 
       // label style
       labelStyle: getMediumStyle(color: MyColors.darkGrey),
