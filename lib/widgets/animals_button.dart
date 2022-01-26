@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 import 'package:smartfarm/widgets/my_border_radius.dart';
+import 'package:smartfarm/widgets/text/MyTextMedium.dart';
 
 class AnimalButtons extends StatelessWidget {
   String? img;
@@ -17,9 +18,11 @@ class AnimalButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
+      hoverColor: Colors.white,
       borderRadius: MyBorder.circular(),
       onTap: () {},
       child: Container(
+        // margin: MyEdgeInsets.symmetric(h: 5.0),
         padding: MyEdgeInsets.only(top: 15.0, left: 10.0),
         height: getUniqueH(100.0),
         width: getUniqueW(100.0),
@@ -28,7 +31,7 @@ class AnimalButtons extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            MyTextSemibold(text: text, size: 18.0),
+            MtTextMedium(text, size: 18.0),
             Align(
               alignment: Alignment.centerRight,
               child: ClipRRect(
