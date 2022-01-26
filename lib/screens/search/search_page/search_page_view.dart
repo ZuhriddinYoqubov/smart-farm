@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/screens/search/farm_list_page/all_category_page_view.dart';
 
 class SearchPageView extends StatelessWidget {
   const SearchPageView({Key? key}) : super(key: key);

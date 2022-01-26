@@ -8,9 +8,8 @@ class HomePageCubit extends Cubit<HomePageState> {
 
   int indicatorIndex = 0;
   int indicatorLength = 4;
-  
 
-  changeIndicatorIndex(int value){
+  changeIndicatorIndex(int value) {
     indicatorIndex = value;
     emit(HomePageInitial());
   }

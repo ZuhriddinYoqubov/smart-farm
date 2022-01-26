@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartfarm/core/components/exporting_packages.dart';
 
 class SettingsPageView extends StatelessWidget {
   const SettingsPageView({Key? key}) : super(key: key);
@@ -13,6 +14,10 @@ class SettingsPageView extends StatelessWidget {
             color: Colors.red,
           ),
         ),
+      ),
+
+      body: Center(
+        child: CreditCard(),
       ),
     );
   }

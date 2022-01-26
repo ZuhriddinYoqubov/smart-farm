@@ -3,7 +3,6 @@ import 'package:scrollable_clean_calendar/controllers/clean_calendar_controller.
 import 'package:scrollable_clean_calendar/scrollable_clean_calendar.dart';
 import 'package:scrollable_clean_calendar/utils/enums.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/core/components/size_config.dart';
 
 class CalendarPageView extends StatelessWidget {
   CalendarPageView({Key? key}) : super(key: key);
@@ -24,15 +23,13 @@ class CalendarPageView extends StatelessWidget {
     SizeConfig().init(context);
     return Scaffold(
       body: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: getUniqueW(25),
-        ),
+        padding: MyEdgeInsets.symmetric(h: 25.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: getUniqueH(375),
-              width: getUniqueW(370),
+              height: getUniqueH(375.0),
+              width: getUniqueW(370.0),
               child: ScrollableCleanCalendar(
                 daySelectedBackgroundColor: Colors.greenAccent,
                 calendarController: calendarController,
@@ -44,9 +41,11 @@ class CalendarPageView extends StatelessWidget {
               color: Colors.black,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(vertical: getUniqueH(15)),
-              child:  MyTextRegular(text: "Bu erda sizning eslatmangiz bo'ladi",size: 16,)
-            )
+                padding: EdgeInsets.symmetric(vertical: getUniqueH(15)),
+                child: MyTextRegular(
+                  text: "Bu erda sizning eslatmangiz bo'ladi",
+                  size: 16,
+                ))
           ],
         ),
       ),
