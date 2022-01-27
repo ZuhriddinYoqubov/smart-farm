@@ -16,9 +16,6 @@ class FarmInfoCard extends StatelessWidget {
         h: getUniqueW(10.0),
         v: getUniqueH(13.0),
       ),
-      margin: MyEdgeInsets.symmetric(
-        h: getUniqueW(15.0),
-      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
