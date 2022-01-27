@@ -28,7 +28,7 @@ class CreditCard extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const AppLogo(),
+              AppLogo(),
               MyTextRegular(text: '25/09', color: MyColors.white),
             ],
           )

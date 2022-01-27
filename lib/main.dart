@@ -21,9 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Smart Farm',
       theme: getApplicationTheme(),
-
-      home:  OnBoardingPageView(),
-
+      home: const SplashScreenPage(),
     );
   }
 }
