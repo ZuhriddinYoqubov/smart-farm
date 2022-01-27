@@ -7,10 +7,11 @@ import 'package:smartfarm/core/components/exporting_packages.dart';
 class CalendarPageView extends StatelessWidget {
   CalendarPageView({Key? key}) : super(key: key);
   final calendarController = CleanCalendarController(
-      rangeMode: true,
-      minDate: DateTime.now(),
+      rangeMode: false,
+      minDate: DateTime.now().subtract(const Duration(days: 365)),
       maxDate: DateTime.now().add(const Duration(days: 365)),
-      onRangeSelected: (firstDate, secondDate) {},
+      
+      // onRangeSelected: (firstDate, secondDate) {},
       onDayTapped: (date) {},
       onPreviousMinDateTapped: (date) {},
       onAfterMaxDateTapped: (date) {},
@@ -22,30 +23,41 @@ class CalendarPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      body: Padding(
-        padding: MyEdgeInsets.symmetric(h: 25.0),
+
+      body: SafeArea(
+
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
-              height: getUniqueH(375.0),
-              width: getUniqueW(370.0),
+
+              height: getUniqueH(360),
+              width: getUniqueW(370),
+
               child: ScrollableCleanCalendar(
-                daySelectedBackgroundColor: Colors.greenAccent,
+                dayRadius: getUniqueW(25),
+                monthTextStyle: getBoldStyle(fontSize: 24),
+                daySelectedBackgroundColor: MyColors.green,
                 calendarController: calendarController,
                 layout: Layout.DEFAULT,
                 calendarCrossAxisSpacing: 0,
+
+                
               ),
             ),
             const Divider(
-              color: Colors.black,
+              color: MyColors.grey,
+              thickness: 1,
             ),
             Padding(
+
                 padding: EdgeInsets.symmetric(vertical: getUniqueH(15)),
                 child: MyTextRegular(
                   text: "Bu erda sizning eslatmangiz bo'ladi",
                   size: 16,
                 ))
+
+          
           ],
         ),
       ),

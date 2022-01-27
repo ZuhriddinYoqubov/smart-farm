@@ -14,6 +14,7 @@ class MyAssetIcons {
   static const String facebook = 'assets/icons/facebook.svg';
   static const String vector = 'assets/icons/vector.svg';
   static const String setting = 'assets/icons/setting.svg';
+  static const String left = 'assets/icons/left.svg';
 }
 
 class MyAnimalsImage {

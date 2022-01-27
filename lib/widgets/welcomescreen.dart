@@ -102,8 +102,15 @@ class IntroPage extends StatelessWidget {
                       curve: Curves.easeInOut,
                     );
                   } else {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => SignUpView()));
+                    Navigator.push(
+                      context,
+                      PageRouteBuilder(
+                        pageBuilder: (c, a1, a2) => SignUpView(),
+                        transitionsBuilder: (c, anim, a2, child) =>
+                            FadeTransition(opacity: anim, child: child),
+                        transitionDuration: const Duration(milliseconds: 2000),
+                      ),
+                    );
                   }
                 },
                 child: const Text("Keyingi"),
@@ -142,7 +149,9 @@ class Page extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  SizedBox(width: 10,),
+                  SizedBox(
+                    width: 10,
+                  ),
                   Text(
                     pageData == null
                         ? 'Make a beautiful clean and fully functional onboarding screen layout in Android StudioIn this part we are going to setup the viewpager intro slider.Illustra...'
@@ -150,7 +159,10 @@ class Page extends StatelessWidget {
                             ? 'Make a beautiful clean and fully functional onboarding screen layout in Android StudioIn this part we are going to setup the viewpager intro slider.Illustra...'
                             : pageData!.description,
                     textAlign: TextAlign.center,
-                    style: const TextStyle(fontSize: 40,color: Colors.black,fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 40,
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold),
                   ),
                 ],
               ),

@@ -14,62 +14,8 @@ class HomePageView extends StatelessWidget {
           BlocBuilder<HomePageCubit, HomePageState>(builder: (context, state) {
         var _contextWatch = context.watch<HomePageCubit>();
         var _contextRead = context.read<HomePageCubit>();
-        return buildScaffold2(_contextWatch, _contextRead, context);
+        return buildScaffold(_contextWatch, _contextRead, context);
       }),
-    );
-  }
-
-  Widget buildScaffold(HomePageCubit _contextWatch, HomePageCubit _contextRead,
-      BuildContext context) {
-    return Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // PAGE VIEW SECTION
-            Container(
-              margin: MyEdgeInsets.only(left: 15.0, top: 50.0, right: 15),
-              width: SizeConfig.screenWidth,
-              height: getUniqueH(348),
-              child: PageView.builder(
-                onPageChanged: (v) {
-                  _contextRead.changeIndicatorIndex(v);
-                },
-                itemCount: _contextWatch.indicatorLength,
-                itemBuilder: (context, index) {
-                  return const AnimalFeedingInfo();
-                },
-              ),
-            ),
-            MySizedBox(height: 10.0),
-            // PAGE VIEW INDICATOR
-            PageIndicator(
-                length: _contextWatch.indicatorLength,
-                currentIndex: _contextWatch.indicatorIndex),
-            MySizedBox(height: 30.0),
-            // FLOATTING ACTION BUTTON
-            _buildFloatingActionButton(context),
-            MySizedBox(height: 20.0),
-            Divider(
-              thickness: getUniqueH(1.0),
-              color: MyColors.lightGrey,
-              height: getUniqueH(40.0),
-            ),
-            // FARMS SECTIONS
-            MyTextBold(text: 'Fermalar', size: 20.0, color: MyColors.black),
-            Flexible(
-                child: GridView.builder(
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 10,
-                            mainAxisSpacing: 10),
-                    itemBuilder: (context, index) {
-                      return Container();
-                    }))
-          ],
-        ),
-      ),
     );
   }
 
@@ -89,7 +35,7 @@ class HomePageView extends StatelessWidget {
     );
   }
 
-  Widget buildScaffold2(HomePageCubit _contextWatch, HomePageCubit _contextRead,
+  Widget buildScaffold(HomePageCubit _contextWatch, HomePageCubit _contextRead,
       BuildContext context) {
     return Scaffold(
       body: CustomScrollView(

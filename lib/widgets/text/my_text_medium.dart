@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
-class MtTextMedium extends StatelessWidget {
+class MyTextMedium extends StatelessWidget {
   String text;
   Color color;
   double size;
   TextAlign align;
   int? maxLines;
 
-  MtTextMedium(
+  MyTextMedium(
     this.text, {
     this.color = MyColors.black,
     this.size = 14.0,
