@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/widgets/my_edge_insets.dart';
 import 'package:smartfarm/widgets/my_shape.dart';
-import 'package:smartfarm/widgets/my_text_bold.dart';
+import 'package:smartfarm/widgets/text/my_text_bold.dart';
 
 class MyOutlinedButtonText extends StatelessWidget {
   VoidCallback onPressed;

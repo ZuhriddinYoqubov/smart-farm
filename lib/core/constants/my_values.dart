@@ -1,5 +1,5 @@
 import 'package:flutter/painting.dart';
-import 'package:smartfarm/core/constants/size_config.dart';
+import 'package:smartfarm/core/components/size_config.dart';
 
 class MyMargin {
   static const double m8 = 8.0;

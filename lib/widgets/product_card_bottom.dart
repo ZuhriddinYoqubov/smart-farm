@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/constants/my_colors.dart';
-import 'package:smartfarm/core/constants/size_config.dart';
-import 'package:smartfarm/widgets/my_text_bold.dart';
+import 'package:smartfarm/core/components/size_config.dart';
+import 'package:smartfarm/widgets/text/my_text_bold.dart';
 
 class ProductCardBottom extends StatelessWidget {
   Color? color;
@@ -10,15 +10,16 @@ class ProductCardBottom extends StatelessWidget {
   double? weight;
   String? text;
   String? price;
-  ProductCardBottom(
-      {this.color = MyColors.white,
-      this.height = 220.0,
-      this.weight = 155.0,
-      required this.price,
-      this.img,
-      required this.text,
-      Key? key})
-      : super(key: key);
+
+  ProductCardBottom({
+    this.color = MyColors.white,
+    this.height = 220.0,
+    this.weight = 155.0,
+    required this.price,
+    this.img,
+    required this.text,
+    Key? key,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
