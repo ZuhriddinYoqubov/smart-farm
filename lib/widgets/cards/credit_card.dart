@@ -8,7 +8,6 @@ class CreditCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: getUniqueW(320.0),
       height: getUniqueH(140.0),
       padding: MyEdgeInsets.symmetric(h: 20.0, v: 18.0),
       decoration: MyDecoration.circular(gradient: _gradient),
