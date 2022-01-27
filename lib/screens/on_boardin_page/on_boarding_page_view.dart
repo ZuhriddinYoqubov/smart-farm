@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 import 'package:smartfarm/screens/on_boardin_page/on_boarding_page_cubit.dart';
-import 'package:smartfarm/widgets/welcomescreen.dart';
 
 class OnBoardingPageView extends StatelessWidget {
   OnBoardingPageView({Key? key}) : super(key: key);
@@ -12,6 +11,7 @@ class OnBoardingPageView extends StatelessWidget {
     'Jarayonni\nreal-time kuzatib\nboring',
   ];
 
+  @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return BlocProvider(
@@ -80,41 +80,41 @@ class OnBoardingPageView extends StatelessWidget {
             child: MyButton(
                 onPressed: () {
                   _contextRead.incrementCount();
-                  if (_currentPage == 2) {
+                  if (_currentPage == 3) {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const HomePageView(),
+                        builder: (_) => const HomePageView(),
                       ),
                     );
                   }
                 },
                 label: 'Keyingi'),
-          )
+          ),
         ],
       ),
     );
   }
 }
-  // Column buildBody(BuildContext context) {
-  //   return Column(
-  //     children: [
-  //       SafeArea(
-  //           child: Image.asset(
-  //         MyAssetImages.chicken,
-  //         width: SizeConfig.screenWidth,
-  //       )),
-  //       Container(
-  //         height: getUniqueH(580.0),
-  //         width: MediaQuery.of(context).size.width,
-  //         child: IntroPage(
-  //           indx: indx,
-  //           pageData: pageData,
-  //           indicatorSize: 14,
-  //           activeIndicatorColor: Colors.orange,
-  //           onPageChange: (page) {},
-  //         ),
-  //       ),
-  //     ],
-  //   );
-  // }
+// Column buildBody(BuildContext context) {
+//   return Column(
+//     children: [
+//       SafeArea(
+//           child: Image.asset(
+//         MyAssetImages.chicken,
+//         width: SizeConfig.screenWidth,
+//       )),
+//       Container(
+//         height: getUniqueH(580.0),
+//         width: MediaQuery.of(context).size.width,
+//         child: IntroPage(
+//           indx: indx,
+//           pageData: pageData,
+//           indicatorSize: 14,
+//           activeIndicatorColor: Colors.orange,
+//           onPageChange: (page) {},
+//         ),
+//       ),
+//     ],
+//   );
+// }
