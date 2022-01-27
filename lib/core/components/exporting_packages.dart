@@ -8,6 +8,8 @@ export 'package:smartfarm/screens/search/animals_category_page/animals_category_
 export 'package:smartfarm/screens/auth/sign_in/sigh_in_view.dart';
 export 'package:smartfarm/screens/auth/sign_up/sign_up_view.dart';
 export 'package:smartfarm/screens/auth/sign_up_second/sign_up_second_view.dart';
+export 'package:smartfarm/screens/search/farm_list_page/all_category_page_view.dart';
+
 
 // Widgets
 export 'package:smartfarm/widgets/animal_feeding_info.dart';
@@ -36,6 +38,8 @@ export 'package:smartfarm/widgets/my_sized_box.dart';
 export 'package:smartfarm/widgets/sign_up_app_bar.dart';
 export 'package:smartfarm/widgets/page_indicator.dart';
 export 'package:smartfarm/widgets/buttons/my_text_button.dart';
+export 'package:smartfarm/widgets/cards/credit_card.dart';
+export 'package:smartfarm/widgets/bottom_sheet_holder.dart';
 
 // Components
 export 'package:smartfarm/core/components/size_config.dart';
