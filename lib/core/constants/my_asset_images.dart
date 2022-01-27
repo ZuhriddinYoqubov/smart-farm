@@ -22,10 +22,13 @@ class MyAssetImages {
   static const String cow = "$IMAGE_PATH/cow.png";
   static const String sheep = "$IMAGE_PATH/sheep.png";
   static const String chicken = "$IMAGE_PATH/chicken.png";
+  static const String cows = "$IMAGE_PATH/cows.png";
+  static const String sheeps = "$IMAGE_PATH/sheeps.png";
+  static const String chickens = "$IMAGE_PATH/chikens.png";
 }
 
-class MyAssetsImagestwo {
-  static const String cows = "$Image_Path2/cows.png";
-  static const String sheeps = "$Image_Path2/sheeps.png";
-  static const String chickens = "$Image_Path2/chikens.png";
-}
+// class MyAssetsImagestwo {
+//   static const String cows = "$Image_Path2/cows.png";
+//   static const String sheeps = "$Image_Path2/sheeps.png";
+//   static const String chickens = "$Image_Path2/chikens.png";
+// }
