@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/screens/home/nutrition_history_page/nutrition_history_page_view.dart';
-import 'package:smartfarm/widgets/my_nutrion_history_item.dart';
 
 class FarmDetailPageView extends StatefulWidget {
   const FarmDetailPageView({Key? key}) : super(key: key);
