@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
+import 'package:smartfarm/screens/settings/data_editing_page/data_editing_page_view.dart';
 import 'package:smartfarm/screens/settings/language_change_page/language_change_page_view.dart';
+import 'package:smartfarm/screens/settings/purchase_history_page/purchase_history_page_view.dart';
 import 'package:smartfarm/widgets/bottom/bottom_sheet_with_credir_card.dart';
 import 'package:smartfarm/widgets/text/my_text_medium.dart';
 
@@ -27,12 +29,11 @@ class SettingsPageView extends StatelessWidget {
                     // DEPOZIT SECTION
                     MyOutlinedButton(
                       onPressed: () {
-                        showModalBottomSheet( 
+                        showModalBottomSheet(
                             context: context,
                             builder: (BuildContext context) =>
                                 BottomSheetWithCreditCard());
                       },
-
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,12 +46,19 @@ class SettingsPageView extends StatelessWidget {
                       vPadding: 15,
                       hPadding: 15,
                       fixedSize: Size(getUniqueW(155), getUniqueH(92)),
-                    
                     ),
 
-                    // CASH HISTORY SECTION
+                    // PURCHASE HISTORY SECTION
                     MyOutlinedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                const PurchaseHistoryPageView(),
+                          ),
+                        );
+                      },
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -69,22 +77,35 @@ class SettingsPageView extends StatelessWidget {
                 ),
                 MySizedBox(height: 20),
 
-                // UPDATE PROFILE SECTION
+                // EDIT PROFILE DATA SECTION
                 MyOutlinedButton(
-                    onPressed: () {},
-                    child: MyTextMedium(
-                      'Profilni tahrirlash',
-                      size: 16,
-                    ),
-                    vPadding: 18,
-                    hPadding: 100,
-                    fixedSize: Size(getUniqueW(330), getUniqueH(52)),),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DataEditingPageView(),
+                      ),
+                    );
+                  },
+                  child: MyTextMedium(
+                    'Profilni tahrirlash',
+                    size: 16,
+                  ),
+                  vPadding: 18,
+                  hPadding: 100,
+                  fixedSize: Size(getUniqueW(330), getUniqueH(52)),
+                ),
                 MySizedBox(height: 20),
 
                 // CHANGE LANGUAGE SECTION
                 MyOutlinedButton(
                   onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => const LanguageChangePageView(),),);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LanguageChangePageView(),
+                      ),
+                    );
                   },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -116,6 +137,7 @@ class SettingsPageView extends StatelessWidget {
       ),
     );
   }
+
   Widget buildListTile() {
     return SafeArea(
       child: Container(

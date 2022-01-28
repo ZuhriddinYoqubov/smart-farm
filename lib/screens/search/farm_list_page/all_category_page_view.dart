@@ -31,7 +31,7 @@ class AllCategoryPageView extends StatelessWidget {
         crossAxisSpacing: getUniqueW(15.0),
         children: List.generate(
           9,
-          (index) => AnimalButtons(img: MyAnimalsImage.cow, text: 'Sigir'),
+          (index) => AnimalButtons(img: MyAssetImages.cow, text: 'Sigir'),
         ),
       ),
     );

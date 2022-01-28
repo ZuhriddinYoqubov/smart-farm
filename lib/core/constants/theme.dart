@@ -82,6 +82,8 @@ ThemeData getApplicationTheme() {
     ),
     // input decoration theme (text form field)
 
+   
+
     inputDecorationTheme: InputDecorationTheme(
       contentPadding: const EdgeInsets.all(MyPadding.p8),
       // hint style

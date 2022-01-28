@@ -25,6 +25,8 @@ class BodyPageView extends StatelessWidget {
     return Scaffold(
       body: _contextWatch.pages[_contextWatch.currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: MyColors.primary,
+        unselectedItemColor: MyColors.grey,
         type: BottomNavigationBarType.fixed,
         showSelectedLabels: false,
         showUnselectedLabels: false,
@@ -32,7 +34,7 @@ class BodyPageView extends StatelessWidget {
           _setItem(MyAssetIcons.home, 0, _contextWatch.currentIndex),
           _setItem(MyAssetIcons.search, 1, _contextWatch.currentIndex),
           _setItem(MyAssetIcons.calendar, 2, _contextWatch.currentIndex),
-          _setItem(MyAssetIcons.settings, 4, _contextWatch.currentIndex),
+          _setItem(MyAssetIcons.settings, 3, _contextWatch.currentIndex),
         ],
         onTap: (i) {
           _contextRead.changePage(i);

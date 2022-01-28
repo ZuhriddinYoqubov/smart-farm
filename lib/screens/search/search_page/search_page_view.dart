@@ -27,7 +27,7 @@ class SearchPageView extends StatelessWidget {
               itemCount: 10,
               itemBuilder: (BuildContext context, int index) {
                 return AnimalButtons(
-                  img: MyAnimalsImage.cow,
+                  img: MyAssetImages.cow,
                   text: "Sigir",
                 );
               },

@@ -5,5 +5,7 @@ class AppStrings {
   static const String tilSozlamalari = 'Til sozlamalari';
   static const String ozbekTili = "O'zbek tili";
   static const String russkiyYazik = "Русский язык";
+  static const String xaridlarTarixi = "Xaridlar tarixi";
+  static const String meningMalumotlarim = "Mening ma'lumotlarim";
 
 }
