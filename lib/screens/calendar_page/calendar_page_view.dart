@@ -23,13 +23,17 @@ class CalendarPageView extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
+
       body: SafeArea(
+
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
+
               height: getUniqueH(360),
               width: getUniqueW(370),
+
               child: ScrollableCleanCalendar(
                 dayRadius: getUniqueW(25),
                 monthTextStyle: getBoldStyle(fontSize: 24),
@@ -46,9 +50,14 @@ class CalendarPageView extends StatelessWidget {
               thickness: 1,
             ),
             Padding(
-              padding: EdgeInsets.all(getUniqueH(15)),
-              child:  MyTextRegular(text: "Bu erda sizning eslatmangiz bo'ladi",size: 16, color: MyColors.grey,)
-            )
+
+                padding: EdgeInsets.symmetric(vertical: getUniqueH(15)),
+                child: MyTextRegular(
+                  text: "Bu erda sizning eslatmangiz bo'ladi",
+                  size: 16,
+                ))
+
+          
           ],
         ),
       ),

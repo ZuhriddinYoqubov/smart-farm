@@ -23,8 +23,9 @@ class MyApp extends StatelessWidget {
       title: 'Smart Farm',
       theme: getApplicationTheme(),
 
-      home:  SettingsPageView(),
+     // home:  SettingsPageView(),
 
+      home: const SplashScreenPage(),
     );
   }
 }

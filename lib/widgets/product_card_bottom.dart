@@ -29,6 +29,12 @@ class ProductCardBottom extends StatelessWidget {
       width: getUniqueW(weight!),
       decoration: BoxDecoration(
         color: color,
+        boxShadow: const [
+          BoxShadow(
+            color: MyColors.grey,
+            blurRadius: 1.0,
+          ),
+        ],
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(

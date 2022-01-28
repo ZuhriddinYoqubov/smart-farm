@@ -6,10 +6,12 @@ class MyDecoration {
     double radius = 10.0,
     Color? color,
     Border? border,
+    LinearGradient? gradient,
   }) =>
       BoxDecoration(
         color: color,
         border: border,
+        gradient: gradient,
         borderRadius: BorderRadius.circular(
           getUniqueW(radius),
         ),
