@@ -11,6 +11,10 @@ class OnBoardingPageView extends StatelessWidget {
     "Ularni o'z\nnazoratingiz ostida\nboqing",
     'Jarayonni\nreal-time kuzatib\nboring',
   ];
+  late int _currentPage;
+  late int _pagesLength;
+  late var _controller;
+  late var _contextRead;
 
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -18,10 +22,10 @@ class OnBoardingPageView extends StatelessWidget {
       create: (context) => OnBoardingPageCubit(),
       child: BlocBuilder<OnBoardingPageCubit, OnBoardingPageState>(
         builder: (context, state) {
-          int _currentPage = context.watch<OnBoardingPageCubit>().currentPage;
-          int _pagesLength = context.watch<OnBoardingPageCubit>().pagesLength;
-          var _controller = context.watch<OnBoardingPageCubit>().controller;
-          var _contextRead = context.read<OnBoardingPageCubit>();
+          _currentPage = context.watch<OnBoardingPageCubit>().currentPage;
+          _pagesLength = context.watch<OnBoardingPageCubit>().pagesLength;
+          _controller = context.watch<OnBoardingPageCubit>().controller;
+          _contextRead = context.read<OnBoardingPageCubit>();
           return buildScaffold(
               _contextRead, _controller, _currentPage, _pagesLength, context);
         },
