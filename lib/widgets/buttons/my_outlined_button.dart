@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smartfarm/core/components/exporting_packages.dart';
 import 'package:smartfarm/core/constants/my_colors.dart';
 import 'package:smartfarm/widgets/my_edge_insets.dart';
 import 'package:smartfarm/widgets/my_shape.dart';
@@ -6,12 +7,22 @@ import 'package:smartfarm/widgets/my_shape.dart';
 class MyOutlinedButton extends StatelessWidget {
   VoidCallback onPressed;
   Widget child;
-  double padding;
+  double vPadding;
+  double hPadding;
+  Size? minimumSize;
+  Size? maximumSize;
+  Size? fixedSize;
+  Alignment? alignment;
   MyOutlinedButton({
-    Key? key,
     required this.onPressed,
     required this.child,
-    this.padding = 7.0
+    required this.vPadding,
+    required this.hPadding,
+    this.fixedSize,
+    this.maximumSize,
+    this.minimumSize,
+    this.alignment,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -20,10 +31,11 @@ class MyOutlinedButton extends StatelessWidget {
       onPressed: onPressed,
       child: child,
       style: OutlinedButton.styleFrom(
-        primary: MyColors.grey,
-        padding: MyEdgeInsets.all(padding),
-        shape: MyShape.circular(radius: 10.0),
-        side: const BorderSide(color: MyColors.grey),
+        alignment: alignment,
+        minimumSize: minimumSize,
+        maximumSize: maximumSize,
+        fixedSize:  fixedSize,
+        padding: MyEdgeInsets.symmetric(v: vPadding, h: hPadding),
       ),
     );
   }

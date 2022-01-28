@@ -27,9 +27,8 @@ ThemeData getApplicationTheme() {
         centerTitle: true,
         color: Colors.transparent,
         elevation: MyAppSize.s0,
-        
         iconTheme: const IconThemeData(color: MyColors.black),
-        shadowColor: MyColors.primaryOppacity50,
+        shadowColor: MyColors.glassBlack,
         systemOverlayStyle: SystemUiOverlayStyle.dark,
         titleTextStyle: getSemiBoldStyle(
           color: MyColors.black,
@@ -41,6 +40,19 @@ ThemeData getApplicationTheme() {
         disabledColor: MyColors.grey,
         buttonColor: MyColors.primary,
         splashColor: MyColors.primaryOppacity50),
+
+    // outlined button theme
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        textStyle: getMediumStyle(color: MyColors.primary),
+        primary: MyColors.primary,
+        alignment: Alignment.centerLeft,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(MyAppSize.s10),
+          side: const BorderSide(color: MyColors.grey, width: 1),
+        ),
+      ),
+    ),
 
     // elevated button theme
     elevatedButtonTheme: ElevatedButtonThemeData(

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
+import 'package:smartfarm/screens/settings/language_change_page/language_change_page_view.dart';
 import 'package:smartfarm/widgets/bottom/bottom_sheet_with_credir_card.dart';
 import 'package:smartfarm/widgets/text/my_text_medium.dart';
 
@@ -24,13 +25,14 @@ class SettingsPageView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     // DEPOZIT SECTION
-                    buildOutlinedButton(
+                    MyOutlinedButton(
                       onPressed: () {
                         showModalBottomSheet( 
                             context: context,
                             builder: (BuildContext context) =>
                                 BottomSheetWithCreditCard());
                       },
+
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,12 +44,12 @@ class SettingsPageView extends StatelessWidget {
                       ),
                       vPadding: 15,
                       hPadding: 15,
-                      width: 155,
-                      height: 92,
+                      fixedSize: Size(getUniqueW(155), getUniqueH(92)),
+                    
                     ),
 
                     // CASH HISTORY SECTION
-                    buildOutlinedButton(
+                    MyOutlinedButton(
                       onPressed: () {},
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,27 +63,29 @@ class SettingsPageView extends StatelessWidget {
                       ),
                       vPadding: 15,
                       hPadding: 15,
-                      width: 155,
-                      height: 92,
+                      fixedSize: Size(getUniqueW(155), getUniqueH(92)),
                     ),
                   ],
                 ),
                 MySizedBox(height: 20),
 
                 // UPDATE PROFILE SECTION
-                buildOutlinedButton(
+                MyOutlinedButton(
                     onPressed: () {},
                     child: MyTextMedium(
                       'Profilni tahrirlash',
                       size: 16,
                     ),
                     vPadding: 18,
-                    hPadding: 100),
+                    hPadding: 100,
+                    fixedSize: Size(getUniqueW(330), getUniqueH(52)),),
                 MySizedBox(height: 20),
 
                 // CHANGE LANGUAGE SECTION
-                buildOutlinedButton(
-                  onPressed: () {},
+                MyOutlinedButton(
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => const LanguageChangePageView(),),);
+                  },
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -103,6 +107,7 @@ class SettingsPageView extends StatelessWidget {
                   ),
                   vPadding: 25,
                   hPadding: 30,
+                  fixedSize: Size(getUniqueW(330), getUniqueH(74)),
                 ),
               ],
             ),
@@ -111,31 +116,6 @@ class SettingsPageView extends StatelessWidget {
       ),
     );
   }
-
-  Widget buildOutlinedButton({
-    required Widget child,
-    required VoidCallback onPressed,
-    required double vPadding,
-    required double hPadding,
-    double height = 0,
-    double width = 0,
-  }) {
-    return OutlinedButton(
-      onPressed: onPressed,
-      child: child,
-      style: OutlinedButton.styleFrom(
-        alignment: Alignment.centerLeft,
-        padding: MyEdgeInsets.symmetric(v: vPadding, h: hPadding),
-        minimumSize: Size(getUniqueW(width), getUniqueH(height)),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(
-            getUniqueW(10),
-          ),
-        ),
-      ),
-    );
-  }
-
   Widget buildListTile() {
     return SafeArea(
       child: Container(

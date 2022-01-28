@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 import 'package:smartfarm/screens/home/my_animals_detail_page/my_animals_detail_page_view.dart';
 
-
 class AnimalFeedingInfo extends StatelessWidget {
   const AnimalFeedingInfo({Key? key}) : super(key: key);
 
@@ -64,39 +63,34 @@ class AnimalFeedingInfo extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            Container(
               height: getUniqueH(190.0),
               width: getUniqueW(85.0),
-              child: MyOutlinedButton(
-                onPressed: () {
-                  showModalBottomSheet(
-                    isScrollControlled: true,
-                    backgroundColor: Colors.transparent,
-                    context: context,
-                    builder: (_) => ProductBuyingBottom(),
-                  );
-                },
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Spacer(),
+              padding: MyEdgeInsets.all(7),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(getUniqueH(10)),
+                border: Border.all(width: 1, color: MyColors.grey),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Spacer(),
 
-                    //  CORN BUTTON
+                  //  CORN BUTTON
 
-                    InkWell(
-                        onTap: () {
-                          showModalBottomSheet(
-                            isScrollControlled: true,
-                            backgroundColor: Colors.transparent,
-                            context: context,
-                            builder: (_) => ProductBuyingBottom(),
-                          );
-                        },
-                        child: SvgPicture.asset(MyAssetIcons.corn)),
-                    const Spacer(),
-                    _setFoodPercent(),
-                  ],
-                ),
+                  InkWell(
+                      onTap: () {
+                        showModalBottomSheet(
+                          isScrollControlled: true,
+                          backgroundColor: Colors.transparent,
+                          context: context,
+                          builder: (_) => ProductBuyingBottom(),
+                        );
+                      },
+                      child: SvgPicture.asset(MyAssetIcons.corn)),
+                  const Spacer(),
+                  _setFoodPercent(),
+                ],
               ),
             )
           ],
@@ -109,7 +103,8 @@ class AnimalFeedingInfo extends StatelessWidget {
 
   Widget _commentButton(BuildContext context) {
     return MyOutlinedButton(
-      padding: 10.0,
+      vPadding: 10.0,
+      hPadding: 10.0,
       onPressed: () {
         Navigator.push(
             context,
@@ -131,7 +126,10 @@ class AnimalFeedingInfo extends StatelessWidget {
                 MySizedBox(height: 10.0),
                 MyTextBold(text: 'Izoh', color: Colors.black),
                 MySizedBox(height: 5.0),
-                MyTextRegular(text: AppStrings.shuKunlarda, maxLines: 2,)
+                MyTextRegular(
+                  text: AppStrings.shuKunlarda,
+                  maxLines: 2,
+                )
               ],
             ),
           ),
