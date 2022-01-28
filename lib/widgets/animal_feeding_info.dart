@@ -62,6 +62,18 @@ class AnimalFeedingInfo extends StatelessWidget {
                     ),
                   ),
                 ),
+                Positioned(
+                  bottom: getUniqueH(7.0),
+                  left: getUniqueW(10.0),
+                  child: ContainerWithOpacity(
+                    vPadding: 7.0,
+                    hPadding: 12.0,
+                    child: MyTextBold(
+                      text: "5 dona",
+                      size: 12.0,
+                    ),
+                  ),
+                ),
               ],
             ),
             SizedBox(
@@ -94,13 +106,33 @@ class AnimalFeedingInfo extends StatelessWidget {
                         },
                         child: SvgPicture.asset(MyAssetIcons.corn)),
                     const Spacer(),
+
+                    MyOutlinedButtonText(
+                      onPressed: () {},
+                      label: '12 %',
+                      color: MyColors.red,
+                    ),
+
                     _setFoodPercent(),
+
                   ],
                 ),
               ),
-            )
+            ),
           ],
         ),
+        SizedBox(height: getUniqueH(15.0)),
+        MyOutlinedButton(
+            padding: 10.0,
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => MyAnimalsDetailPageView(),
+                ),
+              );
+            },
+            child: Row(
         MySizedBox(height: 15.0),
         _commentButton(context)
       ],
@@ -141,6 +173,12 @@ class AnimalFeedingInfo extends StatelessWidget {
     );
   }
 
+  Widget _buildBottomSheet(BuildContext context) {
+    return Container(
+      height: 400,
+      color: MyColors.primary,
+    );
+  }
   Widget _showAnimalPercent() => Container(
         width: getUniqueW(75.0),
         alignment: Alignment.center,

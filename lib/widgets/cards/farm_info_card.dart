@@ -13,6 +13,10 @@ class FarmInfoCard extends StatelessWidget {
       padding: MyEdgeInsets.symmetric(h: getUniqueW(10.0), v: getUniqueH(13.0)),
       decoration: MyDecoration.withImage(
         imageUrl: Links.cow,
+      ),
+      padding: MyEdgeInsets.symmetric(
+        h: getUniqueW(10.0),
+        v: getUniqueH(13.0),
         color: Colors.amber,
       ),
       child: Column(
