@@ -84,11 +84,12 @@ class OnBoardingPageView extends StatelessWidget {
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => const HomePageView(),
+                        builder: (_) =>  BodyPageView(),
                       ),
                     );
                   }
                 },
+
                 label: 'Keyingi'),
           ),
         ],

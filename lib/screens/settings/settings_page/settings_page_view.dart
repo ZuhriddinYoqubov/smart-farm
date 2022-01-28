@@ -8,7 +8,7 @@ class SettingsPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: MyColors.green,
+      backgroundColor: Color(0xff454545),
       appBar: AppBar(
         title: const Text(
           'SettingsPage',
@@ -17,11 +17,9 @@ class SettingsPageView extends StatelessWidget {
           ),
         ),
       ),
-
       body: Center(
-        child: BottomSheetWithCreditCard(),
+        child: ContactBottomSheet(),
       ),
     );
   }
-
-  }
+}
