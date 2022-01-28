@@ -15,6 +15,13 @@ class MyAssetIcons {
   static const String vector = 'assets/icons/vector.svg';
   static const String setting = 'assets/icons/setting.svg';
   static const String left = 'assets/icons/left.svg';
+  static const String oclock = 'assets/icons/oclock.png';
+  static const String card = 'assets/icons/card.png';
+  static const String uzb = 'assets/icons/uzb.svg';
+  static const String rus = 'assets/icons/rus.svg';
+  static const String globe = 'assets/icons/globe.svg';
+  static const String right = 'assets/icons/right.svg';
+
 }
 
 class MyAnimalsImage {
