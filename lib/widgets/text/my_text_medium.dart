@@ -14,7 +14,7 @@ class MyTextMedium extends StatelessWidget {
     this.size = 14.0,
     this.align = TextAlign.left,
     this.maxLines,
-    Key? key,
+    Key? key, 
   }) : super(key: key);
 
   @override

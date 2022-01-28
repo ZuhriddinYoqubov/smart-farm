@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/widgets/my_nutrion_history_item.dart';
 
 class NutritionHistoryPageView extends StatelessWidget {
   const NutritionHistoryPageView({Key? key}) : super(key: key);

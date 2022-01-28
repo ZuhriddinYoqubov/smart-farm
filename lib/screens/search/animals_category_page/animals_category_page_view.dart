@@ -39,7 +39,7 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
                   alignment: Alignment.center,
                   height: getUniqueH(45.0),
                   width: getUniqueW(245.0),
-                  child: SearchField(),
+                  child: MySearchTextField(),
                 ),
               ],
             ),
@@ -59,19 +59,19 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
                 SizedBox(height: getUniqueH(10.0)),
                 Row(
                   children: [
-                    AnimalButtons(
+                    MyAnimalButtons(
                       img: MyAssetImages.cow,
                       text: "Sigir",
                       color: MyColors.primary,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
-                    AnimalButtons(
+                    MyAnimalButtons(
                       img: MyAssetImages.chicken,
                       text: "Tovuq",
                       color: MyColors.primaryOppacity50,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
-                    AnimalButtons(
+                    MyAnimalButtons(
                       img: MyAssetImages.sheep,
                       text: "Qo'y",
                       color: MyColors.grey,
@@ -81,19 +81,19 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
                 SizedBox(height: getUniqueH(15.0)),
                 Row(
                   children: [
-                    AnimalButtons(
+                    MyAnimalButtons(
                       img: MyAssetImages.horse,
                       text: "Ot",
                       color: MyColors.green,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
-                    AnimalButtons(
+                    MyAnimalButtons(
                       img: MyAssetImages.sheep,
                       text: "Qo'y",
                       color: MyColors.lightGrey,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
-                    AnimalButtons(
+                    MyAnimalButtons(
                       img: MyAssetImages.chicken,
                       text: "Tovuq",
                       color: MyColors.primary,
@@ -103,19 +103,19 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
                 SizedBox(height: getUniqueH(15.0)),
                 Row(
                   children: [
-                    AnimalButtons(
+                    MyAnimalButtons(
                       img: MyAssetImages.chicken,
                       text: "Tovuq",
                       color: MyColors.primary,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
-                    AnimalButtons(
+                    MyAnimalButtons(
                       img: MyAssetImages.horse,
                       text: "Ot",
                       color: MyColors.green,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
-                    AnimalButtons(
+                    MyAnimalButtons(
                       img: MyAssetImages.sheep,
                       text: "Qo'y",
                       color: MyColors.grey,

@@ -12,7 +12,7 @@ class TestPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
 
-          AnimalButtons(img: MyAssetImages.cow, text: 'Sigir')
+          MyAnimalButtons(img: MyAssetImages.cow, text: 'Sigir')
         ],
       ),
     );

@@ -1,11 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/screens/settings/data_editing_page/data_editing_page_view.dart';
-import 'package:smartfarm/screens/settings/language_change_page/language_change_page_view.dart';
-import 'package:smartfarm/screens/settings/purchase_history_page/purchase_history_page_view.dart';
-import 'package:smartfarm/widgets/bottom/bottom_sheet_with_credir_card.dart';
-import 'package:smartfarm/widgets/text/my_text_medium.dart';
-
 class SettingsPageView extends StatelessWidget {
   const SettingsPageView({Key? key}) : super(key: key);
 
@@ -29,10 +23,12 @@ class SettingsPageView extends StatelessWidget {
                     // DEPOZIT SECTION
                     MyOutlinedButton(
                       onPressed: () {
-                        showModalBottomSheet(
-                            context: context,
-                            builder: (BuildContext context) =>
-                                BottomSheetWithCreditCard());
+                        Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const DepozitPageView(),
+                      ),
+                    );
                       },
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,

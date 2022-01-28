@@ -150,14 +150,14 @@ class _FarmDetailPageViewState extends State<FarmDetailPageView>
         children: [
           Row(
             children: [
-              AnimalsCardBottom(
+              MyAnimalsCardBottom(
                 data: "28.01.2022",
                 price: "200000",
                 img: "img",
                 text: "Tovuq",
               ),
               MySizedBox(width: 20.0),
-              AnimalsCardBottom(
+              MyAnimalsCardBottom(
                 data: "28.01.2022",
                 price: "200000",
                 img: "img",
@@ -168,14 +168,14 @@ class _FarmDetailPageViewState extends State<FarmDetailPageView>
           MySizedBox(height: 20.0),
           Row(
             children: [
-              AnimalsCardBottom(
+              MyAnimalsCardBottom(
                 data: "28.01.2022",
                 price: "200000",
                 img: "img",
                 text: "Tovuq",
               ),
               MySizedBox(width: 20.0),
-              AnimalsCardBottom(
+              MyAnimalsCardBottom(
                 data: "28.01.2022",
                 price: "200000",
                 img: "img",

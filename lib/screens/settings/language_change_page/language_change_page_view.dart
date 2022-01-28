@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/widgets/text/my_text_medium.dart';
 
 class LanguageChangePageView extends StatelessWidget {
   const LanguageChangePageView({Key? key}) : super(key: key);

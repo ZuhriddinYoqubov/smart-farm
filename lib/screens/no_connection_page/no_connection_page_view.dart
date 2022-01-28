@@ -31,8 +31,7 @@ class _NoConnectionPageState extends State<NoConnectionPage> {
                   //   fit: BoxFit.contain,
                   // ),
                   Image.asset(
-                // MyAnimalsImage.no_connection,
-                "assets/animals_image/no_connection.png",
+                MyAssetImages.noConnection,
                 fit: BoxFit.contain,
               ),
             ),

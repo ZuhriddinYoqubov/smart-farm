@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
-class BottomSheetHolder extends StatelessWidget {
-  const BottomSheetHolder({Key? key}) : super(key: key);
+class MyBottomSheetHolder extends StatelessWidget {
+  const MyBottomSheetHolder({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

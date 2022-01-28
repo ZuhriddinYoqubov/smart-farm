@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
-class BottomSheetWithCreditCard extends StatelessWidget {
-  BottomSheetWithCreditCard({Key? key}) : super(key: key);
+class MyBottomSheetWithCreditCard extends StatelessWidget {
+  MyBottomSheetWithCreditCard({Key? key}) : super(key: key);
   int _count = 1;
 
   @override
@@ -13,8 +13,8 @@ class BottomSheetWithCreditCard extends StatelessWidget {
       decoration: MyDecoration.circular(color: MyColors.white),
       child: Column(
         children: [
-          const BottomSheetHolder(),
-          const CreditCard(),
+          const MyBottomSheetHolder(),
+          const MyCreditCard(),
           MySizedBox(height: 30.0),
           _showAnimalPrice(),
           MySizedBox(height: 15.0),

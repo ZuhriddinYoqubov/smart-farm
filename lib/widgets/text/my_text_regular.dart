@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/core/components/size_config.dart';
 
 class MyTextRegular extends StatelessWidget {
   final String text;

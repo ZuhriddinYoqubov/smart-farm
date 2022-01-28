@@ -15,7 +15,7 @@ class SearchPageView extends StatelessWidget {
           _showSearchField(),
           _setCategoryLabel('Fermalar'),
           MySizedBox(height: 2.0),
-          const FarmInfoCard(),
+          const MyFarmInfoCard(),
           MySizedBox(height: 7.0),
           _setCategoryLabel('Hayvonlar'),
           MySizedBox(height: 10.0),
@@ -26,7 +26,7 @@ class SearchPageView extends StatelessWidget {
               padding: MyEdgeInsets.symmetric(h: 10.0),
               itemCount: 10,
               itemBuilder: (BuildContext context, int index) {
-                return AnimalButtons(
+                return MyAnimalButtons(
                   img: MyAssetImages.cow,
                   text: "Sigir",
                 );
@@ -49,7 +49,7 @@ class SearchPageView extends StatelessWidget {
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
                   padding: MyEdgeInsets.symmetric(h: 5.0),
-                  child: const ProductsCard(),
+                  child: const MyProductsCard(),
                 );
               },
             ),
@@ -66,7 +66,7 @@ class SearchPageView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          MySizedBox(height: 45.0, width: 275.0, child: SearchField()),
+          MySizedBox(height: 45.0, width: 275.0, child: MySearchTextField()),
           _showFilterButton(),
         ],
       ),

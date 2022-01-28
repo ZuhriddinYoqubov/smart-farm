@@ -121,28 +121,28 @@ class _AnimalsGridPageViewState extends State<AnimalsGridPageView>
   Widget cardAnimals(data, price, img, text) {
     return Column(
       children: [
-        AnimalsCardBottom(
+        MyAnimalsCardBottom(
           data: data,
           price: price,
           img: img,
           text: text,
         ),
         MySizedBox(height: getUniqueH(20.0)),
-        AnimalsCardBottom(
+        MyAnimalsCardBottom(
           data: data,
           price: price,
           img: img,
           text: text,
         ),
         MySizedBox(height: getUniqueH(20.0)),
-        AnimalsCardBottom(
+        MyAnimalsCardBottom(
           data: data,
           price: price,
           img: img,
           text: text,
         ),
         MySizedBox(height: getUniqueH(20.0)),
-        AnimalsCardBottom(
+        MyAnimalsCardBottom(
           data: data,
           price: price,
           img: img,

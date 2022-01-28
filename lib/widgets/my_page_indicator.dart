@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
-class PageIndicator extends StatelessWidget {
+class MyPageIndicator extends StatelessWidget {
   Color color;
   int currentIndex;
   int length;
 
-  PageIndicator({
+  MyPageIndicator({
     Key? key,
     this.color = MyColors.lightGrey,
     this.currentIndex = 0,

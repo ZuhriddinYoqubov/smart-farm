@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:smartfarm/widgets/my_decoration.dart';
-import 'package:smartfarm/widgets/my_edge_insets.dart';
+import 'package:smartfarm/core/components/exporting_packages.dart';
 
-class ContainerWithOpacity extends StatelessWidget {
-  double vPadding;
-  double hPadding;
+class MyContainerWithOpacity extends StatelessWidget {
+  final double vPadding;
+  final double hPadding;
   Widget? child;
 
-  ContainerWithOpacity({
+  MyContainerWithOpacity({
     Key? key,
     this.hPadding = 15.0,
     this.vPadding = 5.0,

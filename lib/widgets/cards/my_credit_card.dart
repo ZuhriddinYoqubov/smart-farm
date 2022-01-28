@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/widgets/app_logo.dart';
 
-class CreditCard extends StatelessWidget {
-  const CreditCard({Key? key}) : super(key: key);
+class MyCreditCard extends StatelessWidget {
+  const MyCreditCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,12 @@ class CreditCard extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              AppLogo(),
+              //AppLogo(),
+              SvgPicture.asset(
+                MyAssetIcons.logo,
+                height: getUniqueH(25),
+                width: getUniqueW(25),
+              ),
               MyTextRegular(text: '25/09', color: MyColors.white),
             ],
           )

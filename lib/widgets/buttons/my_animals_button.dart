@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/widgets/my_border_radius.dart';
-import 'package:smartfarm/widgets/text/my_text_medium.dart';
 
-class AnimalButtons extends StatelessWidget {
+class MyAnimalButtons extends StatelessWidget {
   String? img;
   Color? color;
   String text;
 
-  AnimalButtons({
+  MyAnimalButtons({
     required this.img,
     this.color = MyColors.primary,
     required this.text,

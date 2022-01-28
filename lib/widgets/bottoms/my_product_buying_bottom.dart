@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
-class ProductBuyingBottom extends StatelessWidget {
-  ProductBuyingBottom({Key? key}) : super(key: key);
+class MyProductBuyingBottom extends StatelessWidget {
+  MyProductBuyingBottom({Key? key}) : super(key: key);
   int _amount = 1;
 
   @override

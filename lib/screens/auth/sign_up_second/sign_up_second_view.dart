@@ -13,7 +13,7 @@ class SignUpSecond extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return Scaffold(
-      appBar: const SignUpAppBar(),
+      appBar: const MySignUpAppBar(),
       body: Center(
         child: SingleChildScrollView(
           child: Padding(

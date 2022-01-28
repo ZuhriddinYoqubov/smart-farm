@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 import 'package:smartfarm/screens/home/home_page/home_page_cubit.dart';
-import 'package:smartfarm/screens/search/farm_detail_page/farm_detail_page_view.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({Key? key}) : super(key: key);
@@ -56,13 +55,13 @@ class HomePageView extends StatelessWidget {
                     },
                     itemCount: _contextWatch.indicatorLength,
                     itemBuilder: (context, index) {
-                      return const AnimalFeedingInfo();
+                      return const MyAnimalFeedingInfo();
                     },
                   ),
                 ),
                 MySizedBox(height: 10.0),
                 // PAGE VIEW INDICATOR
-                PageIndicator(
+                MyPageIndicator(
                     length: _contextWatch.indicatorLength,
                     currentIndex: _contextWatch.indicatorIndex),
                 MySizedBox(height: 30.0),

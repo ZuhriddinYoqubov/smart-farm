@@ -74,7 +74,7 @@ class OnBoardingPageView extends StatelessWidget {
               ),
             ),
           ),
-          PageIndicator(
+          MyPageIndicator(
             length: _pagesLength,
             currentIndex: _currentPage,
             color: MyColors.primary,

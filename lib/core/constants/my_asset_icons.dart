@@ -22,12 +22,4 @@ class MyAssetIcons {
   static const String globe = 'assets/icons/globe.svg';
   static const String right = 'assets/icons/right.svg';
   static const String pen = 'assets/icons/pen.svg';
-
-
-  static const String cow = 'assets/animals_image/cow.png';
-  static const String chicken = 'assets/animals_image/chicken.png';
-  static const String sheep = 'assets/animals_image/sheep.png';
-  static const String hourse = 'assets/animals_image/hourse.png';
-  static const String noConnection =
-      'assets/animals_image/no_connection_r.png';
 }

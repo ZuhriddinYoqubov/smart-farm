@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/widgets/my_nutrion_history_item.dart';
 
 class PurchaseHistoryPageView extends StatelessWidget {
   const PurchaseHistoryPageView({Key? key}) : super(key: key);

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/widgets/buttons/my_button_with_icon.dart';
 
 class SignUpView extends StatelessWidget {
   SignUpView({Key? key}) : super(key: key);
@@ -14,7 +13,7 @@ class SignUpView extends StatelessWidget {
     _context = context;
     SizeConfig().init(context);
     return Scaffold(
-      appBar: const SignUpAppBar(),
+      appBar: const MySignUpAppBar(),
       body: Center(
         child: SingleChildScrollView(
           child: Padding(

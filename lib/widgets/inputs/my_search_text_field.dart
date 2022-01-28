@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
-class SearchField extends StatelessWidget {
-  SearchField({Key? key}) : super(key: key);
+class MySearchTextField extends StatelessWidget {
+  MySearchTextField({Key? key}) : super(key: key);
   final TextEditingController _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {

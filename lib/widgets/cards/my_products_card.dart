@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
-class ProductsCard extends StatelessWidget {
-  const ProductsCard({Key? key}) : super(key: key);
+class MyProductsCard extends StatelessWidget {
+  const MyProductsCard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

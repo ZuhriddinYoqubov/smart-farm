@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
-class FeedingListTile extends StatelessWidget {
-  const FeedingListTile({Key? key}) : super(key: key);
+class MyFeedingListTile extends StatelessWidget {
+  const MyFeedingListTile({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

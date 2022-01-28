@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/widgets/product_card_bottom.dart';
-
 class ProductsGridPage extends StatefulWidget {
   const ProductsGridPage({Key? key}) : super(key: key);
 
@@ -120,25 +118,25 @@ class ProductsGridPageState extends State<ProductsGridPage>
   Widget card(price, text, img) {
     return Column(
       children: [
-        ProductCardBottom(
+        MyProductCardBottom(
           price: price,
           text: text,
           img: img,
         ),
         MySizedBox(height: getUniqueH(20.0)),
-        ProductCardBottom(
+        MyProductCardBottom(
           price: price,
           text: text,
           img: img,
         ),
         MySizedBox(height: getUniqueH(20.0)),
-        ProductCardBottom(
+        MyProductCardBottom(
           price: price,
           text: text,
           img: img,
         ),
         MySizedBox(height: getUniqueH(20.0)),
-        ProductCardBottom(
+        MyProductCardBottom(
           price: price,
           text: text,
           img: img,

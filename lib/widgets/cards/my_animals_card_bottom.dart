@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
-class AnimalsCardBottom extends StatelessWidget {
+class MyAnimalsCardBottom extends StatelessWidget {
   Color? color;
   String img;
   double? height;
@@ -10,7 +10,7 @@ class AnimalsCardBottom extends StatelessWidget {
   String? price;
   String? data;
 
-  AnimalsCardBottom({
+  MyAnimalsCardBottom({
     this.color = MyColors.white,
     required this.data,
     this.height = 242.0,

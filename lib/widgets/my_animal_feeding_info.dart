@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/screens/home/my_animals_detail_page/my_animals_detail_page_view.dart';
 
-class AnimalFeedingInfo extends StatelessWidget {
-  const AnimalFeedingInfo({Key? key}) : super(key: key);
+class MyAnimalFeedingInfo extends StatelessWidget {
+  const MyAnimalFeedingInfo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +39,7 @@ class AnimalFeedingInfo extends StatelessWidget {
                         isScrollControlled: true,
                         backgroundColor: Colors.transparent,
                         context: context,
-                        builder: (_) => ProductBuyingBottom(),
+                        builder: (_) => MyProductBuyingBottom(),
                       );
                     },
                     child: SvgPicture.asset(
@@ -52,7 +51,7 @@ class AnimalFeedingInfo extends StatelessWidget {
                 Positioned(
                   bottom: getUniqueH(7.0),
                   left: getUniqueW(10.0),
-                  child: ContainerWithOpacity(
+                  child: MyContainerWithOpacity(
                     vPadding: 7.0,
                     hPadding: 12.0,
                     child: MyTextBold(
@@ -84,7 +83,7 @@ class AnimalFeedingInfo extends StatelessWidget {
                           isScrollControlled: true,
                           backgroundColor: Colors.transparent,
                           context: context,
-                          builder: (_) => ProductBuyingBottom(),
+                          builder: (_) => MyProductBuyingBottom(),
                         );
                       },
                       child: SvgPicture.asset(MyAssetIcons.corn)),

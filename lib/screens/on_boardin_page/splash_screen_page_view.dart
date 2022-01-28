@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/screens/on_boardin_page/on_boarding_page_view.dart';
 
 class SplashScreenPage extends StatelessWidget {
   const SplashScreenPage({Key? key}) : super(key: key);
@@ -18,7 +17,11 @@ class SplashScreenPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            AppLogo(size: 70.0),
+             SvgPicture.asset(
+                MyAssetIcons.logo,
+                height: getUniqueH(70),
+                width: getUniqueW(70),
+              ),
             MySizedBox(height: 20.0),
             MyTextSemibold(text: 'SmartFarm', color: MyColors.white),
           ],

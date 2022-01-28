@@ -7,5 +7,7 @@ class AppStrings {
   static const String russkiyYazik = "Русский язык";
   static const String xaridlarTarixi = "Xaridlar tarixi";
   static const String meningMalumotlarim = "Mening ma'lumotlarim";
+  static const String depozit = "Depozit";
+
 
 }

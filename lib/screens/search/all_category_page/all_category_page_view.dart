@@ -31,7 +31,7 @@ class AllCategoryPageView extends StatelessWidget {
         crossAxisSpacing: getUniqueW(15.0),
         children: List.generate(
           9,
-          (index) => AnimalButtons(img: MyAssetImages.cow, text: 'Sigir'),
+          (index) => MyAnimalButtons(img: MyAssetImages.cow, text: 'Sigir'),
         ),
       ),
     );
@@ -40,7 +40,7 @@ class AllCategoryPageView extends StatelessWidget {
   SliverList _showFarmList() {
     return SliverList(
       delegate: SliverChildBuilderDelegate((ctx, i) {
-        return FarmInfoCard();
+        return MyFarmInfoCard();
       }, childCount: 5),
     );
   }
@@ -51,7 +51,7 @@ class AllCategoryPageView extends StatelessWidget {
       toolbarHeight: getUniqueH(64.0),
       leadingWidth: getUniqueW(49.0),
       floating: true,
-      title: SearchField(),
+      title: MySearchTextField(),
     );
   }
 
