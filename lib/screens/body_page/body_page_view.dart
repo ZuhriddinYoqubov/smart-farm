@@ -4,6 +4,7 @@ import 'package:smartfarm/screens/body_page/body_page_cubit.dart';
 
 class BodyPageView extends StatelessWidget {
   BodyPageView({Key? key}) : super(key: key);
+  late BodyPageCubit _pageCubit;
 
   @override
   Widget build(BuildContext context) {
@@ -12,16 +13,14 @@ class BodyPageView extends StatelessWidget {
       create: (_) => BodyPageCubit(),
       child: BlocBuilder<BodyPageCubit, BodyPageState>(
         builder: (context, state) {
-          var _contextWatch = context.watch<BodyPageCubit>();
-          var _contextRead = context.read<BodyPageCubit>();
-          return buildScaffold(_contextWatch, _contextRead);
+          _pageCubit = context.watch<BodyPageCubit>();
+          return buildScaffold(_pageCubit);
         },
       ),
     );
   }
 
-  Scaffold buildScaffold(
-      BodyPageCubit _contextWatch, BodyPageCubit _contextRead) {
+  Scaffold buildScaffold(BodyPageCubit _contextWatch) {
     return Scaffold(
       body: _contextWatch.pages[_contextWatch.currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -29,30 +28,26 @@ class BodyPageView extends StatelessWidget {
         showSelectedLabels: false,
         showUnselectedLabels: false,
         items: [
-          _setItem(MyAssetIcons.home, 0, _contextWatch.currentIndex),
-          _setItem(MyAssetIcons.search, 1, _contextWatch.currentIndex),
-          _setItem(MyAssetIcons.calendar, 2, _contextWatch.currentIndex),
-          _setItem(MyAssetIcons.settings, 4, _contextWatch.currentIndex),
+          _setItem(MyAssetIcons.home, 0),
+          _setItem(MyAssetIcons.search, 1),
+          _setItem(MyAssetIcons.calendar, 2),
+          _setItem(MyAssetIcons.settings, 3),
         ],
-        onTap: (i) {
-          _contextRead.changePage(i);
-        },
+        onTap: _contextWatch.changePage,
       ),
     );
   }
 
-  BottomNavigationBarItem _setItem(
-    String assetIcon,
-    int index,
-    int currentIndex,
-  ) =>
+  BottomNavigationBarItem _setItem(String assetIcon, int index) =>
       BottomNavigationBarItem(
         label: "",
         icon: SvgPicture.asset(
           assetIcon,
           height: getUniqueH(20.0),
           width: getUniqueW(20.0),
-          color: currentIndex == index ? MyColors.primary : MyColors.grey,
+          color: _pageCubit.currentIndex == index
+              ? MyColors.primary
+              : MyColors.grey,
         ),
       );
 }

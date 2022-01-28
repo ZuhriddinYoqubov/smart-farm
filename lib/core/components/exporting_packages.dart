@@ -43,6 +43,8 @@ export 'package:smartfarm/widgets/cards/credit_card.dart';
 export 'package:smartfarm/widgets/bottom_sheet_holder.dart';
 export 'package:smartfarm/widgets/app_logo.dart';
 export 'package:smartfarm/widgets/bottom/contact_bottom.dart';
+export 'package:smartfarm/widgets/my_divider.dart';
+
 
 
 // Components

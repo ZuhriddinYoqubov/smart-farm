@@ -4,12 +4,13 @@ import 'package:smartfarm/screens/calendar_page/calendar_page_view.dart';
 import 'package:smartfarm/screens/home/home_page/home_page_view.dart';
 import 'package:smartfarm/screens/search/search_page/search_page_view.dart';
 import 'package:smartfarm/screens/settings/settings_page/settings_page_view.dart';
+
 part 'body_page_state.dart';
 
 class BodyPageCubit extends Cubit<BodyPageState> {
   BodyPageCubit() : super(BodyPageInitial());
 
-  int currentIndex = 0;
+  int _currentIndex = 0;
 
   List pages = [
     //trash
@@ -19,8 +20,10 @@ class BodyPageCubit extends Cubit<BodyPageState> {
     const SettingsPageView(),
   ];
 
-  changePage(int index) {
-    currentIndex = index;
+  void changePage(int index) {
+    _currentIndex = index;
     emit(BodyPageInitial());
   }
+
+  int get currentIndex => _currentIndex;
 }

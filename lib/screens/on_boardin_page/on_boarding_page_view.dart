@@ -5,117 +5,85 @@ import 'package:smartfarm/screens/on_boardin_page/on_boarding_page_cubit.dart';
 class OnBoardingPageView extends StatelessWidget {
   OnBoardingPageView({Key? key}) : super(key: key);
 
-  List<String> pageTitle = [
+  final List<String> pageTitle = [
     'Sevimli\nhayvonlaringizni\nonlayn sotib oling',
     "Ularni o'z\nnazoratingiz ostida\nboqing",
     'Jarayonni\nreal-time kuzatib\nboring',
   ];
 
+  late OnBoardingPageCubit _cubit;
+  late OnBoardingPageCubit _read;
+
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return BlocProvider(
       create: (context) => OnBoardingPageCubit(),
       child: BlocBuilder<OnBoardingPageCubit, OnBoardingPageState>(
         builder: (context, state) {
-          int _currentPage = context.watch<OnBoardingPageCubit>().currentPage;
-          int _pagesLength = context.watch<OnBoardingPageCubit>().pagesLength;
-          var _controller = context.watch<OnBoardingPageCubit>().controller;
-          var _contextRead = context.read<OnBoardingPageCubit>();
-          return buildScaffold(
-              _contextRead, _controller, _currentPage, _pagesLength, context);
+          // int _currentPage = context.watch<OnBoardingPageCubit>().currentPage;
+          // int _pagesLength = context.watch<OnBoardingPageCubit>().pagesLength;
+          // var _controller = context.watch<OnBoardingPageCubit>().controller;
+          // var _contextRead = context.read<OnBoardingPageCubit>();
+          _cubit = context.watch();
+          _read = context.read();
+          return buildScaffold();
         },
       ),
     );
   }
 
-  Scaffold buildScaffold(OnBoardingPageCubit _contextRead, var _controller,
-      int _currentPage, int _pagesLength, BuildContext context) {
+  Scaffold buildScaffold() {
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          SafeArea(
-            child: SizedBox(
-              width: SizeConfig.screenWidth,
-              height: SizeConfig.screenWidth / 360 * 350 + getUniqueH(120),
-              child: Flexible(
-                child: PageView.builder(
-                  controller: _controller,
-                  physics: const BouncingScrollPhysics(),
-                  onPageChanged: (v) {
-                    _contextRead.changeCurrentPage(v);
-                  },
-                  itemCount: _pagesLength,
-                  itemBuilder: (context, index) {
-                    print(index);
-                    return Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Image.asset(
-                          MyAssetImages.cows,
-                          fit: BoxFit.fitWidth,
-                          width: SizeConfig.screenWidth,
-                        ),
-                        Container(
-                          height: getUniqueH(120),
-                          padding: MyEdgeInsets.only(left: 30, bottom: 30),
-                          child: MyTextBold(text: pageTitle[index], size: 30),
-                        ),
-                      ],
-                    );
-                  },
-                ),
+          SizedBox(
+            width: SizeConfig.screenWidth,
+            height: SizeConfig.screenWidth / 360 * 350 + getUniqueH(120),
+            child: Flexible(
+              child: PageView.builder(
+                controller: _cubit.controller,
+                physics: const BouncingScrollPhysics(),
+                onPageChanged: _cubit.changeCurrentPage,
+                itemCount: _cubit.pagesLength,
+                itemBuilder: (context, index) {
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        MyAssetImages.cows,
+                        fit: BoxFit.fitWidth,
+                        width: SizeConfig.screenWidth,
+                      ),
+                      Container(
+                        height: getUniqueH(120),
+                        padding: MyEdgeInsets.only(left: 30, bottom: 30),
+                        child: MyTextBold(
+                            text: pageTitle[_cubit.currentPage], size: 30),
+                      ),
+                    ],
+                  );
+                },
               ),
             ),
           ),
           PageIndicator(
-            length: _pagesLength,
-            currentIndex: _currentPage,
+            length: _cubit.pagesLength,
+            currentIndex: _cubit.currentPage,
             color: MyColors.primary,
           ),
           SizedBox(height: getUniqueH(37)),
           Center(
             child: MyButton(
-                onPressed: () {
-                  _contextRead.incrementCount();
-                  if (_currentPage == 3) {
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) =>  BodyPageView(),
-                      ),
-                    );
-                  }
-                },
-
-                label: 'Keyingi'),
+              onPressed: _cubit.currentPage != 2
+                  ? _cubit.onNextButtonPressed
+                  : _cubit.onSkipButtonPressed,
+              label: 'Keyingi',
+            ),
           ),
         ],
       ),
     );
   }
 }
-// Column buildBody(BuildContext context) {
-//   return Column(
-//     children: [
-//       SafeArea(
-//           child: Image.asset(
-//         MyAssetImages.chicken,
-//         width: SizeConfig.screenWidth,
-//       )),
-//       Container(
-//         height: getUniqueH(580.0),
-//         width: MediaQuery.of(context).size.width,
-//         child: IntroPage(
-//           indx: indx,
-//           pageData: pageData,
-//           indicatorSize: 14,
-//           activeIndicatorColor: Colors.orange,
-//           onPageChange: (page) {},
-//         ),
-//       ),
-//     ],
-//   );
-// }
