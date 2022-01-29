@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
+import 'package:smartfarm/core/constants/animal_list.dart';
 
 class SearchPageView extends StatelessWidget {
   const SearchPageView({Key? key}) : super(key: key);
@@ -24,8 +25,9 @@ class SearchPageView extends StatelessWidget {
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               padding: MyEdgeInsets.symmetric(h: 10.0),
-              itemCount: 10,
+              itemCount: AnimalList.animals.length,
               itemBuilder: (BuildContext context, int index) {
+                String animalName;
                 return MyAnimalButtons(
                   img: MyAssetImages.cow,
                   text: "Sigir",
