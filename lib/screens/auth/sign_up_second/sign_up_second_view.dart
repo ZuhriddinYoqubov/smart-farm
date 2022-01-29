@@ -79,7 +79,7 @@ class SignUpSecondView extends StatelessWidget {
                   MyButton(
                       onPressed: () {
                         Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (_) => HomePageView()));
+                            MaterialPageRoute(builder: (_) => BodyPageView()));
                       },
                       label: 'Ro’yxatdan o’tish'),
                 ],
