@@ -9,6 +9,7 @@ class  MyTextFormField extends StatelessWidget {
   TextCapitalization capitalization;
   bool obscureText;
   Widget? prefix;
+  Widget? suffix;
   MyTextFormField({
     Key? key,
     this.hint,
@@ -18,6 +19,7 @@ class  MyTextFormField extends StatelessWidget {
     this.capitalization = TextCapitalization.none,
     this.obscureText = false,
     this.prefix,
+    this.suffix,
   }) : super(key: key);
 
   @override
@@ -37,6 +39,7 @@ class  MyTextFormField extends StatelessWidget {
   InputDecoration _setDecoration() => InputDecoration(
         hintText: hint,
         prefixIcon: prefix,
+        suffixIcon: suffix,
         hintStyle: _textStyle(),
         border: _setBorder(),
         focusedBorder: _setBorder(),

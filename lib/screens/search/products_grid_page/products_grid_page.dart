@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-class ProductsGridPage extends StatefulWidget {
-  const ProductsGridPage({Key? key}) : super(key: key);
+class ProductsGridPageView extends StatefulWidget {
+  const ProductsGridPageView({Key? key}) : super(key: key);
 
   @override
-  State<ProductsGridPage> createState() => ProductsGridPageState();
+  State<ProductsGridPageView> createState() => ProductsGridPageState();
 }
 
-class ProductsGridPageState extends State<ProductsGridPage>
+class ProductsGridPageState extends State<ProductsGridPageView>
     with TickerProviderStateMixin {
   late TabController _tabController;
   @override

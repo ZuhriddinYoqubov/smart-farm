@@ -32,6 +32,7 @@ class MyAnimalsCardBottom extends StatelessWidget {
             builder: (context) => MyAnimalFeedingInfo(),
           ),
         );
+        Navigator.push(context, MaterialPageRoute(builder: (context) => AnimalsDetailPageView(),),);
       },
       child: Container(
         height: getUniqueH(height!),

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
-class SignUpView extends StatelessWidget {
-  SignUpView({Key? key}) : super(key: key);
+class SignInView extends StatelessWidget {
+  SignInView({Key? key}) : super(key: key);
 
   final GlobalKey<FormFieldState> _formKey = GlobalKey<FormFieldState>();
-  final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _surnameController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   late BuildContext _context;
   @override
   Widget build(BuildContext context) {
@@ -32,24 +32,28 @@ class SignUpView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           MyTextBold(
-            text: "Ro'yxatdan o'tish",
+            text: "Kirish",
             size: 24.0,
             color: Colors.black,
           ),
           MySizedBox(height: 50),
           MyTextFormField(
-            hint: 'Ism',
-            controller: _nameController,
+            hint: 'Telefon raqam',
+            controller: _phoneController,
             inputType: TextInputType.name,
             action: TextInputAction.next,
           ),
           MySizedBox(height: 20),
           MyTextFormField(
-            hint: 'Familiya',
-            controller: _surnameController,
+            hint: 'Parol',
+            controller: _passwordController,
             inputType: TextInputType.name,
             action: TextInputAction.done,
             obscureText: true,
+            suffix: IconButton(
+                padding: EdgeInsets.only(right: getUniqueW(10)),
+                onPressed: () {},
+                icon: const Icon(Icons.remove_red_eye)),
           ),
           MySizedBox(height: 30.0),
           _showDivider(),
@@ -61,7 +65,6 @@ class SignUpView extends StatelessWidget {
                 onPressed: () {},
                 label: 'Facebook',
                 assetIcon: MyAssetIcons.facebook,
-                
               ),
               MyElevatedIconButton(
                 onPressed: () {},
@@ -71,9 +74,12 @@ class SignUpView extends StatelessWidget {
             ],
           ),
           MySizedBox(height: 60.0),
-          MyButton(onPressed: () {
-            Navigator.push(_context, MaterialPageRoute(builder: (_)=> SignUpSecondView()));
-          }, label: 'Keyingi')
+          MyButton(
+              onPressed: () {
+                Navigator.push(_context,
+                    MaterialPageRoute(builder: (_) => SignUpSecondView()));
+              },
+              label: 'Kirish')
         ],
       ),
     );
