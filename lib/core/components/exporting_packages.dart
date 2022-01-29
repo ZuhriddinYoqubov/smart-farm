@@ -64,6 +64,14 @@ export 'package:smartfarm/widgets/my_sign_up_app_bar.dart';
 export 'package:smartfarm/widgets/my_sized_box.dart';
 export 'package:smartfarm/widgets/my_page_indicator.dart';
 export 'package:smartfarm/widgets/my_nutrion_history_item.dart';
+//---- Top Bar ----//
+export 'package:smartfarm/widgets/settings_app_bar.dart';
+
+// Models
+export 'package:smartfarm/models/animal_category.dart';
+
+// Data
+export 'package:smartfarm/core/constants/animal_list.dart';
 
 // Components
 export 'package:smartfarm/core/components/size_config.dart';
@@ -72,6 +80,8 @@ export 'package:smartfarm/core/components/my_shape.dart';
 export 'package:smartfarm/core/components/my_decoration.dart';
 export 'package:smartfarm/core/components/custom_navigator.dart';
 export 'package:smartfarm/core/components/my_border_radius.dart';
+export 'package:smartfarm/core/components/random_color.dart';
+
 
 // Constants
 export 'package:smartfarm/core/constants/my_asset_icons.dart';

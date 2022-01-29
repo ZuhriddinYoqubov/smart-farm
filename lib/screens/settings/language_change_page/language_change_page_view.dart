@@ -7,12 +7,7 @@ class LanguageChangePageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: MyTextSemibold(text: AppStrings.tilSozlamalari),
-        centerTitle: true,
-        backgroundColor: MyColors.white,
-        elevation: MyAppSize.s10,
-      ),
+      appBar: SettingsAppBar(title: AppStrings.tilSozlamalari),
       body: Container(
         height: getUniqueH(120),
         margin: MyEdgeInsets.only(left: 15, top: 30, right: 15),

@@ -62,19 +62,16 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
                     MyAnimalButtons(
                       img: MyAssetImages.cow,
                       text: "Sigir",
-                      color: MyColors.primary,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
                     MyAnimalButtons(
                       img: MyAssetImages.chicken,
                       text: "Tovuq",
-                      color: MyColors.primaryOppacity50,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
                     MyAnimalButtons(
                       img: MyAssetImages.sheep,
                       text: "Qo'y",
-                      color: MyColors.grey,
                     ),
                   ],
                 ),
@@ -84,19 +81,16 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
                     MyAnimalButtons(
                       img: MyAssetImages.horse,
                       text: "Ot",
-                      color: MyColors.green,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
                     MyAnimalButtons(
                       img: MyAssetImages.sheep,
                       text: "Qo'y",
-                      color: MyColors.lightGrey,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
                     MyAnimalButtons(
                       img: MyAssetImages.chicken,
                       text: "Tovuq",
-                      color: MyColors.primary,
                     ),
                   ],
                 ),
@@ -106,19 +100,16 @@ class _AnimalsCategoryPageState extends State<AnimalsCategoryPage> {
                     MyAnimalButtons(
                       img: MyAssetImages.chicken,
                       text: "Tovuq",
-                      color: MyColors.primary,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
                     MyAnimalButtons(
                       img: MyAssetImages.horse,
                       text: "Ot",
-                      color: MyColors.green,
                     ),
                     SizedBox(width: getUniqueW(15.0)),
                     MyAnimalButtons(
                       img: MyAssetImages.sheep,
                       text: "Qo'y",
-                      color: MyColors.grey,
                     ),
                   ],
                 ),
