@@ -7,7 +7,7 @@ class DataEditingPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar:SettingsAppBar(title: AppStrings.meningMalumotlarim),
+        appBar: SettingsAppBar(title: AppStrings.meningMalumotlarim),
         body: Padding(
           padding: MyEdgeInsets.only(left: 15.0, top: 30.0, right: 15.0),
           child: Column(
