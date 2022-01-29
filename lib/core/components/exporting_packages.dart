@@ -32,6 +32,7 @@ export 'package:smartfarm/screens/no_connection_page/no_connection_page_view.dar
 export 'package:smartfarm/widgets/bottoms/my_product_card_bottom.dart';
 export 'package:smartfarm/widgets/bottoms/my_product_buying_bottom.dart';
 export 'package:smartfarm/widgets/bottoms/farm_contact_bottom_sheet.dart';
+export 'package:smartfarm/widgets/bottoms/phone_number_bottom_sheet.dart';
 //----
 export 'package:smartfarm/widgets/text/my_text_bold.dart';
 export 'package:smartfarm/widgets/text/my_text_medium.dart';

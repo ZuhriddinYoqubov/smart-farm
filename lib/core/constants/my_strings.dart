@@ -18,4 +18,8 @@ class AppStrings {
   static const String donkey = "Eshak";
   static const String goat = "Echki";
   static const String elephant = "Fil";
+  static const String toPhone = "Qo'ng'iroq qilmoq";
+  static const String sendSMS = "SMS yuborish";
+  static const String phone = "Telefon";
+  static const String successfullyBuying = "Sotib olish muvaffaqiyatli bo'ldi";
 }
