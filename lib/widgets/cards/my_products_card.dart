@@ -7,8 +7,12 @@ class MyProductsCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-        Navigator.push(context, MaterialPageRoute(builder: (context) => ProductsGridPageView(),));
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const ProductsGridPageView(),
+            ));
       },
       child: Container(
         height: getUniqueH(100.0),
@@ -22,7 +26,7 @@ class MyProductsCard extends StatelessWidget {
             Positioned(
               bottom: getUniqueH(5.0),
               child: MyTextBold(
-                text: 'Qo\'y',
+                text: AppStrings.cow,
                 color: Colors.white,
               ),
             ),
