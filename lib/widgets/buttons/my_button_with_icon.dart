@@ -17,13 +17,13 @@ class MyElevatedIconButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton.icon(
       onPressed: onPressed,
-      icon: SvgPicture.asset(assetIcon),
+      icon: Image.asset(assetIcon, width: getUniqueW(18), ),
       label: MyTextRegular(
         text:label,
-        color: Colors.white,
+        color: MyColors.black,
       ),
       style: ElevatedButton.styleFrom(
-          primary: MyColors.blue,
+          primary: MyColors.blue.withOpacity(0.25),
           padding: MyEdgeInsets.symmetric(h: 36.0, v: 16.0),
           elevation: 0.0),
     );

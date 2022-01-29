@@ -10,8 +10,8 @@ class MyAssetIcons {
   static const String medicationBox = 'assets/icons/MedicationBox.svg';
   static const String corn = 'assets/icons/corn.svg';
   static const String rectangle = 'assets/icons/rectangle.svg';
-  static const String google = 'assets/icons/google.svg';
-  static const String facebook = 'assets/icons/facebook.svg';
+  static const String google = 'assets/icons/google.png';
+  static const String facebook = 'assets/icons/facebook.png';
   static const String vector = 'assets/icons/vector.svg';
   static const String setting = 'assets/icons/setting.svg';
   static const String left = 'assets/icons/left.svg';
@@ -22,4 +22,6 @@ class MyAssetIcons {
   static const String globe = 'assets/icons/globe.svg';
   static const String right = 'assets/icons/right.svg';
   static const String pen = 'assets/icons/pen.svg';
+  static const String bottomArrow = 'assets/icons/bottom_arrow.svg';
+  static const String topArrow = 'assets/icons/top_arrow.svg';
 }

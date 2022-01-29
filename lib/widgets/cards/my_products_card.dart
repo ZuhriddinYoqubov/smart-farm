@@ -6,23 +6,28 @@ class MyProductsCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: getUniqueH(100.0),
-      width: getUniqueW(140.0),
-      alignment: Alignment.bottomRight,
-      decoration: MyDecoration.withImage(imageUrl: Links.cow),
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          SvgPicture.asset(MyAssetIcons.rectangle),
-          Positioned(
-            bottom: getUniqueH(5.0),
-            child: MyTextBold(
-              text: 'Qo\'y',
-              color: Colors.white,
+    return InkWell(
+      onTap: (){
+        Navigator.push(context, MaterialPageRoute(builder: (context) => ProductsGridPageView(),));
+      },
+      child: Container(
+        height: getUniqueH(100.0),
+        width: getUniqueW(140.0),
+        alignment: Alignment.bottomRight,
+        decoration: MyDecoration.withImage(imageUrl: Links.cow),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            SvgPicture.asset(MyAssetIcons.rectangle),
+            Positioned(
+              bottom: getUniqueH(5.0),
+              child: MyTextBold(
+                text: 'Qo\'y',
+                color: Colors.white,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
