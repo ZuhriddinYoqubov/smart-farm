@@ -64,6 +64,7 @@ export 'package:smartfarm/widgets/my_sign_up_app_bar.dart';
 export 'package:smartfarm/widgets/my_sized_box.dart';
 export 'package:smartfarm/widgets/my_page_indicator.dart';
 export 'package:smartfarm/widgets/my_nutrion_history_item.dart';
+export 'package:smartfarm/widgets/my_divider.dart';
 //---- Top Bar ----//
 export 'package:smartfarm/widgets/settings_app_bar.dart';
 
