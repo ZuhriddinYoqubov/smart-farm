@@ -25,7 +25,14 @@ class MyAnimalsCardBottom extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return InkWell(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => MyAnimalFeedingInfo(),
+          ),
+        );
+      },
       child: Container(
         height: getUniqueH(height!),
         width: getUniqueW(weight!),
