@@ -35,7 +35,14 @@ class DataEditingPageView extends StatelessWidget {
               buildInfoCard(
                   description: 'E-pochta', title: 'Kalandarov@gmail.com'),
               MySizedBox(height: 40),
-              MyButton(onPressed: () {}, label: "O'zgarishlarni saqlash")
+              MyButton(onPressed: () {
+                showModalBottomSheet(
+                    backgroundColor: Colors.transparent,
+
+                    context: context, builder: (_) {
+                  return PhoneNumberBottomSheet();
+                });
+              }, label: "O'zgarishlarni saqlash")
             ],
           ),
         ));

@@ -31,6 +31,8 @@ export 'package:smartfarm/screens/no_connection_page/no_connection_page_view.dar
 // Widgets
 export 'package:smartfarm/widgets/bottoms/my_product_card_bottom.dart';
 export 'package:smartfarm/widgets/bottoms/my_product_buying_bottom.dart';
+export 'package:smartfarm/widgets/bottoms/farm_contact_bottom_sheet.dart';
+export 'package:smartfarm/widgets/bottoms/phone_number_bottom_sheet.dart';
 //----
 export 'package:smartfarm/widgets/text/my_text_bold.dart';
 export 'package:smartfarm/widgets/text/my_text_medium.dart';
@@ -64,6 +66,7 @@ export 'package:smartfarm/widgets/my_sign_up_app_bar.dart';
 export 'package:smartfarm/widgets/my_sized_box.dart';
 export 'package:smartfarm/widgets/my_page_indicator.dart';
 export 'package:smartfarm/widgets/my_nutrion_history_item.dart';
+export 'package:smartfarm/widgets/my_divider.dart';
 //---- Top Bar ----//
 export 'package:smartfarm/widgets/settings_app_bar.dart';
 
