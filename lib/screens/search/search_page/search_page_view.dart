@@ -32,7 +32,6 @@ class SearchPageView extends StatelessWidget {
                   text: animal.name,
                 );
               },
-
               separatorBuilder: (ctx, i) {
                 return MySizedBox(width: 10.0);
               },
@@ -67,7 +66,11 @@ class SearchPageView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          MySizedBox(height: 45.0, width: 275.0, child: MySearchTextField()),
+          MySizedBox(
+            height: 45.0,
+            width: 275.0,
+            child: MySearchTextField(),
+          ),
           _showFilterButton(),
         ],
       ),
@@ -100,11 +103,13 @@ class SearchPageView extends StatelessWidget {
           children: [
             MyTextBold(text: category, size: 20.0),
             MyTextButton(
-                onPressed: () {
-                  CustomNavigator()
-                      .push(AllCategoryPageView(categoryName: category));
-                },
-                label: 'Barchasi'),
+              onPressed: () {
+                CustomNavigator().push(
+                  AllCategoryPageView(categoryName: category),
+                );
+              },
+              label: 'Barchasi',
+            ),
           ],
         ),
       );

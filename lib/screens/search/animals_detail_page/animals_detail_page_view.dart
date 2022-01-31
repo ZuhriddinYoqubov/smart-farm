@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/core/components/size_config.dart';
-import 'package:smartfarm/core/constants/my_asset_icons.dart';
-import 'package:smartfarm/core/constants/my_colors.dart';
-import 'package:smartfarm/widgets/buttons/my_elevated_button.dart';
-import 'package:smartfarm/widgets/my_sized_box.dart';
-import 'package:smartfarm/widgets/text/my_text_extrathick.dart';
-import 'package:smartfarm/widgets/text/my_text_regular.dart';
-import 'package:smartfarm/widgets/text/my_text_semibold.dart';
+
 
 class AnimalsDetailPageView extends StatelessWidget {
   const AnimalsDetailPageView({Key? key}) : super(key: key);
