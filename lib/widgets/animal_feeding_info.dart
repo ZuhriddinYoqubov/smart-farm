@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 import 'package:smartfarm/screens/home/my_animals_detail_page/my_animals_detail_page_view.dart';
 
-
 class AnimalFeedingInfo extends StatelessWidget {
   const AnimalFeedingInfo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
@@ -96,25 +96,23 @@ class AnimalFeedingInfo extends StatelessWidget {
                     //  CORN BUTTON
 
                     InkWell(
-                        onTap: () {
-                          showModalBottomSheet(
-                            isScrollControlled: true,
-                            backgroundColor: Colors.transparent,
-                            context: context,
-                            builder: (_) => ProductBuyingBottom(),
-                          );
-                        },
-                        child: SvgPicture.asset(MyAssetIcons.corn)),
+                      onTap: () {
+                        showModalBottomSheet(
+                          isScrollControlled: true,
+                          backgroundColor: Colors.transparent,
+                          context: context,
+                          builder: (_) => ProductBuyingBottom(),
+                        );
+                      },
+                      child: SvgPicture.asset(MyAssetIcons.corn),
+                    ),
                     const Spacer(),
-
                     MyOutlinedButtonText(
                       onPressed: () {},
                       label: '12 %',
                       color: MyColors.red,
                     ),
-
                     _setFoodPercent(),
-
                   ],
                 ),
               ),
@@ -123,18 +121,22 @@ class AnimalFeedingInfo extends StatelessWidget {
         ),
         SizedBox(height: getUniqueH(15.0)),
         MyOutlinedButton(
-            padding: 10.0,
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => MyAnimalsDetailPageView(),
-                ),
-              );
-            },
-            child: Row(
-        MySizedBox(height: 15.0),
-        _commentButton(context)
+          padding: 10.0,
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => MyAnimalsDetailPageView(),
+              ),
+            );
+          },
+          child: Row(
+            children: [
+              MySizedBox(height: 15.0),
+              _commentButton(context),
+            ],
+          ),
+        ),
       ],
     );
   }
@@ -144,10 +146,11 @@ class AnimalFeedingInfo extends StatelessWidget {
       padding: 10.0,
       onPressed: () {
         Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => MyAnimalsDetailPageView(),
-            ));
+          context,
+          MaterialPageRoute(
+            builder: (context) => MyAnimalsDetailPageView(),
+          ),
+        );
       },
       child: Row(
         children: [
@@ -163,7 +166,10 @@ class AnimalFeedingInfo extends StatelessWidget {
                 MySizedBox(height: 10.0),
                 MyTextBold(text: 'Izoh', color: Colors.black),
                 MySizedBox(height: 5.0),
-                MyTextRegular(text: AppStrings.shuKunlarda, maxLines: 2,)
+                MyTextRegular(
+                  text: AppStrings.shuKunlarda,
+                  maxLines: 2,
+                )
               ],
             ),
           ),
@@ -179,6 +185,7 @@ class AnimalFeedingInfo extends StatelessWidget {
       color: MyColors.primary,
     );
   }
+
   Widget _showAnimalPercent() => Container(
         width: getUniqueW(75.0),
         alignment: Alignment.center,
