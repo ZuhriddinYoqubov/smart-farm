@@ -9,17 +9,26 @@ class FarmInfoCard extends StatelessWidget {
     return Container(
       height: getUniqueH(150.0),
       width: getUniqueW(330.0),
-      margin: MyEdgeInsets.symmetric(h: getUniqueW(15.0), v: 7.5),
-      padding: MyEdgeInsets.symmetric(h: getUniqueW(10.0), v: getUniqueH(13.0)),
+      margin: MyEdgeInsets.symmetric(
+        h: getUniqueW(15.0),
+        v: 7.5,
+      ),
+      padding: MyEdgeInsets.symmetric(
+        h: getUniqueW(10.0),
+        v: getUniqueH(13.0),
+      ),
       decoration: MyDecoration.withImage(
         imageUrl: Links.cow,
       ),
-    
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          _setChip('172', color: MyColors.green, radius: 58.0),
+          _setChip(
+            '172',
+            color: MyColors.green,
+            radius: 58.0,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
