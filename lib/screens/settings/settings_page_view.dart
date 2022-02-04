@@ -168,36 +168,33 @@ class SettingsPageView extends StatelessWidget {
             ),
             const Spacer(),
             PopupMenuButton(
-              icon: const Icon(Icons.more_vert),
-              enabled: true,
-              itemBuilder: (context) {
-                return [
-                  PopupMenuItem(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
-                        Text(
-                          "Chiqish",
-                          style: TextStyle(color: Colors.red),
-                        ),
-                        Icon(Icons.logout, color: Colors.red),
-                      ],
-                    ),
-                    onTap: () {
-                      GetStorage().write('token', '').then(
-                        (value) {
+                icon: const Icon(Icons.more_vert),
+                enabled: true,
+                itemBuilder: (context) {
+                  return [
+                    PopupMenuItem(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: const [
+                          Text(
+                            "Chiqish",
+                            style: TextStyle(color: Colors.red),
+                          ),
+                          Icon(Icons.logout, color: Colors.red),
+                        ],
+                      ),
+                      onTap: () {
+                        GetStorage().write('token', '').then((value) {
                           Navigator.pushAndRemoveUntil(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => SignInView()),
                               (route) => false);
-                        },
-                      );
-                    },
-                  )
-                ];
-              },
-            ),
+                        });
+                      },
+                    )
+                  ];
+                }),
           ],
         ),
       ),

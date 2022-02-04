@@ -18,7 +18,11 @@ class MyTextButton extends StatelessWidget {
     return TextButton(
       style: TextButton.styleFrom(primary: color, padding: EdgeInsets.zero),
       onPressed: onPressed,
-      child: MyTextRegular(text: label, decoration: TextDecoration.underline),
+      child: MyTextRegular(
+        text: label,
+        decoration: TextDecoration.underline,
+        color: Colors.orange,
+      ),
     );
   }
 }

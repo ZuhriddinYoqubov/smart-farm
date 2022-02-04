@@ -1,3 +1,8 @@
+import 'package:hive/hive.dart';
+
+part 'myanimals_model.g.dart';
+
+@HiveType(typeId: 0)
 class MyAnimalsModel {
   MyAnimalsModel({
     this.id,
@@ -12,17 +17,27 @@ class MyAnimalsModel {
     this.updatedAt,
     this.img,
   });
-
+  @HiveField(0)
   int? id;
+  @HiveField(1)
   String? name;
+  @HiveField(2)
   String? description;
+  @HiveField(3)
   int? percentFood;
+  @HiveField(4)
   int? percentMade;
+  @HiveField(5)
   int? count;
+  @HiveField(6)
   String? slug;
+  @HiveField(7)
   DateTime? publishedAt;
+  @HiveField(8)
   DateTime? createdAt;
+  @HiveField(9)
   DateTime? updatedAt;
+  @HiveField(10)
   Img? img;
 
   factory MyAnimalsModel.fromJson(Map<String, dynamic> json) => MyAnimalsModel(
@@ -40,6 +55,7 @@ class MyAnimalsModel {
       );
 }
 
+@HiveType(typeId: 1)
 class Img {
   Img({
     this.id,
@@ -60,23 +76,39 @@ class Img {
     this.createdAt,
     this.updatedAt,
   });
-
+  @HiveField(0)
   int? id;
+  @HiveField(1)
   String? name;
+  @HiveField(2)
   String? alternativeText;
+  @HiveField(3)
   String? caption;
+  @HiveField(4)
   int? width;
+  @HiveField(5)
   int? height;
+  @HiveField(6)
   Formats? formats;
+  @HiveField(7)
   String? hash;
+  @HiveField(8)
   String? ext;
+  @HiveField(9)
   String? mime;
+  @HiveField(10)
   double? size;
+  @HiveField(11)
   String? url;
+  @HiveField(12)
   dynamic previewUrl;
+  @HiveField(13)
   String? provider;
+  @HiveField(14)
   dynamic providerMetadata;
+  @HiveField(15)
   DateTime? createdAt;
+  @HiveField(16)
   DateTime? updatedAt;
 
   factory Img.fromJson(Map<String, dynamic> json) => Img(
@@ -100,6 +132,7 @@ class Img {
       );
 }
 
+@HiveType(typeId: 2)
 class Formats {
   Formats({
     this.thumbnail,
@@ -107,10 +140,13 @@ class Formats {
     this.medium,
     this.small,
   });
-
+  @HiveField(0)
   Large? thumbnail;
+  @HiveField(1)
   Large? large;
+  @HiveField(2)
   Large? medium;
+  @HiveField(3)
   Large? small;
 
   factory Formats.fromJson(Map<String, dynamic> json) => Formats(
@@ -121,6 +157,7 @@ class Formats {
       );
 }
 
+@HiveType(typeId: 3)
 class Large {
   Large({
     this.name,
@@ -133,15 +170,23 @@ class Large {
     this.path,
     this.url,
   });
-
+  @HiveField(0)
   String? name;
+  @HiveField(1)
   String? ext;
+  @HiveField(2)
   String? hash;
+  @HiveField(3)
   String? mime;
+  @HiveField(4)
   int? width;
+  @HiveField(5)
   int? height;
+  @HiveField(6)
   double? size;
+  @HiveField(7)
   dynamic path;
+  @HiveField(8)
   String? url;
 
   factory Large.fromJson(Map<String, dynamic> json) => Large(

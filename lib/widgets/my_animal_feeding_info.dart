@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
+import 'package:smartfarm/models/myanimals_model.dart';
 
 class MyAnimalFeedingInfo extends StatelessWidget {
-  const MyAnimalFeedingInfo({Key? key}) : super(key: key);
+  final MyAnimalsModel? myAnimal;
+  const MyAnimalFeedingInfo({Key? key, this.myAnimal}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +24,8 @@ class MyAnimalFeedingInfo extends StatelessWidget {
                     getUniqueW(10.0),
                   ),
                   child: CachedNetworkImage(
-                    imageUrl: 'https://source.unsplash.com/random/6',
+                    imageUrl: dotenv.env['API_ADDRESS'].toString() +
+                        myAnimal!.img!.formats!.medium!.url.toString(),
                     height: getUniqueH(190.0),
                     width: getUniqueW(230.0),
                     fit: BoxFit.cover,
@@ -32,6 +36,7 @@ class MyAnimalFeedingInfo extends StatelessWidget {
                   top: getUniqueH(-8.0),
                   right: getUniqueW(-8.0),
                   child: FloatingActionButton(
+                    heroTag: 'drug_detail',
                     elevation: 0.0,
                     backgroundColor: Colors.red,
                     onPressed: () {
@@ -55,7 +60,7 @@ class MyAnimalFeedingInfo extends StatelessWidget {
                     vPadding: 7.0,
                     hPadding: 12.0,
                     child: MyTextBold(
-                      text: "5 dona",
+                      text: myAnimal!.count.toString(),
                       size: 12.0,
                     ),
                   ),
@@ -118,7 +123,7 @@ class MyAnimalFeedingInfo extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 MyTextBold(
-                  text: 'Broller tovuq',
+                  text: myAnimal!.name.toString(),
                   size: 18.0,
                   color: Colors.black,
                 ),
@@ -126,7 +131,7 @@ class MyAnimalFeedingInfo extends StatelessWidget {
                 MyTextBold(text: 'Izoh', color: Colors.black),
                 MySizedBox(height: 5.0),
                 MyTextRegular(
-                  text: AppStrings.shuKunlarda,
+                  text: myAnimal!.description.toString(),
                   maxLines: 2,
                 )
               ],
@@ -143,14 +148,18 @@ class MyAnimalFeedingInfo extends StatelessWidget {
         alignment: Alignment.center,
         height: getUniqueH(108.0),
         decoration: MyDecoration.circular(color: MyColors.primary),
-        child: MyTextBold(text: '55%', color: MyColors.white, size: 16.0),
+        child: MyTextBold(
+            text: '${myAnimal!.percentMade}%',
+            color: MyColors.white,
+            size: 16.0),
       );
 
   Widget _setFoodPercent() => Container(
         padding: MyEdgeInsets.symmetric(v: 6),
         width: getUniqueW(71.0),
         alignment: Alignment.center,
-        child: MyTextRegular(text: '12%', color: MyColors.red),
+        child: MyTextRegular(
+            text: '${myAnimal!.percentFood}%', color: MyColors.red),
         decoration: MyDecoration.circular(
           radius: 7.0,
           border: Border.all(
