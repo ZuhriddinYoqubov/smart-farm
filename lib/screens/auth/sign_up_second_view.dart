@@ -1,8 +1,12 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
 class SignUpSecondView extends StatelessWidget {
-  SignUpSecondView({Key? key}) : super(key: key);
+  final String? name, email;
+  SignUpSecondView({Key? key, required this.name, required this.email})
+      : super(key: key);
 
   final GlobalKey<FormFieldState> _formKey = GlobalKey<FormFieldState>();
   final TextEditingController _passwordController = TextEditingController();
@@ -66,22 +70,39 @@ class SignUpSecondView extends StatelessWidget {
                     action: TextInputAction.next,
                     hint: 'Telefon Raqam',
                     prefix: _buildContainer(),
-                    suffix: _buildSuffix(),
                   ),
                   MySizedBox(height: 20.0),
-                  MyTextFormField(
-                    controller: _phoneVerifyController,
-                    inputType: TextInputType.visiblePassword,
-                    action: TextInputAction.done,
-                    hint: 'Tasdiqlash kodini kiriting',
-                  ),
                   MySizedBox(height: 40.0),
                   MyButton(
-                      onPressed: () {
-                        Navigator.pushReplacement(context,
-                            MaterialPageRoute(builder: (_) => BodyPageView()));
+                      onPressed: () async {
+                        if (_passwordController.text.isNotEmpty &&
+                            _verifyController.text.isNotEmpty &&
+                            _phoneController.text.isNotEmpty) {
+                          await Dio().post(
+                              dotenv.env['API_ADDRESS'].toString() +
+                                  '/auth/local/register',
+                              data: {
+                                "username": "$name",
+                                "email": "$email",
+                                "password": _passwordController.text,
+                                "phone": "+998" + _phoneController.text,
+                                "confirmed": true,
+                                "blocked": false,
+                              }).then((value) {
+                            Navigator.pushAndRemoveUntil(
+                                context,
+                                MaterialPageRoute(builder: (_) => SignInView()),
+                                (route) => false);
+                          });
+                        }
                       },
                       label: 'Ro’yxatdan o’tish'),
+                  MyTextButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (_) => SignInView()));
+                      },
+                      label: 'Tizimga kirish'),
                 ],
               ),
             ),

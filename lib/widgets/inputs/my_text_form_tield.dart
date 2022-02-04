@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
 
-class  MyTextFormField extends StatelessWidget {
+class MyTextFormField extends StatelessWidget {
   String? hint;
   TextEditingController? controller;
   TextInputAction? action;
@@ -33,6 +33,9 @@ class  MyTextFormField extends StatelessWidget {
       // cursorColor: grey,
       style: _textStyle(),
       decoration: _setDecoration(),
+      validator: (v) {
+        if (v!.isEmpty) return "Bo'sh Bo'lmasligi Shart !";
+      },
     );
   }
 

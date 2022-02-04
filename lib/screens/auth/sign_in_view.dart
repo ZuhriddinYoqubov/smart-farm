@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
+import 'package:smartfarm/services/auth_service.dart';
 
 class SignInView extends StatelessWidget {
   SignInView({Key? key}) : super(key: key);
 
   final GlobalKey<FormFieldState> _formKey = GlobalKey<FormFieldState>();
-  final TextEditingController _phoneController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
   late BuildContext _context;
   @override
@@ -38,8 +39,8 @@ class SignInView extends StatelessWidget {
           ),
           MySizedBox(height: 50),
           MyTextFormField(
-            hint: 'Telefon raqam',
-            controller: _phoneController,
+            hint: 'Email',
+            controller: _emailController,
             inputType: TextInputType.name,
             action: TextInputAction.next,
           ),
@@ -76,10 +77,30 @@ class SignInView extends StatelessWidget {
           MySizedBox(height: 60.0),
           MyButton(
               onPressed: () {
-                Navigator.push(_context,
-                    MaterialPageRoute(builder: (_) => SignUpSecondView()));
+                ServiceAuth.signInUser(
+                        _emailController.text, _passwordController.text)
+                    .then((bool success) {
+                  if (success) {
+                    _showScaffoldMessanger(
+                      "Muvaffaqiyatli Kirish Amalga Oshirildi",
+                      _context,
+                      Colors.green,
+                    );
+                    Navigator.push(_context,
+                        MaterialPageRoute(builder: (_) => BodyPageView()));
+                  } else {
+                    _showScaffoldMessanger("Parol yoki Email noto'g'ri",
+                        _context, Colors.redAccent);
+                  }
+                });
               },
-              label: 'Kirish')
+              label: 'Kirish'),
+          MyTextButton(
+              onPressed: () {
+                Navigator.push(
+                    _context, MaterialPageRoute(builder: (_) => SignUpView()));
+              },
+              label: "Ro'yhatdan o'tish")
         ],
       ),
     );
@@ -100,4 +121,15 @@ class SignInView extends StatelessWidget {
           indent: !isStart ? getUniqueW(10.0) : 0.0,
         ),
       );
+
+  _showScaffoldMessanger(String message, BuildContext context, Color color) {
+    return ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        behavior: SnackBarBehavior.floating,
+        backgroundColor: color,
+        dismissDirection: DismissDirection.horizontal,
+        content: Text(message),
+      ),
+    );
+  }
 }

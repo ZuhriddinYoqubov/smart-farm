@@ -6,7 +6,7 @@ class SignUpView extends StatelessWidget {
 
   final GlobalKey<FormFieldState> _formKey = GlobalKey<FormFieldState>();
   final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _surnameController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
   late BuildContext _context;
   @override
   Widget build(BuildContext context) {
@@ -45,11 +45,10 @@ class SignUpView extends StatelessWidget {
           ),
           MySizedBox(height: 20),
           MyTextFormField(
-            hint: 'Familiya',
-            controller: _surnameController,
+            hint: 'Email',
+            controller: _emailController,
             inputType: TextInputType.name,
             action: TextInputAction.done,
-            obscureText: true,
           ),
           MySizedBox(height: 30.0),
           _showDivider(),
@@ -61,7 +60,6 @@ class SignUpView extends StatelessWidget {
                 onPressed: () {},
                 label: 'Facebook',
                 assetIcon: MyAssetIcons.facebook,
-                
               ),
               MyElevatedIconButton(
                 onPressed: () {},
@@ -71,9 +69,23 @@ class SignUpView extends StatelessWidget {
             ],
           ),
           MySizedBox(height: 60.0),
-          MyButton(onPressed: () {
-            Navigator.push(_context, MaterialPageRoute(builder: (_)=> SignUpSecondView()));
-          }, label: 'Keyingi')
+          MyButton(
+            onPressed: () {
+              if (_nameController.text.isNotEmpty &&
+                  _emailController.text.isNotEmpty) {
+                Navigator.push(
+                  _context,
+                  MaterialPageRoute(
+                    builder: (_) => SignUpSecondView(
+                      name: _nameController.text,
+                      email: _emailController.text,
+                    ),
+                  ),
+                );
+              }
+            },
+            label: 'Keyingi',
+          )
         ],
       ),
     );

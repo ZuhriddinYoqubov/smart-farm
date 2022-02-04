@@ -43,6 +43,11 @@ dependencies:
   welcomescreenflutter: ^0.0.5
   scrollable_clean_calendar: ^1.0.1
   get: ^4.6.1
+  dotenv: ^3.0.0
+  dio: ^4.0.4
+  get_storage: ^2.0.3
+  flutter_dotenv: ^5.0.2
+  jwt_decoder: ^2.0.1
 
 dev_dependencies:
   flutter_test:
