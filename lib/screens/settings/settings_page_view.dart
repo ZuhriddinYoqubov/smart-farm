@@ -157,8 +157,8 @@ class SettingsPageView extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 MyTextBold(text: 'Abdumalik Kalandarov', size: 18),
-                SizedBox(height: getUniqueH(8.0)),
-                MyTextRegular(text: '+998 90 123 45 67', size: 14),
+                MySizedBox(height: 8.0),
+                MyTextRegular(text: '+998 90 123 45 67'),
               ],
             )
           ],

@@ -63,7 +63,7 @@ class _AnimalsGridPageViewState extends State<AnimalsGridPageView>
                     "28.01.2022",
                     "2000000",
                     "img",
-                    "Ot",
+                    "Tovuq",
                   ),
                   MySizedBox(
                     width: getUniqueW(20.0),
@@ -72,7 +72,7 @@ class _AnimalsGridPageViewState extends State<AnimalsGridPageView>
                     "28.01.2022",
                     "5050000",
                     "img",
-                    "Sigir",
+                    "Tovuq",
                   ),
                 ],
               ),

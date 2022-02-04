@@ -7,11 +7,7 @@ class DepozitPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: MyTextSemibold(text: AppStrings.depozit),
-        backgroundColor: MyColors.white,
-        elevation: MyAppSize.s10,
-      ),
+      appBar: SettingsAppBar(title: AppStrings.depozit),
       body: Padding(
         padding: MyEdgeInsets.only(left: 15.0, top: 30.0, right: 15.0),
         child: Column(

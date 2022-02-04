@@ -15,6 +15,7 @@ class MyAssetImages {
   static const String cows = "$IMAGE_PATH/cows.png";
   static const String sheeps = "$IMAGE_PATH/sheeps.png";
   static const String chickens = "$IMAGE_PATH/chikens.png";
+  static const String horsee = "$IMAGE_PATH/horsee.png";
 }
 
 

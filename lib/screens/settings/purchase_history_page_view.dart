@@ -7,12 +7,7 @@ class PurchaseHistoryPageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: MyTextSemibold(text: AppStrings.xaridlarTarixi),
-        centerTitle: true,
-        backgroundColor: MyColors.white,
-        elevation: MyAppSize.s10,
-      ),
+      appBar: SettingsAppBar(title: AppStrings.xaridlarTarixi),
       body: ListView.builder(
         padding: MyEdgeInsets.only(top: MyAppSize.s10),
         itemCount:  5,

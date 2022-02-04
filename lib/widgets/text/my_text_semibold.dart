@@ -1,21 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:smartfarm/core/components/exporting_packages.dart';
 import 'package:smartfarm/core/components/size_config.dart';
 
 class MyTextSemibold extends StatelessWidget {
   final String text;
   double size;
   int? maxLines;
-  Color? color;
+  Color color;
   TextAlign? textAlign;
 
-  MyTextSemibold(
-      {required this.text,
-      this.textAlign,
-      this.color,
-      this.size = 20.0,
-      Key? key,
-      this.maxLines})
-      : super(key: key);
+  MyTextSemibold({
+    required this.text,
+    this.textAlign,
+    this.color = MyColors.black,
+    this.size = 20.0,
+    Key? key,
+    this.maxLines,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

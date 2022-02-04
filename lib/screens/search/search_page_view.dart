@@ -20,18 +20,18 @@ class SearchPageView extends StatelessWidget {
           _setCategoryLabel('Hayvonlar'),
           MySizedBox(height: 10.0),
           SizedBox(
-            height: getUniqueW(100.0),
+            height: getUniqueW(103.0),
             child: ListView.separated(
               scrollDirection: Axis.horizontal,
               padding: MyEdgeInsets.symmetric(h: 10.0),
-              itemCount: 10,
+              itemCount: AnimalList.animals.length,
               itemBuilder: (BuildContext context, int index) {
+                AnimalCategory animal = AnimalList.animals[index];
                 return MyAnimalButtons(
-                  img: MyAssetImages.cow,
-                  text: "Sigir",
+                  img: animal.imagePath,
+                  text: animal.name,
                 );
               },
-
               separatorBuilder: (ctx, i) {
                 return MySizedBox(width: 10.0);
               },
@@ -66,7 +66,11 @@ class SearchPageView extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          MySizedBox(height: 45.0, width: 275.0, child: MySearchTextField()),
+          MySizedBox(
+            height: 45.0,
+            width: 275.0,
+            child: MySearchTextField(),
+          ),
           _showFilterButton(),
         ],
       ),
@@ -99,11 +103,13 @@ class SearchPageView extends StatelessWidget {
           children: [
             MyTextBold(text: category, size: 20.0),
             MyTextButton(
-                onPressed: () {
-                  CustomNavigator()
-                      .push(AllCategoryPageView(categoryName: category));
-                },
-                label: 'Barchasi'),
+              onPressed: () {
+                CustomNavigator().push(
+                  AllCategoryPageView(categoryName: category),
+                );
+              },
+              label: 'Barchasi',
+            ),
           ],
         ),
       );

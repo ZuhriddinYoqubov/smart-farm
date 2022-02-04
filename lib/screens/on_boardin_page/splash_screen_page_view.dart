@@ -32,7 +32,7 @@ class SplashScreenPage extends StatelessWidget {
 
   void _goTo() {
     Timer(const Duration(seconds: 1), () {
-      CustomNavigator().pushReplacement(OnBoardingPageView());
+      CustomNavigator().pushReplacement(SignUpSecondView());
     });
   }
 }
