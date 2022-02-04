@@ -2,27 +2,27 @@
 export 'package:smartfarm/screens/on_boardin_page/splash_screen_page_view.dart';
 export 'package:smartfarm/screens/on_boardin_page/on_boarding_page_view.dart';
 //----
-export 'package:smartfarm/screens/auth/sign_up/sign_up_view.dart';
-export 'package:smartfarm/screens/auth/sign_up_second/sign_up_second_view.dart';
-export 'package:smartfarm/screens/auth/sign_in/sign_in_view.dart';
+export 'package:smartfarm/screens/auth/sign_up_view.dart';
+export 'package:smartfarm/screens/auth/sign_up_second_view.dart';
+export 'package:smartfarm/screens/auth/sign_in_view.dart';
 //----
 export 'package:smartfarm/screens/body_page/body_page_view.dart';
 //----
-export 'package:smartfarm/screens/home/home_page/home_page_view.dart';
-export 'package:smartfarm/screens/home/nutrition_history_page/nutrition_history_page_view.dart';
-export 'package:smartfarm/screens/home/my_animals_detail_page/my_animals_detail_page_view.dart';
+export 'package:smartfarm/screens/home/home_page_view.dart';
+export 'package:smartfarm/screens/home/nutrition_history_page_view.dart';
+export 'package:smartfarm/screens/home/my_animals_detail_page_view.dart';
 //----
-export 'package:smartfarm/screens/search/animals_category_page/animals_category_page_view.dart';
-export 'package:smartfarm/screens/search/animals_detail_page/animals_detail_page_view.dart';
-export 'package:smartfarm/screens/search/all_category_page/all_category_page_view.dart';
-export 'package:smartfarm/screens/search/products_grid_page/products_grid_page.dart';
-export 'package:smartfarm/screens/search/farm_detail_page/farm_detail_page_view.dart';
+export 'package:smartfarm/screens/search/animals_category_page_view.dart';
+export 'package:smartfarm/screens/search/animals_detail_page_view.dart';
+export 'package:smartfarm/screens/search/all_category_page_view.dart';
+export 'package:smartfarm/screens/search/products_grid_page.dart';
+export 'package:smartfarm/screens/search/farm_detail_page_view.dart';
 
 //----
-export 'package:smartfarm/screens/settings/data_editing_page/data_editing_page_view.dart';
-export 'package:smartfarm/screens/settings/depozit_page/depozit_page_view.dart';
-export 'package:smartfarm/screens/settings/language_change_page/language_change_page_view.dart';
-export 'package:smartfarm/screens/settings/purchase_history_page/purchase_history_page_view.dart';
+export 'package:smartfarm/screens/settings/data_editing_page_view.dart';
+export 'package:smartfarm/screens/settings/depozit_page_view.dart';
+export 'package:smartfarm/screens/settings/language_change_page_view.dart';
+export 'package:smartfarm/screens/settings/purchase_history_page_view.dart';
 //----
 export 'package:smartfarm/screens/calendar_page/calendar_page_view.dart';
 //----

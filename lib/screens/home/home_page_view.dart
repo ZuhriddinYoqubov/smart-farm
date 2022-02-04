@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/screens/home/home_page/home_page_cubit.dart';
+import 'package:smartfarm/cubit/home_cubit/home_page_cubit.dart';
 
 class HomePageView extends StatelessWidget {
   const HomePageView({Key? key}) : super(key: key);

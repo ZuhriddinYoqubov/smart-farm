@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smartfarm/core/components/exporting_packages.dart';
-import 'package:smartfarm/screens/body_page/body_page_cubit.dart';
+import 'package:smartfarm/cubit/body_cubit/body_page_cubit.dart';
 
 class BodyPageView extends StatelessWidget {
   BodyPageView({Key? key}) : super(key: key);
